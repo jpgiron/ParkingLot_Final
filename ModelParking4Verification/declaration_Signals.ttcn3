@@ -1,0 +1,86 @@
+
+/* Here is the declarations of the data type
+   and the signals that will be used in the 
+   testcases   */
+   
+/* Code written by: Juan Pablo Giron Ruiz */
+
+
+module declaration_Signals
+{
+
+  /* Step 1. Definition of data Types */
+  
+  type integer spots;
+  type integer numCtrl;
+  type integer numZone;
+  type integer numEntryWay_In;
+  type integer numEntryWay_Out;
+  type integer ID_User;
+  const integer Zone0Ctrl0:= 0;
+  const integer Zone1Ctrl0:= 1;
+  const integer Zone0Ctrl1:= 2;
+  const integer Zone1Ctrl1:= 3;
+  const integer NumTotalZones := 4;
+    
+  /* Step 2. Declaration of the Signals */
+  /* The PURE Signals are enumerated, signals 
+  with parameters are type record */
+  /* The name of the signals must be the same that in 
+  SDL system */
+  
+  /*Signals with parameters */
+  /* Channel cDisplay_main*/
+  
+  type record sReqInfoCtrlZone
+  {
+      numCtrl num_Ctrl,
+      numZone num_Zone
+  }
+  
+  type record sInfoCtrlZone
+  {
+      spots freeSpots  
+  }
+  
+  /* Channel cEnv_pTesting  */
+  
+  type record sEntryCarCtrl
+  {
+      numCtrl num_Ctrl  
+  }
+  type record sOutCarCtrl
+  {
+      numCtrl num_Ctrl
+  }
+  type record sEntryCarZone
+  {
+      numZone num_Zone
+  }
+  type record sOutCarZone
+  {
+      numZone num_Zone
+  }
+  
+  
+  /*Channel cEnv_Main*/
+  
+  type enumerated sCreateCtrlZone {e_sCreateCtrlZone}
+  type enumerated sOkCreateCtrl {e_sOkCreateCtrl}
+  type enumerated sOkCreationZone {e_sOkCreationZone}
+  type enumerated sCreateEntryWay {e_sCreateEntryWay}
+  
+  type record sAddZone
+  {
+      numCtrl num_Ctrl,
+      spots totalSpots,
+      spots freeSpots
+  }
+  
+  /*Channel cEnv_CR */
+  type record sIDUserFromEnv
+  {
+      ID_User ID
+  }
+ 
+}

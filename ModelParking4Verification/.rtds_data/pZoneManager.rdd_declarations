@@ -1,0 +1,32 @@
+Ä}q(UversionqU4.4.1qUobjectq]q]q((crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q	(Utextq
+UquantityZones INTEGERqU
+identifierqU2UtypeqUvardeclqUchildrenq]q((hoq}q(h
+UINTEGERqhU2hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentqhub(crtds.editor.business.SyntaxChecker
+SyntaxTreeNode
+qoq}q(h
+UquantityZonesqhNhUsnglvardeclqh]q(hoq}q(h
+hhU2hUvarnameqh]q hhubaubeh(hoq!}q"(h
+UaDCL quantityZones INTEGER , p_freeSpots , p_totalSpots i_spots , myCtrl , pidCtrl , pidZone PID ;q#hU0hU	cmpnddeclq$h]q%(h(hoq&}q'(h
+U"p_freeSpots , p_totalSpots i_spotsq(hU3hUvardeclq)h]q*((hoq+}q,(h
+Ui_spotsq-hU3hUtypenameq.h]q/hh&ub(hoq0}q1(h
+Up_freeSpotsq2hNhhh]q3(hoq4}q5(h
+h2hU3hUvarnameq6h]q7hh&ubaub(hoq8}q9(h
+Up_totalSpotsq:hNhhh]q;(hoq<}q=(h
+h:hU3hUvarnameq>h]q?hh&ubaubehh!ub(hoq@}qA(h
+UmyCtrl , pidCtrl , pidZone PIDqBhU4hUvardeclqCh]qD((hoqE}qF(h
+UPIDqGhU4hUtypenameqHh]qIhh@ub(hoqJ}qK(h
+UmyCtrlqLhNhhh]qM(hoqN}qO(h
+hLhU4hUvarnameqPh]qQhh@ubaub(hoqR}qS(h
+UpidCtrlqThNhhh]qU(hoqV}qW(h
+hThU4hUvarnameqXh]qYhh@ubaub(hoqZ}q[(h
+UpidZoneq\hNhhh]q](hoq^}q_(h
+h\hU4hUvarnameq`h]qahh@ubaubehh!ubeh(hoqb}qc(h
+UZDCL
+
+quantityZones INTEGER,
+p_freeSpots,p_totalSpots i_spots, 
+myCtrl,pidCtrl,pidZone PID;qdhNhUdatadeclqeh]qfh!ahNubububcrtds.editor.business.ElementReference
+SymbolReference
+qg)Åqh}qi(UprojectqjhjQUsymbolIdqkUSYMB6qlUdiagramFileNameqmUP/home/ubuntu/Documents/Final_Work_Model/ModelParkingSystem4Test/pZoneManager.rddqnubKáqoh&hg)Åqp}qq(hjhjQhkhlhmhnubKáqrh@hg)Åqs}qt(hjhjQhkhlhmhnubKáqueÜqvu.

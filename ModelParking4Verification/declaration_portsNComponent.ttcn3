@@ -1,0 +1,44 @@
+/* Here is the declaration of the ports
+   where the messages are sent, besides
+   is the definition of the component */
+   
+module declaration_portsNComponent
+{
+    import from declaration_templates all;
+    import from declaration_Signals all;
+
+    type port cDisplay_Main_type message
+    {
+        out sReqInfoCtrlZone;
+        in sInfoCtrlZone    
+    }
+
+    type port cEnv_pTesting_type message
+    {
+        out sEntryCarCtrl;
+        out sOutCarCtrl;
+        out sEntryCarZone;
+        out sOutCarZone;    
+    }
+    
+    type port cEnv_Main_type message
+    {
+        out sCreateCtrlZone;
+        out sAddZone;
+        out sCreateEntryWay;
+        in sOkCreateCtrl;
+        in sOkCreationZone;
+    }
+    type port cEnv_CR_type message
+    {
+        out sIDUserFromEnv;
+    }     
+    
+    type component System
+    {
+        port cDisplay_Main_type cDisplay_Main
+        port cEnv_pTesting_type cEnv_pTesting
+        port cEnv_Main_type cEnv_Main
+        port cEnv_CR_type cEnv_CR 
+    }
+}
