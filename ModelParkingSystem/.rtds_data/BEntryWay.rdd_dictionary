@@ -5,35 +5,34 @@
 <DictionaryObjects language="sdl" diagramType="blk">
 <Signal id="SIG1" name="sEnteredCarSystem">
 </Signal>
-<Signal id="SIG10" name="sEnableCardReader">
-</Signal>
-<Signal id="SIG11" name="sDataUser">
-<SignalParameterType>Integer</SignalParameterType>
-</Signal>
-<Signal id="SIG12" name="sAssignCardReaderNCam">
-</Signal>
-<Signal id="SIG13" name="sAssigned">
+<Signal id="SIG10" name="sAssigned">
 <SignalParameterType>pid</SignalParameterType>
 <SignalParameterType>pid</SignalParameterType>
 </Signal>
-<Signal id="SIG14" name="sConfirmEntranceUser">
-<SignalParameterType>DataUser</SignalParameterType>
+<Signal id="SIG11" name="sUpBarrier">
 </Signal>
-<Signal id="SIG15" name="sConfirmOutUser">
-<SignalParameterType>DataUser</SignalParameterType>
+<Signal id="SIG12" name="sDownBarrier">
 </Signal>
-<Signal id="SIG16" name="sOkUser">
+<Signal id="SIG13" name="sLoopInductive_Entrance">
 </Signal>
-<Signal id="SIG17" name="sNoRegis_User">
+<Signal id="SIG14" name="sLoopInductive_Exit">
 </Signal>
-<Signal id="SIG18" name="sRequestPlate">
+<Signal id="SIG15" name="sCarPassedBarrier">
 </Signal>
-<Signal id="SIG19" name="sPlate">
+<Signal id="SIG16" name="sRequestPlate">
+</Signal>
+<Signal id="SIG17" name="sPlate">
 <SignalParameterType>charstring</SignalParameterType>
+</Signal>
+<Signal id="SIG18" name="sEnableCardReader">
+</Signal>
+<Signal id="SIG19" name="sDataUser">
+<SignalParameterType>Integer</SignalParameterType>
 </Signal>
 <Signal id="SIG2" name="sOutCarSystem">
 </Signal>
 <Signal id="SIG20" name="sOkCreateEntryWay">
+<SignalParameterType>PID</SignalParameterType>
 </Signal>
 <Signal id="SIG21" name="sOkInitEntryWay">
 </Signal>
@@ -45,17 +44,19 @@
 </Signal>
 <Signal id="SIG4" name="sInitEntryWay_i">
 </Signal>
-<Signal id="SIG5" name="sUpBarrier">
+<Signal id="SIG5" name="sConfirmEntranceUser">
+<SignalParameterType>DataUser</SignalParameterType>
 </Signal>
-<Signal id="SIG6" name="sDownBarrier">
+<Signal id="SIG6" name="sConfirmOutUser">
+<SignalParameterType>DataUser</SignalParameterType>
 </Signal>
-<Signal id="SIG7" name="sLoopInductive_Entrance">
+<Signal id="SIG7" name="sOkUser">
 </Signal>
-<Signal id="SIG8" name="sLoopInductive_Exit">
+<Signal id="SIG8" name="sNoRegis_User">
 </Signal>
-<Signal id="SIG9" name="sCarPassedBarrier">
+<Signal id="SIG9" name="sAssignCardReaderNCam">
 </Signal>
-<Item id="ITEM1" type="block" name="BEntryWay" scope="current">
+<Item id="ITEM1" type="block" name="BEntryNOut_Way" scope="current">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
@@ -70,18 +71,16 @@
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW14" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK27" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK24" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG16"/>
 <SignalReference id="SIG17"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG14"/>
-<SignalReference id="SIG15"/>
+<SignalReference id="SIG16"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW15" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK24" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK26" isFrom="FALSE"/>
 <SentSignals>
 <SignalReference id="SIG19"/>
 </SentSignals>
@@ -90,20 +89,23 @@
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW12" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK26" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK21" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG11"/>
+<SignalReference id="SIG10"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG10"/>
+<SignalReference id="SIG9"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW13" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK21" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK22" isFrom="FALSE"/>
 <SentSignals>
 <SignalReference id="SIG13"/>
+<SignalReference id="SIG14"/>
+<SignalReference id="SIG15"/>
 </SentSignals>
 <ReceivedSignals>
+<SignalReference id="SIG11"/>
 <SignalReference id="SIG12"/>
 </ReceivedSignals>
 </SignalWindow>
@@ -119,11 +121,10 @@
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW11" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK22" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK27" isFrom="FALSE"/>
 <SentSignals>
 <SignalReference id="SIG7"/>
 <SignalReference id="SIG8"/>
-<SignalReference id="SIG9"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG5"/>
@@ -131,15 +132,15 @@
 </ReceivedSignals>
 </SignalWindow>
 <Channel name="cEntryWay_Main" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW10"/>
-<Channel name="cEnv_EntryWay" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW11"/>
-<Channel name="cEntryWay_CR" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW12"/>
-<Channel name="cCreatorCRNC" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW13"/>
-<Channel name="cEntryWay_DB" fromSignalWindow="SIGWDW5" toSignalWindow="SIGWDW14"/>
-<Channel name="cEntryWay_Cam" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW15"/>
+<Channel name="cEntryWay_DB" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW11"/>
+<Channel name="cCreatorCRNC" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW12"/>
+<Channel name="cEnv_EntryWay" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW13"/>
+<Channel name="cEntryWay_Cam" fromSignalWindow="SIGWDW5" toSignalWindow="SIGWDW14"/>
+<Channel name="cEntryWay_CR" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW15"/>
 <Channel name="cInternalEntryWay" fromSignalWindow="SIGWDW7" toSignalWindow="SIGWDW8"/>
 <Channel name="cCreatorEntryWay_Main" fromSignalWindow="SIGWDW9" toSignalWindow="SIGWDW16"/>
 </Item>
-<Item id="ITEM2" type="process" name="pEntryWay" parentId="ITEM1" scope="none" minInstances="1" maxInstances="cNUMMAXENTRYWAY">
+<Item id="ITEM2" type="process" name="pEntryNOut_Way" parentId="ITEM1" scope="none" minInstances="1" maxInstances="cNUMMAXENTRYWAY">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB2"/>
 </DefiningSymbols>
@@ -147,27 +148,28 @@
 <SymbolReference symbolId="SYMB2"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW4" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK21" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK22" isFrom="TRUE"/>
 <SentSignals>
+<SignalReference id="SIG11"/>
 <SignalReference id="SIG12"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG13"/>
+<SignalReference id="SIG14"/>
+<SignalReference id="SIG15"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW5" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK27" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK24" isFrom="TRUE"/>
 <SentSignals>
-<SignalReference id="SIG14"/>
-<SignalReference id="SIG15"/>
+<SignalReference id="SIG16"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG16"/>
 <SignalReference id="SIG17"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW6" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK24" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK26" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG18"/>
 </SentSignals>
@@ -196,7 +198,7 @@
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW2" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK22" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK27" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG5"/>
 <SignalReference id="SIG6"/>
@@ -204,16 +206,15 @@
 <ReceivedSignals>
 <SignalReference id="SIG7"/>
 <SignalReference id="SIG8"/>
-<SignalReference id="SIG9"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW3" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK26" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK21" isFrom="TRUE"/>
 <SentSignals>
-<SignalReference id="SIG10"/>
+<SignalReference id="SIG9"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG11"/>
+<SignalReference id="SIG10"/>
 </ReceivedSignals>
 </SignalWindow>
 </Item>

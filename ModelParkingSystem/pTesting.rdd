@@ -244,4 +244,56 @@ VIA cpTesting_Main</Text>
 </Link>
 </DiagramPartition>
 
+<DiagramPartition name="Part. 1" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.59" pageHeight="27.94" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB49" type="sdlPrcsDgmFrm" xCenter="306" yCenter="396" fixedDimensions="TRUE" width="568" height="726" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB50" type="sdlInputSig" xCenter="275" yCenter="99" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sLoopInductive_EntranceTest(numEntryWay)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB51" type="sdlState" xCenter="275" yCenter="33" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB52" type="sdlSendSig" xCenter="275" yCenter="165" fixedDimensions="FALSE" width="462" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sLoopInductive_EntranceTest(numEntryWay) VIA cpTesting_Main</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK52" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB50" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB52" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK50" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB51" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB50" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+</DiagramPartition>
+
 </Diagram>

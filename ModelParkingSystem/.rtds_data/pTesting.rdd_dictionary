@@ -3,10 +3,10 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sOutCarCtrl">
-<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<Signal id="SIG1" name="sOutCarZone">
+<SignalParameterType>itIndex</SignalParameterType>
 <InputSymbols>
-<SymbolReference symbolId="SYMB5"/>
+<SymbolReference symbolId="SYMB42"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG2" name="sEntryCar">
@@ -16,16 +16,16 @@
 <SymbolReference symbolId="SYMB7"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG3" name="sOutCarZone">
-<SignalParameterType>itIndex</SignalParameterType>
-<InputSymbols>
-<SymbolReference symbolId="SYMB42"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG4" name="sEntryCarZone">
+<Signal id="SIG3" name="sEntryCarZone">
 <SignalParameterType>itIndex</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB40"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG4" name="sOutCarCtrl">
+<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB5"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG5" name="sOutCar">
@@ -41,20 +41,31 @@
 <SymbolReference symbolId="SYMB4"/>
 </InputSymbols>
 </Signal>
+<Signal id="SIG7" name="sLoopInductive_EntranceTest">
+<SendSymbols>
+<SymbolReference symbolId="SYMB52"/>
+</SendSymbols>
+<InputSymbols>
+<SymbolReference symbolId="SYMB50"/>
+</InputSymbols>
+</Signal>
 <Item id="ITEM1" type="process" name="pTesting" scope="current">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
+<SymbolReference symbolId="SYMB49"/>
 </UsingSymbols>
 <Body>
 <SentSignals>
 <SignalReference id="SIG5"/>
 <SignalReference id="SIG2"/>
+<SignalReference id="SIG7"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG3"/>
-<SignalReference id="SIG1"/>
 <SignalReference id="SIG4"/>
 <SignalReference id="SIG6"/>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG7"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -73,6 +84,10 @@
 <StateReference itemId="ITEM6"/>
 <SymbolReference symbolId="SYMB42"/>
 </Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB50"/>
+</Transition>
 </Transitions>
 </Body>
 </Item>
@@ -89,6 +104,7 @@
 <Item id="ITEM4" type="state" name="Idle" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB2"/>
+<SymbolReference symbolId="SYMB51"/>
 </DefiningSymbols>
 <UsingSymbols>
 <SymbolReference symbolId="SYMB2"/>
