@@ -2479,9 +2479,9 @@ infoSystem!tableInfoCtrl(indexPid)!freeSpotsZone:=infoCtrlGral!allfreeSpots</Tex
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB773" type="sdlSendSig" xCenter="1144" yCenter="220" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB773" type="sdlSendSig" xCenter="1144" yCenter="220" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sLoopInductive_Entrance TO pidEntryWay</Text>
+<Text>sLoopInductive_Entrance_S TO pidEntryWay</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB774" type="sdlTask" xCenter="1144" yCenter="154" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
@@ -2519,9 +2519,9 @@ infoSystem!tableInfoCtrl(indexPid)!freeSpotsZone:=infoCtrlGral!allfreeSpots</Tex
 <Text>pidOutWay:=infoSystem!tableOutWays(indexOutWay)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB781" type="sdlSendSig" xCenter="1540" yCenter="220" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB781" type="sdlSendSig" xCenter="1540" yCenter="220" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sLoopInductive_Exit TO pidOutWay</Text>
+<Text>sLoopInductive_Exit_S TO pidOutWay</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB783" type="sdlInputSig" xCenter="1144" yCenter="363" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
@@ -2529,9 +2529,9 @@ infoSystem!tableInfoCtrl(indexPid)!freeSpotsZone:=infoCtrlGral!allfreeSpots</Tex
 <Text>sUpBarrier</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB784" type="sdlSendSig" xCenter="1144" yCenter="429" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB784" type="sdlSendSig" xCenter="1144" yCenter="429" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sCarPassedBarrier TO pidEntryWay</Text>
+<Text>sCarPassedBarrier_S TO pidEntryWay</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB785" type="sdlState" xCenter="1144" yCenter="495" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
@@ -2544,9 +2544,9 @@ infoSystem!tableInfoCtrl(indexPid)!freeSpotsZone:=infoCtrlGral!allfreeSpots</Tex
 <Text>sUpBarrier</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB787" type="sdlSendSig" xCenter="1540" yCenter="396" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB787" type="sdlSendSig" xCenter="1540" yCenter="396" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sCarPassedBarrier TO pidOutWay</Text>
+<Text>sCarPassedBarrier_S TO pidOutWay</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB788" type="sdlState" xCenter="1540" yCenter="451" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
