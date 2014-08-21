@@ -8,13 +8,23 @@ SyntaxTreeNode
 qoq}q(h
 UnumEntryWayqhNhUsnglvardeclqh]q(hoq}q(h
 hhU1hUvarnameqh]q hhubaubeh(hoq!}q"(h
-U+DCL numEntryWay INTEGER , pidEntryWay PID ;q#hU0hU	cmpnddeclq$h]q%(h(hoq&}q'(h
-UpidEntryWay PIDq(hU2hUvardeclq)h]q*((hoq+}q,(h
-UPIDq-hU2hUtypenameq.h]q/hh&ub(hoq0}q1(h
-UpidEntryWayq2hNhhh]q3(hoq4}q5(h
-h2hU2hUvarnameq6h]q7hh&ubaubehh!ubeh(hoq8}q9(h
-U)DCL
+UODCL numEntryWay INTEGER , numOutWay INTEGER , pidEntryWay PID , pidOutWay PID ;q#hU0hU	cmpnddeclq$h]q%(h(hoq&}q'(h
+UnumOutWay INTEGERq(hU2hUvardeclq)h]q*((hoq+}q,(h
+UINTEGERq-hU2hUtypenameq.h]q/hh&ub(hoq0}q1(h
+U	numOutWayq2hNhhh]q3(hoq4}q5(h
+h2hU2hUvarnameq6h]q7hh&ubaubehh!ub(hoq8}q9(h
+UpidEntryWay PIDq:hU3hUvardeclq;h]q<((hoq=}q>(h
+UPIDq?hU3hUtypenameq@h]qAhh8ub(hoqB}qC(h
+UpidEntryWayqDhNhhh]qE(hoqF}qG(h
+hDhU3hUvarnameqHh]qIhh8ubaubehh!ub(hoqJ}qK(h
+UpidOutWay PIDqLhU4hUvardeclqMh]qN((hoqO}qP(h
+UPIDqQhU4hUtypenameqRh]qShhJub(hoqT}qU(h
+U	pidOutWayqVhNhhh]qW(hoqX}qY(h
+hVhU4hUvarnameqZh]q[hhJubaubehh!ubeh(hoq\}q](h
+UKDCL
 numEntryWay INTEGER,
-pidEntryWay PID;q:hNhUdatadeclq;h]q<h!ahNubububcrtds.editor.business.ElementReference
+numOutWay INTEGER,
+pidEntryWay PID,
+pidOutWay PID;q^hNhUdatadeclq_h]q`h!ahNubububcrtds.editor.business.ElementReference
 SymbolReference
-q=)Åq>}q?(Uprojectq@h@QUsymbolIdqAUSYMB8qBUdiagramFileNameqCUR/home/ubuntu/Documents/ProjectSDL/Modificada/ModeloOrganizado/pCreatorEntryWay.rddqDubKáqEh&h=)ÅqF}qG(h@h@QhAhBhChDubKáqHeÜqIu.
+qa)Åqb}qc(UprojectqdhdQUsymbolIdqeUSYMB8qfUdiagramFileNameqgUO/home/ubuntu/Documents/Final_Work_Model/ModelParkingSystem/pCreatorEntryWay.rddqhubKáqih&ha)Åqj}qk(hdhdQhehfhghhubKáqlh8ha)Åqm}qn(hdhdQhehfhghhubKáqohJha)Åqp}qq(hdhdQhehfhghhubKáqreÜqsu.

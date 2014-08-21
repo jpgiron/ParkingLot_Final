@@ -11,36 +11,40 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB2" type="sdlPrcs" xCenter="528" yCenter="396" fixedDimensions="TRUE" width="506" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB2" type="sdlPrcs" xCenter="561" yCenter="374" fixedDimensions="TRUE" width="484" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pMainSystemManager</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="759" yCenter="198" fixedDimensions="TRUE" width="132" height="66" color="#000000" fillColor="#ffffaa">
+<Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="792" yCenter="176" fixedDimensions="TRUE" width="132" height="66" color="#000000" fillColor="#ffffaa">
 <Description></Description>
 <Text>pTesting</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK93" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK120" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEntryWay_Main</Text>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="0.0232258064516" endType="midarrow">
-<Text id="1">[sInitEntryWay_i]</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="-0.0335483870968" endType="midarrow">
+<Text id="1">[sInitEntryWay_i,
+sLoopInductive_Entrance,
+sLoopInductive_Exit,
+sCarPassedBarrier]</Text>
 <Text id="2">__</Text>
 </Connector>
 <Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[sEnteredCarSystem,
 sOutCarSystem,
+sUpBarrier,
 sOkEntryWay1]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="528"/>
+<LinkSegment orientation="h" length="561"/>
 
 </Link>
 
-<Link linkId="LINK85" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK124" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_pTesting</Text>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="0.324607329843" endType="midarrow">
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="0.38219895288" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2">__</Text>
 </Connector>
@@ -50,17 +54,77 @@ sOutCarCtrl,
 sEntryCarZone,
 sOutCarZone,
 sLoopInductive_EntranceTest,
-sLoopInductive_ExitTest,
-sCarPassedBarrierTest]</Text>
+sLoopInductive_ExitTest]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="198"/>
+<LinkSegment orientation="v" length="176"/>
 
 </Link>
 
-<Link linkId="LINK91" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK118" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cMain_CtrlManager</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sExcQuantityCtrl,
+sOkCreationCtrl]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="-0.0335483870968" endType="midarrow">
+<Text id="1">[sCreateCtrl]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="h" length="594"/>
+
+</Link>
+
+<Link linkId="LINK117" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Main</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.545454545455" endType="midarrow">
+<Text id="1">[sCreateCtrlZone,
+sCreateEntryWay,
+sCreateOutWay,
+sReqInfoSystem,
+sAddZone,
+sSetUpFreeSpot,
+sSetUpTotalSpot]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="0.392258064516" endType="midarrow">
+<Text id="1">[sExcLimitCtrl,
+sImpossibleGetInfoCtrls,
+sOkCreateCtrl,
+sExcLimitZones,
+sOkCreationZone,
+sOkSetUp,
+sInfoSystem,
+sOkCreateE_W,
+sOkCreateO_W,
+sExcEntryWay,
+sExcOutWay,
+sFreeSpotsSystem]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="165"/>
+<LinkSegment orientation="h" length="462"/>
+
+</Link>
+
+<Link linkId="LINK119" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cDisplay_Main</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="-0.590909090909" endType="midarrow">
+<Text id="1">[sReqInfoCtrlZone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="-0.270506108202" endType="midarrow">
+<Text id="1">[sInfoCtrlZone]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="405"/>
+
+</Link>
+
+<Link linkId="LINK114" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cMain_CtrlZone</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="-0.695652173913" endType="midarrow">
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="-0.863636363636" endType="midarrow">
 <Text id="1">[sInfoTotalCtrl,
 sOkCreateZone,
 sExcLimitZones,
@@ -76,89 +140,35 @@ sInitTotalSpotZone,
 sInitialConnection]</Text>
 <Text id="2">__</Text>
 </Connector>
-<LinkSegment orientation="v" length="-396"/>
+<LinkSegment orientation="v" length="-374"/>
 
 </Link>
 
-<Link linkId="LINK92" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Main</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.521739130435" endType="midarrow">
-<Text id="1">[sCreateCtrlZone,
-sCreateEntryWay,
-sReqInfoSystem,
-sAddZone,
-sSetUpFreeSpot,
-sSetUpTotalSpot ]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="0.534193548387" endType="midarrow">
-<Text id="1">[sExcLimitCtrl,
-sImpossibleGetInfoCtrls,
-sOkCreateCtrl,
-sExcLimitZones,
-sOkCreationZone,
-sOkSetUp,
-sInfoSystem,
-sOkCreateE_W,
-sExcEntryWay]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="v" length="198"/>
-<LinkSegment orientation="h" length="495"/>
-
-</Link>
-
-<Link linkId="LINK88" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cMain_CtrlManager</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sExcQuantityCtrl,
-sOkCreationCtrl]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="0.0232258064516" endType="midarrow">
-<Text id="1">[sCreateCtrl]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="h" length="627"/>
-
-</Link>
-
-<Link linkId="LINK87" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK115" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cCreatorEntryWay_Main</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.130434782609" endType="midarrow">
-<Text id="1">[sOkCreateEntryNOut_Way,
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sOkCreateEntryWay,
+sOkCreateOutWay,
+sExcOutWay,
 sExcEntryWay]</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.020942408377" endType="midarrow">
-<Text id="1">[sCreateEntryWay]</Text>
+<Text id="1">[sCreateEntryWay,
+sCreateOutWay]</Text>
 <Text id="2">__</Text>
 </Connector>
-<LinkSegment orientation="v" length="-396"/>
+<LinkSegment orientation="v" length="-374"/>
 
 </Link>
 
-<Link linkId="LINK90" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cDisplay_Main</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="-0.565217391304" endType="midarrow">
-<Text id="1">[sReqInfoCtrlZone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="-0.328097731239" endType="midarrow">
-<Text id="1">[sInfoCtrlZone]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="v" length="383"/>
-
-</Link>
-
-<Link linkId="LINK86" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK121" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cMain_Zone</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.782608695652" endType="midarrow">
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.818181818182" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="0.221935483871" endType="midarrow">
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="0.136774193548" endType="midarrow">
 <Text id="1">[sIR1_ZoneTest,
 sIR2_ZoneTest,
 sIR3_ZoneTest,
@@ -166,14 +176,14 @@ sIR4_ZoneTest,
 sLoopInductive_ZoneTest]</Text>
 <Text id="2">__</Text>
 </Connector>
-<LinkSegment orientation="v" length="77"/>
-<LinkSegment orientation="h" length="429"/>
+<LinkSegment orientation="v" length="66"/>
+<LinkSegment orientation="h" length="396"/>
 
 </Link>
 
-<Link linkId="LINK89" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK125" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cpTesting_Main</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.913043478261" endType="midarrow">
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.954545454545" endType="midarrow">
 <Text id="1">[sEntryCar,
 sOutCar,
 sLoopInductive_EntranceTest,

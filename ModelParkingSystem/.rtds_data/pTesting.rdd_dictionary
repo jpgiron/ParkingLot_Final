@@ -3,10 +3,10 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sOutCarZone">
+<Signal id="SIG1" name="sEntryCarZone">
 <SignalParameterType>itIndex</SignalParameterType>
 <InputSymbols>
-<SymbolReference symbolId="SYMB42"/>
+<SymbolReference symbolId="SYMB40"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG2" name="sEntryCar">
@@ -16,16 +16,16 @@
 <SymbolReference symbolId="SYMB7"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG3" name="sEntryCarZone">
-<SignalParameterType>itIndex</SignalParameterType>
-<InputSymbols>
-<SymbolReference symbolId="SYMB40"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG4" name="sOutCarCtrl">
+<Signal id="SIG3" name="sOutCarCtrl">
 <SignalParameterType>itIndext_Ctrl</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB5"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG4" name="sEntryCarCtrl">
+<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB4"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG5" name="sOutCar">
@@ -35,13 +35,23 @@
 <SymbolReference symbolId="SYMB8"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG6" name="sEntryCarCtrl">
-<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<Signal id="SIG6" name="sOutCarZone">
+<SignalParameterType>itIndex</SignalParameterType>
 <InputSymbols>
-<SymbolReference symbolId="SYMB4"/>
+<SymbolReference symbolId="SYMB42"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG7" name="sLoopInductive_EntranceTest">
+<Signal id="SIG7" name="sLoopInductive_ExitTest">
+<SignalParameterType>indexO_W</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB57"/>
+</SendSymbols>
+<InputSymbols>
+<SymbolReference symbolId="SYMB59"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG8" name="sLoopInductive_EntranceTest">
+<SignalParameterType>indexE_W</SignalParameterType>
 <SendSymbols>
 <SymbolReference symbolId="SYMB52"/>
 </SendSymbols>
@@ -56,71 +66,90 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG5"/>
-<SignalReference id="SIG2"/>
 <SignalReference id="SIG7"/>
+<SignalReference id="SIG5"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG2"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG3"/>
-<SignalReference id="SIG4"/>
+<SignalReference id="SIG8"/>
 <SignalReference id="SIG6"/>
 <SignalReference id="SIG1"/>
+<SignalReference id="SIG3"/>
 <SignalReference id="SIG7"/>
+<SignalReference id="SIG4"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB4"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB5"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM5"/>
+<StateReference itemId="ITEM2"/>
 <SymbolReference symbolId="SYMB40"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM6"/>
+<StateReference itemId="ITEM8"/>
 <SymbolReference symbolId="SYMB42"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB50"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM3"/>
+<SymbolReference symbolId="SYMB59"/>
 </Transition>
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM2" type="variable" name="NroCtrl" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM2" type="state" name="sWaitZoneEntry" parentId="ITEM1" scope="none">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB6"/>
+<SymbolReference symbolId="SYMB38"/>
 </DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB38"/>
+</UsingSymbols>
 </Item>
-<Item id="ITEM3" type="variable" name="NroZone" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB6"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM4" type="state" name="Idle" parentId="ITEM1" scope="none">
+<Item id="ITEM3" type="state" name="Idle" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB2"/>
+<SymbolReference symbolId="SYMB58"/>
 <SymbolReference symbolId="SYMB51"/>
 </DefiningSymbols>
 <UsingSymbols>
 <SymbolReference symbolId="SYMB2"/>
 <SymbolReference symbolId="SYMB9"/>
 <SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB60"/>
+<SymbolReference symbolId="SYMB56"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM5" type="state" name="sWaitZoneEntry" parentId="ITEM1" scope="none">
+<Item id="ITEM4" type="variable" name="NroZone" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB38"/>
+<SymbolReference symbolId="SYMB6"/>
 </DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB38"/>
-</UsingSymbols>
 </Item>
-<Item id="ITEM6" type="state" name="sWaitZoneOut" parentId="ITEM1" scope="none">
+<Item id="ITEM5" type="variable" name="numEntryWay" parentId="ITEM1" scope="none" variableTypeName="indexE_W">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM6" type="variable" name="numOutWay" parentId="ITEM1" scope="none" variableTypeName="indexO_W">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="NroCtrl" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM8" type="state" name="sWaitZoneOut" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB39"/>
 </DefiningSymbols>

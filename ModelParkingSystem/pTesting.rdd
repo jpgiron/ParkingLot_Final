@@ -62,10 +62,12 @@ or when It is leaving the zone</Text>
 <Text>sOutCarCtrl(NroCtrl)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="sdlText" xCenter="99" yCenter="44" fixedDimensions="TRUE" width="176" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB6" type="sdlText" xCenter="121" yCenter="77" fixedDimensions="FALSE" width="220" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>DCL
-NroCtrl,NroZone INTEGER;</Text>
+NroCtrl,NroZone INTEGER,
+numEntryWay indexE_W,
+numOutWay indexO_W;</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB7" type="sdlSendSig" xCenter="154" yCenter="385" fixedDimensions="TRUE" width="286" height="44" color="#000000" fillColor="#ffffff">
@@ -265,6 +267,31 @@ VIA cpTesting_Main</Text>
 <Description></Description>
 <Text>sLoopInductive_EntranceTest(numEntryWay) VIA cpTesting_Main</Text>
 </Symbol>
+
+<Symbol symbolId="SYMB56" type="sdlState" xCenter="275" yCenter="231" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB57" type="sdlSendSig" xCenter="275" yCenter="429" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sLoopInductive_ExitTest(numEntryWay) VIA cpTesting_Main</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB58" type="sdlState" xCenter="275" yCenter="297" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB59" type="sdlInputSig" xCenter="275" yCenter="363" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sLoopInductive_ExitTest(numOutWay)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB60" type="sdlState" xCenter="275" yCenter="495" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
 </Symbol>
 
 <Link linkId="LINK52" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
@@ -288,6 +315,62 @@ VIA cpTesting_Main</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB50" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK53" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB52" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB56" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK62" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB57" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB60" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK60" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB58" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB59" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK61" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB59" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB57" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

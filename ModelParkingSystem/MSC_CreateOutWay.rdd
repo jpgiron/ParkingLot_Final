@@ -131,7 +131,7 @@
 
 <Link linkId="LINK50" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB19" type="mscvoid" isOutside="TRUE" side="y" position="-0.680715197957" endType="voidend">
+<Connector attachedSymbolId="SYMB19" type="mscvoid" isOutside="TRUE" side="y" position="-0.694763729246" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -247,7 +247,7 @@
 </Link>
 
 <Link linkId="LINK39" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sCreateEntryWay</Text>
+<Text>sCreateOutWay</Text>
 <Connector attachedSymbolId="SYMB23" type="mscvoid" isOutside="TRUE" side="y" position="-0.789808917197" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>

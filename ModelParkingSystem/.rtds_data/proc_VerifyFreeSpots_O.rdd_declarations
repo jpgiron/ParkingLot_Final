@@ -1,0 +1,26 @@
+€}q(UversionqU4.4.1qUobjectq]q]q((crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q	(Utextq
+UIN freeSpots INTEGER ;qU
+identifierqU1UtypeqUfpardeclqUchildrenq]q(hoq}q(h
+UIN freeSpots INTEGERqhU1hUfparqh]q((hoq}q(h
+UINqhU1hUparamwayqh]qU_SyntaxTreeNodeAdapter__parentqhub(hoq}q(h
+U	freeSpotsqhU1hU	paramnameqh]q hhub(hoq!}q"(h
+UINTEGERq#hU1hU	paramtypeq$h]q%hhubeh(hoq&}q'(h
+hhU1hhhhhhububah(hoq(}q)(h
+UHFPAR
+IN freeSpots INTEGER;
+RETURNS INTEGER;
+DCL returnFreeSpots INTEGER;q*hNhUdatadeclq+h]q,(h(hoq-}q.(h
+U	INTEGER ;q/hU2hUretdeclq0h]q1(hoq2}q3(h
+UINTEGERq4hU2hUtypenameq5h]q6h(hoq7}q8(h
+h/hU2hh0hh1hh-ububahh(ub(hoq9}q:(h
+UreturnFreeSpots INTEGERq;hU3hUvardeclq<h]q=((hoq>}q?(h
+UINTEGERq@hU3hUtypenameqAh]qBh(hoqC}qD(h
+h;hU3hh<hh=hh9ubub(crtds.editor.business.SyntaxChecker
+SyntaxTreeNode
+qEoqF}qG(h
+UreturnFreeSpotsqHhNhUsnglvardeclqIh]qJ(hoqK}qL(h
+hHhU3hUvarnameqMh]qNhhCubaubehh(ubehNububcrtds.editor.business.ElementReference
+SymbolReference
+qO)qP}qQ(UprojectqRhRQUsymbolIdqSUSYMB5qTUdiagramFileNameqUUU/home/ubuntu/Documents/Final_Work_Model/ModelParkingSystem/proc_VerifyFreeSpots_O.rddqVubK‡qWh-hO)qX}qY(hRhRQhShThUhVubK‡qZh9hO)q[}q\(hRhRQhShThUhVubK‡q]e†q^u.

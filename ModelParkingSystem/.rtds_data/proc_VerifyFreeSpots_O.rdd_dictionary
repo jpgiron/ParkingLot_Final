@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="prcd">
+<Item id="ITEM1" type="procedure" name="proc_VerifyFreeSpots_O" scope="current" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="INTEGER" procedureReturnType="INTEGER">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<Prototype>
+<Signature>proc_VerifyFreeSpots_O</Signature>
+<PrototypeSymbol>
+<SymbolReference symbolId="SYMB11"/>
+<PrototypeText>proc_VerifyFreeSpots_O</PrototypeText>
+</PrototypeSymbol>
+</Prototype>
+<Body>
+</Body>
+</Item>
+<Item id="ITEM2" type="variable" name="freeSpots" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="returnFreeSpots" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+</Item>
+</DictionaryObjects>

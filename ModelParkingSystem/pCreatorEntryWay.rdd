@@ -38,12 +38,12 @@
 
 <Symbol symbolId="SYMB16" type="sdlInputSig" xCenter="231" yCenter="616" fixedDimensions="TRUE" width="352" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sOkCreateEntryNOut_Wayt_Way(pidEntryWay)</Text>
+<Text>sOkCreateEntryNOut_Way(pidEntryWay)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB17" type="sdlSendSig" xCenter="231" yCenter="682" fixedDimensions="TRUE" width="308" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sOkCreateEntryNOut_Way(pidEntryWay) VIA cCreatorEntryWay_Main</Text>
+<Text>sOkCreateEntryWay(pidEntryWay) VIA cCreatorEntryWay_Main</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB18" type="sdlState" xCenter="231" yCenter="737" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
@@ -128,7 +128,7 @@
 
 <Symbol symbolId="SYMB6" type="sdlDecision" xCenter="242" yCenter="286" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>numEntryWay&lt;cNUMMAXENTRYNWAY</Text>
+<Text>numEntryWay&lt;cNUMMAXENTRYWAY</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB8" type="sdlText" xCenter="979" yCenter="66" fixedDimensions="TRUE" width="220" height="110" color="#000000" fillColor="#ffffff">
@@ -136,7 +136,7 @@
 <Text>DCL
 numEntryWay INTEGER,
 numOutWay INTEGER,
-pidEntryWay PID;
+pidEntryWay PID,
 pidOutWay PID;</Text>
 </Symbol>
 
