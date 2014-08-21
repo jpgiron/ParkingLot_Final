@@ -11,23 +11,23 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB3" type="sdlPrcdProto" xCenter="330" yCenter="44" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB3" type="sdlPrcdProto" xCenter="396" yCenter="66" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>LoadDB</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="sdlText" xCenter="143" yCenter="44" fixedDimensions="FALSE" width="264" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB4" type="sdlText" xCenter="143" yCenter="44" fixedDimensions="FALSE" width="242" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>FPAR
 IN/OUT dataBase tDATABASE;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlPrcdStart" xCenter="264" yCenter="99" fixedDimensions="TRUE" width="66" height="22" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlPrcdStart" xCenter="264" yCenter="132" fixedDimensions="TRUE" width="66" height="22" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="sdlTask" xCenter="275" yCenter="572" fixedDimensions="FALSE" width="418" height="858" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB6" type="sdlTask" xCenter="275" yCenter="572" fixedDimensions="FALSE" width="396" height="792" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>dataBase!tplates(0):='ABE123',dataBase!tID(0):=0,
 dataBase!tplates(1):='AFG541',dataBase!tID(1):=1,
@@ -77,23 +77,23 @@ dataBase!tplates(39):='KIP740',dataBase!tID(39):=39</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK19" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK21" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB6" type="sdlarrow" isOutside="TRUE" side="x" position="-0.0526315789474" endType="arrow">
+<Connector attachedSymbolId="SYMB6" type="sdlarrow" isOutside="TRUE" side="x" position="-0.0555555555556" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="473"/>
+<LinkSegment orientation="v" length="440"/>
 
 </Link>
 
 <Link linkId="LINK20" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB6" type="void" isOutside="TRUE" side="x" position="-0.0526315789474" endType="voidend">
+<Connector attachedSymbolId="SYMB6" type="void" isOutside="TRUE" side="x" position="-0.0555555555556" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

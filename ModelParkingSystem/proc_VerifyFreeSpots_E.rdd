@@ -5,7 +5,7 @@
 <Diagram language="sdl" type="prcd" name="proc_VerifyFreeSpots_E" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
 
 <DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
-<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE"/>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
 <Symbol symbolId="SYMB2" type="sdlPrcdDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="#000000" fillColor="#ffffff">
 <Description></Description>
@@ -16,9 +16,9 @@
 <Text>returnFreeSpots</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB11" type="sdlTask" xCenter="407" yCenter="264" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB11" type="sdlTask" xCenter="407" yCenter="264" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>returnFreeSpots:=returnFreeSpots-1</Text>
+<Text>returnFreeSpots:=freeSpots-1</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB3" type="sdlPrcdProto" xCenter="385" yCenter="33" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">

@@ -134,7 +134,7 @@ module tc_EntryNOutCarSystem
     
     indexHour:=19;
     
-    for (index:=0;index<4*indexHour+4/*length_array_data*/;index:=index+1)
+    for (index:=0;index<4*indexHour+4;index:=index+1)
     {
       /* In cars */
       numCars:=aEntryCar[index];
@@ -159,31 +159,6 @@ module tc_EntryNOutCarSystem
       
       
     }
-    
-    /*Loop for Out Cars */
-    /*for (index:=0;index<length_array_data;index:=index+1)
-    {
-      numCars:=aOutCar[index];
-      nCtrl_Entry:=aCtrlOutCar[index];
-      nZone_Entry:=aZoneOutCar[index];
-      for (count_numCars:=0; count_numCars<numCars;count_numCars:=count_numCars+1)
-      {
-          execute(tc_OutCar(nCtrl_Entry,nZone_Entry));
-          t_waitEntryCar.start(10);
-          t_waitEntryCar.timeout;
-      }
-    }*/
-    
-    /*Loop for Verify Expected Datas */
-    /*for (index:=0;index<length_array_data;index:=index+1)
-    {
-      numCars:=aExpectedSpots[index];
-      nCtrl_Entry:=aCtrlExpected[index];
-      nZone_Entry:=aZoneExpected[index];
-      execute(tc_VerifyFreeSpots(nCtrl_Entry,nZone_Entry,numCars));
-      t_waitEntryCar.start(10);
-      t_waitEntryCar.timeout;
-    }*/
     numCars:=aExpectedSpots[4*indexHour];
     nCtrl_Entry:=aCtrlExpected[4*indexHour];
     nZone_Entry:=aZoneExpected[4*indexHour];
