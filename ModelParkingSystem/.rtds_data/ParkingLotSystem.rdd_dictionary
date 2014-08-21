@@ -20,7 +20,7 @@
 <Signal id="SIG15" name="sPlate">
 <SignalParameterType>charstring</SignalParameterType>
 </Signal>
-<Signal id="SIG16" name="sOkCreateEntryWay">
+<Signal id="SIG16" name="sOkCreateEntryNOut_Way">
 <SignalParameterType>PID</SignalParameterType>
 </Signal>
 <Signal id="SIG17" name="sExcEntryWay">

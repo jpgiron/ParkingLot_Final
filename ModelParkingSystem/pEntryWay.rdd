@@ -2,7 +2,7 @@
 
 <!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
 
-<Diagram language="sdl" type="prcs" name="pEntryWay" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
+<Diagram language="sdl" type="prcs" name="pEntryNOut_Way" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
 
 <DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
@@ -62,9 +62,9 @@ i_pidC:=pidC</Text>
 <Text>sWaitAssigned</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB149" type="sdlSendSig" xCenter="495" yCenter="550" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB149" type="sdlSendSig" xCenter="495" yCenter="550" fixedDimensions="FALSE" width="352" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sOkCreateEntryWay(SELF) TO PARENT</Text>
+<Text>sOkCreateEntryNOut_Way(SELF) TO PARENT</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB150" type="sdlInputSig" xCenter="495" yCenter="198" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">

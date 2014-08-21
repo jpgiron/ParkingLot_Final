@@ -49,22 +49,6 @@ sExcEntryWay]</Text>
 
 </Link>
 
-<Link linkId="LINK407" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Zone</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.590909090909" endType="midarrow">
-<Text id="1">[sIR1_Zone,sIR2_Zone,
-sIR3_Zone,sIR4_Zone,
-sLoopInductive_Zone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="0.247818499127" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="-264"/>
-
-</Link>
-
 <Link linkId="LINK425" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cDisplay_Main</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="-0.6" endType="midarrow">
@@ -76,6 +60,26 @@ sLoopInductive_Zone]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="h" length="-573"/>
+
+</Link>
+
+<Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_pTesting</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
+<Text id="1">[sEntryCarCtrl,
+sOutCarCtrl,
+sEntryCarZone,
+sOutCarZone,
+sLoopInductive_EntranceTest,
+sLoopInductive_ExitTest,
+sCarPassedBarrierTest]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.155322862129" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-264"/>
 
 </Link>
 
@@ -96,19 +100,15 @@ sDownBarrier]</Text>
 
 </Link>
 
-<Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_pTesting</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
-<Text id="1">[sEntryCarCtrl,
-sOutCarCtrl,
-sEntryCarZone,
-sOutCarZone,
-sLoopInductive_EntranceTest,
-sLoopInductive_ExitTest,
-sCarPassedBarrierTest]</Text>
+<Link linkId="LINK407" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Zone</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.590909090909" endType="midarrow">
+<Text id="1">[sIR1_Zone,sIR2_Zone,
+sIR3_Zone,sIR4_Zone,
+sLoopInductive_Zone]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.155322862129" endType="midarrow">
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="0.247818499127" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
@@ -216,7 +216,7 @@ sConfirmOutUser]</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB47" type="sdlText" xCenter="858" yCenter="561" fixedDimensions="FALSE" width="352" height="924" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB47" type="sdlText" xCenter="858" yCenter="572" fixedDimensions="FALSE" width="352" height="946" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>NEWTYPE infoMainCtrls
 STRUCT
@@ -240,6 +240,7 @@ STRUCT
     freeSpotsParking INTEGER;
     tableInfoCtrl tableMainInfoCtrls;
     tableEntryWays table_EntryWays;
+    tableOutWays table_OutWays;
 ENDNEWTYPE;
 
 SYNTYPE Index = INTEGER
@@ -267,7 +268,7 @@ STRUCT
 ENDNEWTYPE;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlText" xCenter="319" yCenter="550" fixedDimensions="TRUE" width="594" height="1078" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="330" yCenter="682" fixedDimensions="TRUE" width="616" height="1298" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/* Declarations of constants */
 
@@ -275,7 +276,9 @@ SYNONYM cNUMMAXCTRL INTEGER = 3;
 SYNONYM cMAX_ZONES INTEGER = 3;
 SYNONYM cNUMMAXZONES_SYSTEM INTEGER = cNUMMAXCTRL*cMAX_ZONES;
 SYNONYM cNUMMAXSPOTS INTEGER = 500;
-SYNONYM cNUMMAXENTRYWAY INTEGER = 4;
+SYNONYM cNUMMAXENTRYWAY INTEGER = 2;
+SYNONYM cNUMMAXOUTWAY INTEGER = 2;
+SYNONYM cNUMMAXENTRYNOUTWAY INTEGER = cNUMMAXENTRYWAY+cNUMMAXOUTWAY;
 SYNONYM cNUMMAXUSERS INTEGER = 40;
 
 SYNTYPE i_spots = INTEGER
@@ -295,11 +298,19 @@ STRUCT
 ENDNEWTYPE;
 
 SYNTYPE indexE_W = INTEGER
-  CONSTANTS 0:cNUMMAXENTRYWAY-1
+  CONSTANTS 0:cNUMMAXENTRYWAY
+ENDSYNTYPE;
+
+SYNTYPE indexO_W = INTEGER
+  CONSTANTS 0:cNUMMAXOUTWAY
 ENDSYNTYPE;
 
 NEWTYPE table_EntryWays
     ARRAY(indexE_W,PID)
+ENDNEWTYPE;
+
+NEWTYPE table_OutWays
+    ARRAY(indexO_W,PID)
 ENDNEWTYPE;
 
 NEWTYPE table_Zones
@@ -531,7 +542,7 @@ SIGNAL sAssignCardReaderNCam;
 /*Channel cInternalEntryWay*/
 /*---&gt;Signals from pEntryWay to pCreatorEntryWay&lt;---*/
 
-SIGNAL sOkCreateEntryWay;
+SIGNAL sOkCreateEntryNOut_Way(PID);
 
 /*---&gt;Signals from pCreatorEntryWay to pEntryWay&lt;---*/
 

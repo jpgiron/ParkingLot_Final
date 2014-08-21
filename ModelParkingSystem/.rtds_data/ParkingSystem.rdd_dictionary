@@ -391,44 +391,44 @@
 <SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG82" name="sOkInitEntryWay">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB44"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG83" name="sOutCarSystem">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB44"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG84" name="sOkCreateEntryWay">
+<Signal id="SIG82" name="sOkCreateEntryNOut_Way">
 <SignalParameterType>PID</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB44"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG85" name="sEnteredCarSystem">
+<Signal id="SIG83" name="sOkInitEntryWay">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB44"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG86" name="sOkEntryWay1">
+<Signal id="SIG84" name="sOutCarSystem">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB44"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG87" name="sInitEntryWay_i">
+<Signal id="SIG85" name="sOkCreateEntryWay">
+<SignalParameterType>PID</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB44"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG88" name="sIamCamera">
-<SignalParameterType>pid</SignalParameterType>
+<Signal id="SIG86" name="sEnteredCarSystem">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB46"/>
+<SymbolReference symbolId="SYMB44"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG89" name="sIamCardReader">
+<Signal id="SIG87" name="sOkEntryWay1">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG88" name="sInitEntryWay_i">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG89" name="sIamCamera">
 <SignalParameterType>pid</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB46"/>
@@ -437,6 +437,12 @@
 <Signal id="SIG9" name="sExcEntryWay">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG90" name="sIamCardReader">
+<SignalParameterType>pid</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
 </DeclarationSymbols>
 </Signal>
 <Item id="ITEM1" type="system" name="System" scope="current">
@@ -574,37 +580,37 @@
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM13" type="type" name="tableInfoGralCtrl" parentId="ITEM1" scope="none">
+<Item id="ITEM13" type="type" name="table_EntryWays" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM14" type="type" name="InfoZone" parentId="ITEM1" scope="none">
+<Item id="ITEM14" type="type" name="tableInfoGralCtrl" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM15" type="type" name="indexE_W" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<Item id="ITEM15" type="type" name="InfoZone" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM16" type="type" name="itIndext_Ctrl" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<Item id="ITEM16" type="type" name="indexE_W" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM17" type="type" name="tableVeriFyCon_Zone" parentId="ITEM1" scope="none">
+<Item id="ITEM17" type="type" name="itIndext_Ctrl" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM18" type="type" name="i_spots" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<Item id="ITEM18" type="type" name="tableVeriFyCon_Zone" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM19" type="type" name="table_Zones" parentId="ITEM1" scope="none">
+<Item id="ITEM19" type="type" name="i_spots" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
@@ -720,47 +726,52 @@
 </ReceivedSignals>
 </SignalWindow>
 </Item>
-<Item id="ITEM20" type="type" name="table_EntryWays" parentId="ITEM1" scope="none">
+<Item id="ITEM20" type="type" name="table_Zones" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM21" type="type" name="itIndex" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<Item id="ITEM21" type="type" name="table_OutWays" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM22" type="type" name="tableMainInfoCtrls" parentId="ITEM1" scope="none">
+<Item id="ITEM22" type="type" name="indexO_W" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM23" type="variable" name="cNUMMAXCTRL" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<Item id="ITEM23" type="type" name="itIndex" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM24" type="variable" name="cNUMMAXENTRYWAY" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<Item id="ITEM24" type="type" name="tableMainInfoCtrls" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM25" type="variable" name="cNUMMAXUSERS" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<Item id="ITEM25" type="variable" name="cNUMMAXOUTWAY" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM26" type="variable" name="cMAX_ZONES" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<Item id="ITEM26" type="variable" name="cNUMMAXCTRL" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM27" type="variable" name="cNUMMAXZONES_SYSTEM" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<Item id="ITEM27" type="variable" name="cNUMMAXENTRYNOUTWAY" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM28" type="variable" name="cNUMMAXSPOTS" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<Item id="ITEM28" type="variable" name="cNUMMAXENTRYWAY" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM29" type="variable" name="cMAX_ZONES" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
@@ -822,6 +833,21 @@
 <SignalReference id="SIG38"/>
 </ReceivedSignals>
 </SignalWindow>
+</Item>
+<Item id="ITEM30" type="variable" name="cNUMMAXZONES_SYSTEM" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM31" type="variable" name="cNUMMAXSPOTS" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM32" type="variable" name="cNUMMAXUSERS" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
 </Item>
 <Item id="ITEM4" type="type" name="DataUser" parentId="ITEM1" scope="none">
 <DefiningSymbols>

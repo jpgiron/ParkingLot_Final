@@ -5,7 +5,7 @@
 <Diagram language="sdl" type="msc" name="MSC_CreateOutWay" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
 
 <DiagramPartition name="Part. 0" nbPagesH="3" nbPagesV="2">
-<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE"/>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
 <Symbol symbolId="SYMB1" type="mscExternalFrm" xCenter="892" yCenter="841" fixedDimensions="TRUE" width="1741" height="1617" color="#000000" fillColor="#ffffff">
 <Description></Description>
@@ -156,7 +156,7 @@
 </Link>
 
 <Link linkId="LINK48" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sOkCreateEntryNOutWay(pidEntryWay)</Text>
+<Text>sOkCreateOutWay(pidOutWay)</Text>
 <Connector attachedSymbolId="SYMB19" type="mscvoid" isOutside="TRUE" side="y" position="0.00766283524904" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
@@ -286,7 +286,7 @@
 </Link>
 
 <Link linkId="LINK40" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sOkCreateE_W</Text>
+<Text>sOkCreateO_W</Text>
 <Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.0449293966624" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>

@@ -80,21 +80,6 @@ sInitialConnection]</Text>
 
 </Link>
 
-<Link linkId="LINK88" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cMain_CtrlManager</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sExcQuantityCtrl,
-sOkCreationCtrl]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="0.0232258064516" endType="midarrow">
-<Text id="1">[sCreateCtrl]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="h" length="627"/>
-
-</Link>
-
 <Link linkId="LINK92" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_Main</Text>
 <Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.521739130435" endType="midarrow">
@@ -123,6 +108,36 @@ sExcEntryWay]</Text>
 
 </Link>
 
+<Link linkId="LINK88" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cMain_CtrlManager</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sExcQuantityCtrl,
+sOkCreationCtrl]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="0.0232258064516" endType="midarrow">
+<Text id="1">[sCreateCtrl]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="h" length="627"/>
+
+</Link>
+
+<Link linkId="LINK87" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCreatorEntryWay_Main</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.130434782609" endType="midarrow">
+<Text id="1">[sOkCreateEntryNOut_Way,
+sExcEntryWay]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.020942408377" endType="midarrow">
+<Text id="1">[sCreateEntryWay]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="-396"/>
+
+</Link>
+
 <Link linkId="LINK90" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cDisplay_Main</Text>
 <Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="-0.565217391304" endType="midarrow">
@@ -134,21 +149,6 @@ sExcEntryWay]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="v" length="383"/>
-
-</Link>
-
-<Link linkId="LINK87" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cCreatorEntryWay_Main</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.130434782609" endType="midarrow">
-<Text id="1">[sOkCreateEntryWay,
-sExcEntryWay]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.020942408377" endType="midarrow">
-<Text id="1">[sCreateEntryWay]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="v" length="-396"/>
 
 </Link>
 

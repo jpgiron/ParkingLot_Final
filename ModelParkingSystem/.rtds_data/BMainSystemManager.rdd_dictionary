@@ -33,7 +33,7 @@
 <Signal id="SIG19" name="sOkCreateZone">
 <SignalParameterType>InfoCtrl</SignalParameterType>
 </Signal>
-<Signal id="SIG2" name="sOkCreateEntryWay">
+<Signal id="SIG2" name="sOkCreateEntryNOut_Way">
 <SignalParameterType>PID</SignalParameterType>
 </Signal>
 <Signal id="SIG20" name="sExcLimitZones">
