@@ -81,12 +81,24 @@ sConfirmZoneManager_i]</Text>
 
 </Link>
 
+<Link linkId="LINK234" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cDisplay_Main</Text>
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="-0.516129032258" endType="midarrow">
+<Text id="1">[sReqInfoCtrlZone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.397199236155" endType="midarrow">
+<Text id="1">[sInfoCtrlZone]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="-319"/>
+
+</Link>
+
 <Link linkId="LINK237" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_Main</Text>
 <Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="0.375" endType="midarrow">
 <Text id="1">[sCreateCtrlZone,
-sCreateEntryWay,
-sCreateOutWay,
 sReqInfoSystem,
 sAddZone,
 sSetUpFreeSpot,
@@ -100,29 +112,10 @@ sOkCreateCtrl,
 sExcLimitZones,
 sOkCreationZone,
 sOkSetUp,
-sInfoSystem,
-sOkCreateE_W,
-sOkCreateO_W,
-sExcEntryWay,
-sExcOutWay,
-sFreeSpotsSystem]</Text>
+sInfoSystem]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="h" length="924"/>
-
-</Link>
-
-<Link linkId="LINK234" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cDisplay_Main</Text>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="-0.516129032258" endType="midarrow">
-<Text id="1">[sReqInfoCtrlZone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.397199236155" endType="midarrow">
-<Text id="1">[sInfoCtrlZone]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="v" length="-319"/>
 
 </Link>
 

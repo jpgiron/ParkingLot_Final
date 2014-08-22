@@ -72,7 +72,7 @@ infoTableZone,tmpInfoZone InfoZone,
 indexList,index,indexPid INTEGER,
 infoCtrlG InfoCtrl,
 assignedZoneManager BOOLEAN,
-zone itIndex,
+zone indexZone,
 tmpTblZone table_Zones;</Text>
 </Symbol>
 
@@ -626,20 +626,17 @@ infoCtrlG!alltotalSpots:=0</Text>
 <Text>-</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB1533" type="sdlTask" xCenter="891" yCenter="264" fixedDimensions="TRUE" width="506" height="132" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1533" type="sdlTask" xCenter="891" yCenter="264" fixedDimensions="TRUE" width="506" height="154" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>
+<Text>/*
 infoTableZone!freeSpots:=p_freeSpots,
 infoTableZone!ID:=SENDER,
 pidZone:=SENDER,
 tmpTblZone := infoCtrlG!listZones,
-index:=CALL proc_FindIndexPidZone(pidZone,tmpTblZone,indexList)</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB1535" type="sdlTask" xCenter="924" yCenter="385" fixedDimensions="FALSE" width="396" height="66" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>infoTableZone!totalSpots:=tmpTblZone(index)!totalSpots,
-infoCtrlG!listZones(index):=infoTableZone</Text>
+index:=CALL proc_FindIndexPidZone(pidZone,tmpTblZone,indexList),
+infoTableZone!totalSpots:=tmpTblZone(index)!totalSpots,
+infoCtrlG!listZones(index):=infoTableZone
+*/</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB1536" type="sdlInputSig" xCenter="1034" yCenter="132" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
@@ -817,23 +814,9 @@ infoCtrlG!listZones(index):=infoTableZone</Text>
 
 </Link>
 
-<Link linkId="LINK2025" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK2042" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB1533" type="void" isOutside="TRUE" side="x" position="0.130434782609" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1535" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="121"/>
-
-</Link>
-
-<Link linkId="LINK1903" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB1535" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -841,7 +824,7 @@ infoCtrlG!listZones(index):=infoTableZone</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="77"/>
+<LinkSegment orientation="v" length="198"/>
 
 </Link>
 
@@ -954,8 +937,8 @@ pidZone := tmpInfoZone!ID</Text>
 
 <Symbol symbolId="SYMB1552" type="sdlTask" xCenter="517" yCenter="539" fixedDimensions="FALSE" width="286" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>tmpInfoZone!freeSpots:=p_freeSpots,
-infoCtrlG!listZones(zone):=tmpInfoZone</Text>
+<Text>/*tmpInfoZone!freeSpots:=p_freeSpots,
+infoCtrlG!listZones(zone):=tmpInfoZone*/</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB1553" type="sdlInputSig" xCenter="517" yCenter="473" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
@@ -973,20 +956,21 @@ infoCtrlG!listZones(zone):=tmpInfoZone</Text>
 <Text>sOkInit</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB1645" type="sdlSendSig" xCenter="891" yCenter="605" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1645" type="sdlSendSig" xCenter="891" yCenter="616" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sOkSetUp VIA cMain_CtrlZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB1646" type="sdlState" xCenter="891" yCenter="671" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1646" type="sdlState" xCenter="891" yCenter="693" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB1647" type="sdlTask" xCenter="891" yCenter="539" fixedDimensions="FALSE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1647" type="sdlTask" xCenter="891" yCenter="539" fixedDimensions="FALSE" width="286" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>tmpInfoZone!totalSpots:=p_totalSpots,
-infoCtrlG!listZones(zone):=tmpInfoZone</Text>
+<Text>/*
+tmpInfoZone!totalSpots:=p_totalSpots,
+infoCtrlG!listZones(zone):=tmpInfoZone*/</Text>
 </Symbol>
 </Symbol>
 
@@ -1232,7 +1216,7 @@ infoCtrlG!listZones(zone):=tmpInfoZone</Text>
 
 </Link>
 
-<Link linkId="LINK2017" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK2045" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB1645" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1242,11 +1226,11 @@ infoCtrlG!listZones(zone):=tmpInfoZone</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="66"/>
+<LinkSegment orientation="v" length="77"/>
 
 </Link>
 
-<Link linkId="LINK2014" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK2044" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB1647" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1256,7 +1240,7 @@ infoCtrlG!listZones(zone):=tmpInfoZone</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="66"/>
+<LinkSegment orientation="v" length="77"/>
 
 </Link>
 </DiagramPartition>
@@ -1307,11 +1291,11 @@ cMain_CtrlZone</Text>
 
 <Symbol symbolId="SYMB43" type="sdlTask" xCenter="176" yCenter="231" fixedDimensions="FALSE" width="330" height="132" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>infoTableZone!totalSpots:=p_totalSpots,
+<Text>/*infoTableZone!totalSpots:=p_totalSpots,
 infoTableZone!freeSpots:=p_freeSpots,
 infoTableZone!ID:=pidZone,
 infoCtrlG!listZones(indexList):=infoTableZone,
-indexList:=indexList+1</Text>
+indexList:=indexList+1*/</Text>
 </Symbol>
 </Symbol>
 
@@ -1452,7 +1436,7 @@ indexPid:=CALL proc_FindIndexPidZone(pidZone,tmpTblZone,indexList),
 infoCtrlG!listZones(indexPid):=infoTableZone,
 infoCtrlG!allfreeSpots:=infoCtrlG!allfreeSpots+p_freeSpots,
 infoCtrlG!alltotalSpots:=infoCtrlG!alltotalSpots+p_totalSpots,
-infoCtrlG!tableConnectionOkZones(indexPid):=TRUE,
+/*infoCtrlG!tableConnectionOkZones(indexPid):=TRUE,*/
 index:=index+1</Text>
 </Symbol>
 

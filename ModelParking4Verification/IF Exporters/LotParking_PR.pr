@@ -1,0 +1,1171 @@
+
+SYSTEM System;
+/* Declarations of constants */
+
+SYNONYM cNUMMAXCTRL INTEGER = 3;
+SYNONYM cMAX_ZONES INTEGER = 3;
+SYNONYM cNUMMAXZONES_SYSTEM INTEGER = cNUMMAXCTRL*cMAX_ZONES;
+SYNONYM cNUMMAXSPOTS INTEGER = 500;
+SYNONYM cNUMMAXENTRYWAY INTEGER = 2;
+SYNONYM cNUMMAXOUTWAY INTEGER = 2;
+SYNONYM cNUMMAXENTRYNOUTWAY INTEGER = cNUMMAXENTRYWAY+cNUMMAXOUTWAY;
+SYNONYM cNUMMAXUSERS INTEGER = 40;
+SYNONYM cNUMMAXFREESPOTS INTEGER =  cNUMMAXSPOTS*cNUMMAXZONES_SYSTEM;
+
+SYNTYPE i_spots = INTEGER
+DEFAULT 0;
+    CONSTANTS 0..cNUMMAXSPOTS
+ENDSYNTYPE;
+
+SYNTYPE numMaxSpots = INTEGER
+  CONSTANTS 0:cNUMMAXFREESPOTS
+ENDSYNTYPE;
+
+SYNTYPE itIndex = INTEGER
+  CONSTANTS 0:cMAX_ZONES-1
+ENDSYNTYPE;
+
+NEWTYPE InfoZone
+STRUCT
+    totalSpots INTEGER;
+    freeSpots INTEGER;
+    ID PID;
+ENDNEWTYPE;
+
+SYNTYPE indexE_W = INTEGER
+  CONSTANTS 0:cNUMMAXENTRYWAY
+ENDSYNTYPE;
+
+SYNTYPE indexO_W = INTEGER
+  CONSTANTS 0:cNUMMAXOUTWAY
+ENDSYNTYPE;
+
+NEWTYPE table_EntryWays
+    ARRAY(indexE_W,PID)
+ENDNEWTYPE;
+
+NEWTYPE table_OutWays
+    ARRAY(indexO_W,PID)
+ENDNEWTYPE;
+
+NEWTYPE table_Zones
+  ARRAY(itIndex, InfoZone)
+ENDNEWTYPE;
+
+SYNTYPE itIndext_Ctrl = INTEGER
+  CONSTANTS 0:cNUMMAXCTRL-1
+ENDSYNTYPE;
+
+NEWTYPE tableInfoGralCtrl
+  ARRAY(itIndext_Ctrl, InfoCtrl)
+ENDNEWTYPE;
+
+NEWTYPE tableMainInfoCtrls
+    ARRAY(itIndext_Ctrl,infoMainCtrls)
+ENDNEWTYPE;
+
+NEWTYPE tableVeriFyCon_Zone
+    ARRAY(itIndext_Ctrl,BOOLEAN)
+ENDNEWTYPE;
+
+NEWTYPE tableVerifyCon_Ctrl
+    ARRAY(itIndext_Ctrl,BOOLEAN)
+ENDNEWTYPE;
+NEWTYPE infoMainCtrls
+STRUCT
+    totalSpotsZone INTEGER;
+    freeSpotsZone INTEGER;
+ENDNEWTYPE;
+
+NEWTYPE InfoCtrl
+STRUCT
+    alltotalSpots INTEGER;
+    allfreeSpots INTEGER;
+    IDCtrl PID;
+    listZones table_Zones;
+    tableConnectionOkZones tableVeriFyCon_Zone;
+ENDNEWTYPE;
+
+NEWTYPE InfoMainSystem
+STRUCT
+    totalSpotsSystem INTEGER;
+    freeSpotsSystem INTEGER;
+    freeSpotsParking INTEGER;
+    tableInfoCtrl tableMainInfoCtrls;
+    tableEntryWays table_EntryWays;
+    tableOutWays table_OutWays;
+ENDNEWTYPE;
+
+SYNTYPE Index = INTEGER
+  CONSTANTS 0:cNUMMAXUSERS-1
+ENDSYNTYPE;
+
+NEWTYPE vec_Plates
+      ARRAY(Index, charstring);
+ENDNEWTYPE;
+
+NEWTYPE vec_ID
+    ARRAY(Index, INTEGER);
+ENDNEWTYPE;
+
+NEWTYPE DataUser
+ STRUCT
+      plate charstring;
+      ID INTEGER;
+ENDNEWTYPE;
+
+NEWTYPE tDATABASE
+STRUCT
+      tplates vec_Plates;
+      tID         vec_ID;
+ENDNEWTYPE;
+/*-------------------------------------------------- Process called pZone --------------------------------------------------------------*/
+
+/*Channel cEnv_Zone */
+/*---->Signal from Enviroment to pZone <----- */
+
+SIGNAL sIR1_Zone,sIR2_Zone,sIR3_Zone,sIR4_Zone,sLoopInductive_Zone;
+
+/*Channel cCtrl_Zone */
+/*----> Signals from pCtrl to pZone <----- */
+
+SIGNAL sInitFreeSpot(i_spots),sInitTotalSpots(i_spots),sReqInfo,sInitPidCtrl(PID);
+
+/*---> Signals from pZone to pCrtl <----*/
+
+SIGNAL sEntered_Car(i_spots),sOut_Car(i_spots),sOkInit,sInfoZone(i_spots,i_spots),sOkInitPid;
+      
+/*Channel cMain_Zone*/
+/*---> Signals from pTesting to pZone<----*/
+
+SIGNAL sIR1_ZoneTest,sIR2_ZoneTest,sIR3_ZoneTest,sIR4_ZoneTest,sLoopInductive_ZoneTest;
+
+/*-------------------------------------------------Process pZoneManager---------------------------------------------------------- */
+
+/* channel cCtrl_ZoneManager*/
+
+/*---> Signals from pCtrl to pZoneManager <---*/
+
+SIGNAL sCreateZone(i_spots,i_spots),sConfirmZoneManager_i;
+
+/*--->Signals from pZoneManager to pCtrl <---*/
+
+SIGNAL sOkCreation(PID),sExcQuantityZones,sIamZoneManager;
+
+/*channel cCreator_ZoneManager*/
+
+/*---> Signals from pCreatorZoneManager to pZoneManager*/
+
+SIGNAL sConfirmZoneManager(PID);
+/*------------------------------------------------Process pCreatorZoneManager-----------------------------------------------*/
+
+/*Channel cCtrl_CreatorZoneManager */
+
+/*---> Signals from pCtrl to pCreatorZoneManager <---*/
+
+SIGNAL sCreateZoneManager;
+
+/*--->Signals from pCreatorZoneManager to pCtrl <---*/
+
+SIGNAL sOkCreateZoneManager(PID);
+/*-------------------------------------------Process pCtrlManager ------------------------------------------*/
+
+/*Channel cMain_CtrlManager*/
+
+/*--->Signals from pMainSystemManager to pCtrlManager <---*/
+
+SIGNAL sCreateCtrl;
+
+/*Signals from pCtrlManager to pMainSystemManager*/
+
+SIGNAL sExcQuantityCtrl,sOkCreationCtrl(InfoCtrl);
+
+/*Channel cCtrl_CtrlManager*/
+
+/* Signals from pCtrlManager to pCtrl*/
+
+SIGNAL sConfirmCtrl;
+
+/*Signals from pCtrl to pCtrlManager*/
+
+SIGNAL sIamCtrl(InfoCtrl);
+
+/*Channel cMain_CtrlZone*/
+
+/*Signals from pMainSystemManager to pCtrl*/
+
+SIGNAL sCreateZone_(i_spots,i_spots),sReqInfoCtrl,sInitFreeSpotZone(itIndex,i_spots);
+SIGNAL sInitTotalSpotZone(itIndex,i_spots),sInitialConnection;
+
+/*Signals from pCtrl to pMainSystemManager*/
+
+SIGNAL sInfoTotalCtrl(InfoCtrl),sOkCreateZone(InfoCtrl),sExcLimitZones,sOkSetUp;
+SIGNAL sOkCreationCtrl_i(InfoCtrl);
+/*-----------------------------------------Process pMainSystemManager-------------------------------*/
+/*Channel cEnv_Main*/
+
+/*--->Signals from Enviroment to pMainSystemManager<---*/
+
+SIGNAL sCreateCtrlZone,sReqInfoSystem,sAddZone(itIndext_Ctrl,i_spots,i_spots);
+SIGNAL sSetUpFreeSpot(itIndext_Ctrl,itIndex,i_spots),sSetUpTotalSpot(itIndext_Ctrl,itIndex,i_spots);
+SIGNAL sCreateEntryWay,sCreateOutWay; 
+
+/*--->Signals from pMainSystemManager to Enviroment<---*/
+
+SIGNAL sExcLimitCtrl,sOkCreationZone,sImpossibleGetInfoCtrls,sOkCreateCtrl;
+SIGNAL sInfoSystem(InfoMainSystem),sOkCreateE_W,sOkCreateO_W;
+SIGNAL sFreeSpotsSystem(numMaxSpots);
+
+/*Channel cpTesting_Main*/
+
+/*--->Signals from pTesting to pMainSystemManager<---*/
+
+SIGNAL sEntryCar(itIndext_Ctrl,itIndex),sOutCar(itIndext_Ctrl,itIndex);
+
+/*Channel cDisplay_Main*/
+
+/*--->Signal from process pDisplay to process pMain<---*/
+
+SIGNAL sReqInfoCtrlZone(itIndext_Ctrl,itIndex);
+
+/*--->Signal from process pMain to process pDisplay<---*/
+
+SIGNAL sInfoCtrlZone(i_spots);
+
+/*--------------------------------------------Process pTesting-----------------------------------------------*/
+
+/*Channel cEnv_pTesting */
+
+/*--->Signals from Enviroment to pTesting<---*/
+ 
+SIGNAL sEntryCarCtrl(itIndext_Ctrl),sOutCarCtrl(itIndext_Ctrl);
+SIGNAL sEntryCarZone(itIndex),sOutCarZone(itIndex);
+SIGNAL sLoopInductive_EntranceTest(indexE_W),sLoopInductive_ExitTest(indexO_W);
+SIGNAL sCarPassedBarrierTest(indexE_W);
+
+CHANNEL cEnv_Zone
+FROM ENV TO ParkingLotSystem WITH sIR1_Zone, sIR2_Zone, sIR3_Zone, sIR4_Zone, sLoopInductive_Zone;
+ENDCHANNEL;
+
+CHANNEL cDisplay_Main
+FROM ENV TO ParkingLotSystem WITH sReqInfoCtrlZone;
+FROM ParkingLotSystem TO ENV WITH sInfoCtrlZone;
+ENDCHANNEL;
+
+CHANNEL cEnv_Main
+FROM ENV TO ParkingLotSystem WITH sCreateCtrlZone, sReqInfoSystem, sAddZone, sSetUpFreeSpot, sSetUpTotalSpot;
+FROM ParkingLotSystem TO ENV WITH sExcLimitCtrl, sImpossibleGetInfoCtrls, sOkCreateCtrl, sExcLimitZones, sOkCreationZone, sOkSetUp, sInfoSystem;
+ENDCHANNEL;
+BLOCK ParkingLotSystem REFERENCED;
+ENDSYSTEM;
+
+
+BLOCK <<SYSTEM System>> ParkingLotSystem;
+
+SUBSTRUCTURE ParkingLotSystem;
+
+CHANNEL cCtrl_Zone
+FROM BZone TO BCtrlZone WITH sEntered_Car, sOut_Car, sOkInit, sInfoZone, sOkInitPid;
+FROM BCtrlZone TO BZone WITH sInitFreeSpot, sInitTotalSpots, sReqInfo, sInitPidCtrl;
+ENDCHANNEL;
+
+CHANNEL cEnv_Main
+FROM ENV TO BMainSystemManager WITH sCreateCtrlZone, sReqInfoSystem, sAddZone, sSetUpFreeSpot, sSetUpTotalSpot;
+FROM BMainSystemManager TO ENV WITH sExcLimitCtrl, sImpossibleGetInfoCtrls, sOkCreateCtrl, sExcLimitZones, sOkCreationZone, sOkSetUp, sInfoSystem;
+ENDCHANNEL;
+
+CHANNEL cDisplay_Main
+FROM ENV TO BMainSystemManager WITH sReqInfoCtrlZone;
+FROM BMainSystemManager TO ENV WITH sInfoCtrlZone;
+ENDCHANNEL;
+
+CHANNEL cCtrl_CreatorZoneManager
+FROM BCtrlZone TO BZone WITH sCreateZoneManager;
+FROM BZone TO BCtrlZone WITH sOkCreateZoneManager;
+ENDCHANNEL;
+
+CHANNEL cMain_CtrlManager
+FROM BCtrlZone TO BMainSystemManager WITH sExcQuantityCtrl, sOkCreationCtrl;
+FROM BMainSystemManager TO BCtrlZone WITH sCreateCtrl;
+ENDCHANNEL;
+
+CHANNEL cMain_CtrlZone
+FROM BCtrlZone TO BMainSystemManager WITH sInfoTotalCtrl, sOkCreateZone, sExcLimitZones, sOkCreateZone, sOkSetUp, sOkCreationCtrl_i, sExcZoneManager;
+FROM BMainSystemManager TO BCtrlZone WITH sCreateZone_, sReqInfoCtrl, sInitFreeSpotZone, sInitTotalSpotZone, sInitialConnection;
+ENDCHANNEL;
+
+CHANNEL cCtrl_ZoneManager
+FROM BZone TO BCtrlZone WITH sOkCreation, sExcQuantityZones, sIamZoneManager;
+FROM BCtrlZone TO BZone WITH sCreateZone, sConfirmZoneManager_i;
+ENDCHANNEL;
+
+CHANNEL cEnv_Zone
+FROM ENV TO BZone WITH sIR1_Zone, sIR2_Zone, sIR3_Zone, sIR4_Zone, sLoopInductive_Zone;
+ENDCHANNEL;
+
+CONNECT cEnv_Zone AND cEnv_Zone;
+
+CONNECT cEnv_Main AND cEnv_Main;
+
+CONNECT cDisplay_Main AND cDisplay_Main;
+BLOCK BMainSystemManager REFERENCED;
+BLOCK BCtrlZone REFERENCED;
+BLOCK BZone REFERENCED;
+
+ENDSUBSTRUCTURE;
+ENDBLOCK;
+
+
+BLOCK <<SYSTEM System / BLOCK ParkingLotSystem / SUBSTRUCTURE ParkingLotSystem>> BMainSystemManager;
+
+SIGNALROUTE cMain_CtrlManager
+FROM ENV TO pMainSystemManager WITH sExcQuantityCtrl, sOkCreationCtrl;
+FROM pMainSystemManager TO ENV WITH sCreateCtrl;
+
+SIGNALROUTE cEnv_Main
+FROM ENV TO pMainSystemManager WITH sCreateCtrlZone, sReqInfoSystem, sAddZone, sSetUpFreeSpot, sSetUpTotalSpot;
+FROM pMainSystemManager TO ENV WITH sExcLimitCtrl, sImpossibleGetInfoCtrls, sOkCreateCtrl, sExcLimitZones, sOkCreationZone, sOkSetUp, sInfoSystem;
+
+SIGNALROUTE cMain_CtrlZone
+FROM ENV TO pMainSystemManager WITH sInfoTotalCtrl, sOkCreateZone, sExcLimitZones, sOkSetUp, sOkCreationCtrl_i;
+FROM pMainSystemManager TO ENV WITH sCreateZone_, sReqInfoCtrl, sInitFreeSpotZone, sInitTotalSpotZone, sInitialConnection;
+
+SIGNALROUTE cDisplay_Main
+FROM ENV TO pMainSystemManager WITH sReqInfoCtrlZone;
+FROM pMainSystemManager TO ENV WITH sInfoCtrlZone;
+
+CONNECT cMain_CtrlZone AND cMain_CtrlZone;
+
+CONNECT cEnv_Main AND cEnv_Main;
+
+CONNECT cDisplay_Main AND cDisplay_Main;
+
+CONNECT cMain_CtrlManager AND cMain_CtrlManager;
+PROCESS pMainSystemManager REFERENCED;
+ENDBLOCK;
+
+
+PROCESS <<SYSTEM System / BLOCK ParkingLotSystem / SUBSTRUCTURE ParkingLotSystem / BLOCK BMainSystemManager>> pMainSystemManager;
+TIMER timerWaitSignalIR;
+TIMER timerWaitCtrl;
+DCL
+
+infoCtrlGral InfoCtrl,
+tableCtrls tableInfoGralCtrl,
+indexList,index,indexPid INTEGER,
+freeSpotsSystem INTEGER,
+tmpfreeSpotsSystem INTEGER,
+numCtrl,numZone INTEGER,
+PidCtrl,PidCtrlManager,PidZone PID,
+totalSpots,freeSpots i_spots,
+infoSystem InfoMainSystem,
+tmpTblCtrl InfoCtrl,
+tmpInfoZone InfoZone,
+tmpTblZones table_Zones,
+tmpTblCtrls tableMainInfoCtrls;
+PROCEDURE proc_FindIndexPIDCtrl REFERENCED;
+START ;
+TASK index:=0,
+indexList:=0,
+infoSystem!totalSpotsSystem:=0,
+infoSystem!freeSpotsSystem:=0,
+infoSystem!freeSpotsParking:=cNUMMAXFREESPOTS;
+OUTPUT sInitialConnection VIA cMain_CtrlZone;
+NEXTSTATE Idle;
+
+
+STATE sWaitConfirmCreateZone;
+INPUT sOkCreateZone(infoCtrlGral);
+TASK tableCtrls(numCtrl):=infoCtrlGral;
+OUTPUT sOkCreationZone VIA cEnv_Main;
+NEXTSTATE Idle;
+INPUT sExcLimitZones;
+OUTPUT sExcLimitZones VIA cEnv_Main;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE Idle;
+INPUT sAddZone(numCtrl,totalSpots,freeSpots);
+TASK tmpTblCtrl:=tableCtrls(numCtrl),
+PidCtrl:=tmpTblCtrl!IDCtrl;
+OUTPUT sCreateZone_(totalSpots,freeSpots) TO PidCtrl;
+NEXTSTATE sWaitConfirmCreateZone;
+INPUT sCreateCtrlZone;
+OUTPUT sCreateCtrl VIA cMain_CtrlManager;
+NEXTSTATE sWaitAckCtrlManager;
+ENDSTATE;
+
+
+STATE Idle;
+INPUT sReqInfoSystem;
+TASK index:=0,
+infoSystem!freeSpotsSystem:=0,
+infoSystem!totalSpotsSystem:=0;
+RTDS_label1 :
+DECISION index<indexList;
+(false):
+TASK index:=0;
+SET(NOW+100,timerWaitCtrl);
+NEXTSTATE sWaitInfoCtrl;
+(true):
+TASK tmpTblCtrl:=tableCtrls(index),
+PidCtrl:=tmpTblCtrl!IDCtrl,
+index:=index+1;
+OUTPUT sReqInfoCtrl TO PidCtrl;
+ENDDECISION;
+JOIN RTDS_label1;
+INPUT sOkCreationCtrl_i(infoCtrlGral);
+TASK tableCtrls(indexList):=infoCtrlGral,
+indexList:=indexList+1;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE sWaitInit;
+INPUT sOkSetUp;
+OUTPUT sOkSetUp VIA cEnv_Main;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE Idle;
+INPUT sSetUpFreeSpot(numCtrl,numZone,freeSpots);
+TASK /*PidCtrl:=tableCtrls(numCtrl)!IDCtrl*/
+tmpTblCtrl:=tableCtrls(numCtrl),
+PidCtrl:=tmpTblCtrl!IDCtrl;
+OUTPUT sInitFreeSpotZone(numZone,freeSpots) TO PidCtrl;
+NEXTSTATE sWaitInit;
+INPUT sSetUpTotalSpot(numCtrl,numZone,totalSpots);
+TASK /*PidCtrl:=tableCtrls(numCtrl)!IDCtrl*/
+tmpTblCtrl:=tableCtrls(numCtrl),
+PidCtrl:=tmpTblCtrl!IDCtrl;
+OUTPUT sInitTotalSpotZone(numZone,totalSpots)
+TO PidCtrl;
+NEXTSTATE sWaitInit;
+ENDSTATE;
+
+
+STATE sWaitAns_Ctrl;
+INPUT sInfoTotalCtrl(infoCtrlGral);
+TASK tmpTblZones:=infoCtrlGral!listZones,
+tmpInfoZone:=tmpTblZones(numZone),
+freeSpots:=tmpInfoZone!freeSpots;
+OUTPUT sInfoCtrlZone(freeSpots) VIA cDisplay_Main;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE Idle;
+INPUT sReqInfoCtrlZone(NumCtrl,NumZone);
+TASK tmpTblCtrl:=tableCtrls(NumCtrl),
+PidCtrl:=tmpTblCtrl!IDCtrl;
+OUTPUT sReqInfoCtrl TO PidCtrl;
+NEXTSTATE sWaitAns_Ctrl;
+ENDSTATE;
+
+
+STATE sWaitAckCtrlManager;
+INPUT sOkCreationCtrl(infoCtrlGral);
+TASK tableCtrls(indexList):=infoCtrlGral,
+indexList:=indexList+1;
+OUTPUT sOkCreateCtrl VIA cEnv_Main;
+NEXTSTATE Idle;
+INPUT sExcQuantityCtrl;
+OUTPUT sExcLimitCtrl VIA
+cEnv_Main;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE sWaitInfoCtrl;
+INPUT sInfoTotalCtrl(infoCtrlGral);
+RESET(timerWaitCtrl);
+TASK /*
+PidCtrl:=infoCtrlGral!IDCtrl,
+indexPid:=CALL proc_FindIndexPIDCtrl(PidCtrl,tableCtrls,indexList),
+infoSystem!freeSpotsSystem:=infoSystem!freeSpotsSystem+infoCtrlGral!allfreeSpots,
+infoSystem!totalSpotsSystem:=infoSystem!totalSpotsSystem+infoCtrlGral!alltotalSpots,
+tmpTblCtrls:=infoSystem!tableInfoCtrl,
+tmpTblCtrl:=tmpTblCtrls(indexPid),
+tmpTblCtrl!totalSpotsZone:=infoCtrlGral!alltotalSpots,
+tmpTblCtrl!freeSpotsZone:=infoCtrlGral!allfreeSpots,
+infoSystem!tableInfoCtrl(indexPid):=tmpTblCtrl
+*/;
+TASK tableCtrls(indexPid):=infoCtrlGral;
+TASK index:=index+1;
+DECISION index<indexList;
+(false):
+RESET(timerWaitCtrl);
+OUTPUT sInfoSystem(infoSystem) VIA cEnv_Main;
+NEXTSTATE Idle;
+(true):
+SET(NOW+100,timerWaitCtrl);
+NEXTSTATE -;
+ENDDECISION;
+INPUT timerWaitCtrl;
+OUTPUT sImpossibleGetInfoCtrls VIA cEnv_Main;
+NEXTSTATE Idle;
+ENDSTATE;
+ENDPROCESS;
+
+
+PROCEDURE <<SYSTEM System / BLOCK ParkingLotSystem / SUBSTRUCTURE ParkingLotSystem / BLOCK BMainSystemManager / PROCESS pMainSystemManager>> proc_FindIndexPIDCtrl;
+FPAR 
+IN/OUT PidCtrl PID,tableCtrl tableInfoGralCtrl,indexList INTEGER;
+RETURNS INTEGER;
+
+DCL index INTEGER;
+START ;
+TASK index:=0;
+RTDS_label1 :
+DECISION index<indexList;
+(false):
+TASK index:=-1;
+RETURN    index;
+(true):
+DECISION /*tableCtrl(index)!IDCtrl*/ PidCtrl= PidCtrl;
+(false):
+TASK index:=index+1;
+(true):
+RETURN    index;
+ENDDECISION;
+ENDDECISION;
+JOIN RTDS_label1;
+ENDPROCEDURE;
+
+
+BLOCK <<SYSTEM System / BLOCK ParkingLotSystem / SUBSTRUCTURE ParkingLotSystem>> BCtrlZone;
+
+SIGNALROUTE cCtrl_CreatorZoneManager
+FROM ENV TO pCtrl WITH sOkCreateZoneManager;
+FROM pCtrl TO ENV WITH sCreateZoneManager;
+
+SIGNALROUTE cCtrl_Zone
+FROM ENV TO pCtrl WITH sEntered_Car, sOut_Car, sOkInit, sInfoZone, sOkInitPid;
+FROM pCtrl TO ENV WITH sInitFreeSpot, sInitTotalSpots, sReqInfo, sInitPidCtrl;
+
+SIGNALROUTE cCtrl_CtrlManager
+FROM pCtrlManager TO pCtrl WITH sConfirmCtrl;
+FROM pCtrl TO pCtrlManager WITH sIamCtrl;
+
+SIGNALROUTE cMain_CtrlZone
+FROM ENV TO pCtrl WITH sCreateZone_, sReqInfoCtrl, sInitFreeSpotZone, sInitTotalSpotZone, sInitialConnection;
+FROM pCtrl TO ENV WITH sInfoTotalCtrl, sOkCreateZone, sExcLimitZones, sOkSetUp, sOkCreationCtrl_i;
+
+SIGNALROUTE cCtrl_ZoneManager
+FROM ENV TO pCtrl WITH sOkCreation, sExcQuantityZones, sIamZoneManager;
+FROM pCtrl TO ENV WITH sCreateZone, sConfirmZoneManager_i;
+
+SIGNALROUTE cMain_CtrlManager
+FROM ENV TO pCtrlManager WITH sCreateCtrl;
+FROM pCtrlManager TO ENV WITH sExcQuantityCtrl, sOkCreationCtrl;
+
+CONNECT cMain_CtrlManager AND cMain_CtrlManager;
+
+CONNECT cMain_CtrlZone AND cMain_CtrlZone;
+
+CONNECT cCtrl_ZoneManager AND cCtrl_ZoneManager;
+
+CONNECT cCtrl_CreatorZoneManager AND cCtrl_CreatorZoneManager;
+
+CONNECT cCtrl_Zone AND cCtrl_Zone;
+PROCESS pCtrl(1, cNUMMAXCTRL) REFERENCED;
+PROCESS pCtrlManager REFERENCED;
+ENDBLOCK;
+
+
+PROCESS <<SYSTEM System / BLOCK ParkingLotSystem / SUBSTRUCTURE ParkingLotSystem / BLOCK BCtrlZone>> pCtrl;
+TIMER timerWaitInfoZones;
+DCL
+
+p_freeSpots,p_totalSpots i_spots,
+pidZone,myZoneManager,pid_ZoneManager PID,
+infoTableZone,tmpInfoZone InfoZone,
+indexList,index,indexPid INTEGER,
+infoCtrlG InfoCtrl,
+assignedZoneManager BOOLEAN,
+zone itIndex,
+tmpTblZone table_Zones;
+PROCEDURE proc_FindIndexPidZone REFERENCED;
+START ;
+TASK indexList:=0,
+index:=0,
+indexPid:=0,
+infoCtrlG!alltotalSpots:=0,
+infoCtrlG!allfreeSpots:=0,
+infoCtrlG!IDCtrl:=SELF,
+assignedZoneManager:=FALSE;
+NEXTSTATE Idle;
+
+
+STATE sWaitConfirmInitPid;
+INPUT sOkInitPid;
+OUTPUT sReqInfo TO SENDER;
+NEXTSTATE sWaitInfo_FirstZone;
+ENDSTATE;
+
+
+STATE Idle;
+INPUT sCreateZone_(p_totalSpots,p_freeSpots);
+DECISION assignedZoneManager;
+(false):
+OUTPUT sCreateZoneManager VIA cCtrl_CreatorZoneManager;
+NEXTSTATE sWaitCreationZoneManager;
+(true):
+OUTPUT sCreateZone(p_totalSpots,p_freeSpots)
+TO myZoneManager;
+NEXTSTATE sWaitAck_BZone;
+ENDDECISION;
+INPUT sInitialConnection;
+OUTPUT sConfirmZoneManager_i VIA cCtrl_ZoneManager;
+NEXTSTATE sWaitConfirmZoneManager;
+ENDSTATE;
+
+
+STATE sWaitCreationZoneManager;
+INPUT sOkCreateZoneManager(pid_ZoneManager);
+TASK myZoneManager:=pid_ZoneManager,
+assignedZoneManager:=TRUE;
+OUTPUT sCreateZone(p_totalSpots,p_freeSpots)
+TO myZoneManager;
+NEXTSTATE sWaitAck_BZone;
+ENDSTATE;
+
+
+STATE sWaitConfirmZoneManager;
+INPUT sIamZoneManager;
+TASK assignedZoneManager:=TRUE,
+myZoneManager:=SENDER;
+OUTPUT sInitPidCtrl(SELF) VIA cCtrl_Zone;
+NEXTSTATE sWaitConfirmInitPid;
+ENDSTATE;
+
+
+STATE sWaitInfo_FirstZone;
+INPUT sInfoZone(p_totalSpots,p_freeSpots);
+TASK infoTableZone!totalSpots:=p_totalSpots,
+infoTableZone!freeSpots:=p_freeSpots,
+infoTableZone!ID:=SENDER,
+infoCtrlG!listZones(indexList):=infoTableZone,
+indexList:=indexList+1;
+OUTPUT sOkCreationCtrl_i(infoCtrlG) VIA cMain_CtrlZone;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE Idle;
+INPUT sReqInfoCtrl;
+TASK index:=0,
+infoCtrlG!allfreeSpots:=0,
+infoCtrlG!alltotalSpots:=0;
+RTDS_label1 :
+DECISION index<indexList;
+(false):
+TASK index:=0;
+SET(NOW+20, timerWaitInfoZones);
+NEXTSTATE sWaitInfoZone;
+(true):
+TASK /*pidZone:=infoCtrlG!listZones(index)!ID,*/
+tmpTblZone := infoCtrlG!listZones,
+tmpInfoZone := tmpTblZone(index),
+pidZone := tmpInfoZone!ID,
+infoCtrlG!tableConnectionOkZones(index):=FALSE,
+index:=index+1;
+OUTPUT sReqInfo to pidZone;
+ENDDECISION;
+JOIN RTDS_label1;
+INPUT sEntered_Car(p_freeSpots);
+TASK /*
+infoTableZone!freeSpots:=p_freeSpots,
+infoTableZone!ID:=SENDER,
+pidZone:=SENDER,
+tmpTblZone := infoCtrlG!listZones,
+index:=CALL proc_FindIndexPidZone(pidZone,tmpTblZone,indexList),
+infoTableZone!totalSpots:=tmpTblZone(index)!totalSpots,
+infoCtrlG!listZones(index):=infoTableZone
+*/;
+NEXTSTATE -;
+INPUT sOut_Car(p_freeSpots);
+TASK /*
+infoTableZone!freeSpots:=p_freeSpots,
+infoTableZone!ID:=SENDER,
+pidZone:=SENDER,
+tmpTblZone := infoCtrlG!listZones,
+index:=CALL proc_FindIndexPidZone(pidZone,tmpTblZone,indexList),
+infoTableZone!totalSpots:=tmpTblZone(index)!totalSpots,
+infoCtrlG!listZones(index):=infoTableZone
+*/;
+NEXTSTATE -;
+ENDSTATE;
+
+
+STATE Idle;
+INPUT sConfirmCtrl;
+OUTPUT sIamCtrl(infoCtrlG) TO SENDER;
+NEXTSTATE -;
+INPUT sInitFreeSpotZone(zone,p_freeSpots);
+TASK /*pidZone:=infoCtrlG!listZones(Zone)!ID*/
+tmpTblZone := infoCtrlG!listZones,
+tmpInfoZone := tmpTblZone(zone),
+pidZone := tmpInfoZone!ID;
+OUTPUT sInitFreeSpot(p_freeSpots) TO pidZone;
+NEXTSTATE sWaitOkInit_freeSpots;
+INPUT sInitTotalSpotZone(zone,p_totalSpots);
+TASK /*pidZone:=infoCtrlG!listZones(zone)!ID*/
+tmpTblZone := infoCtrlG!listZones,
+tmpInfoZone := tmpTblZone(zone),
+pidZone := tmpInfoZone!ID;
+OUTPUT sInitTotalSpots(p_totalSpots) TO pidZone;
+NEXTSTATE sWaitOkInit_TotalSpots;
+ENDSTATE;
+
+
+STATE sWaitOkInit_TotalSpots;
+INPUT sOkInit;
+TASK /*
+tmpInfoZone!totalSpots:=p_totalSpots,
+infoCtrlG!listZones(zone):=tmpInfoZone*/;
+OUTPUT sOkSetUp VIA cMain_CtrlZone;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE sWaitOkInit_freeSpots;
+INPUT sOkInit;
+TASK /*tmpInfoZone!freeSpots:=p_freeSpots,
+infoCtrlG!listZones(zone):=tmpInfoZone*/;
+OUTPUT sOkSetUp VIA cMain_CtrlZone;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE sWaitAck_BZone;
+INPUT sOkCreation(pidZone);
+TASK /*infoTableZone!totalSpots:=p_totalSpots,
+infoTableZone!freeSpots:=p_freeSpots,
+infoTableZone!ID:=pidZone,
+infoCtrlG!listZones(indexList):=infoTableZone,
+indexList:=indexList+1*/;
+OUTPUT sOkCreateZone(infoCtrlG) VIA
+cMain_CtrlZone;
+NEXTSTATE Idle;
+INPUT sExcQuantityZones;
+OUTPUT sExcLimitZones VIA
+cMain_CtrlZone;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE sWaitInfoZone;
+INPUT sInfoZone(p_totalSpots,p_freeSpots);
+RESET(timerWaitInfoZones);
+TASK infoTableZone!totalSpots:=p_totalSpots,
+infoTableZone!freeSpots:=p_freeSpots,
+infoTableZone!ID:=SENDER,
+pidZone:=SENDER,
+tmpTblZone := infoCtrlG!listZones,
+indexPid:=CALL proc_FindIndexPidZone(pidZone,tmpTblZone,indexList),
+infoCtrlG!listZones(indexPid):=infoTableZone,
+infoCtrlG!allfreeSpots:=infoCtrlG!allfreeSpots+p_freeSpots,
+infoCtrlG!alltotalSpots:=infoCtrlG!alltotalSpots+p_totalSpots,
+/*infoCtrlG!tableConnectionOkZones(indexPid):=TRUE,*/
+index:=index+1;
+SET(NOW+20, timerWaitInfoZones);
+DECISION index<indexList;
+(false):
+RESET(timerWaitInfoZones);
+OUTPUT sInfoTotalCtrl(infoCtrlG) VIA cMain_CtrlZone;
+NEXTSTATE Idle;
+(true):
+NEXTSTATE -;
+ENDDECISION;
+INPUT timerWaitInfoZones;
+OUTPUT sInfoTotalCtrl(infoCtrlG) VIA
+cMain_CtrlZone;
+NEXTSTATE Idle;
+ENDSTATE;
+ENDPROCESS;
+
+
+PROCEDURE <<SYSTEM System / BLOCK ParkingLotSystem / SUBSTRUCTURE ParkingLotSystem / BLOCK BCtrlZone / PROCESS pCtrl>> proc_FindIndexPidZone;
+FPAR 
+IN/OUT PidZone PID,tableZones table_Zones,indexList INTEGER;
+RETURNS INTEGER;
+
+DCL index INTEGER;
+START ;
+TASK index:=0;
+RTDS_label1 :
+DECISION index<=indexList;
+(false):
+TASK index:=-1;
+RETURN    index;
+(true):
+DECISION tableZones(index)!ID = PidZone;
+(false):
+TASK index:=index+1;
+(true):
+RETURN    index;
+ENDDECISION;
+ENDDECISION;
+JOIN RTDS_label1;
+ENDPROCEDURE;
+
+
+PROCESS <<SYSTEM System / BLOCK ParkingLotSystem / SUBSTRUCTURE ParkingLotSystem / BLOCK BCtrlZone>> pCtrlManager;
+DCL
+
+QuantityCtrl,QuantityCtrlManager INTEGER,
+infoCtrlGral InfoCtrl,pidCtrlManager PID;
+START ;
+TASK QuantityCtrl:=1;
+NEXTSTATE Idle;
+
+
+STATE sWaitAckCtrl;
+INPUT sIamCtrl(infoCtrlGral);
+OUTPUT sOkCreationCtrl(infoCtrlGral) VIA cMain_CtrlManager;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE Idle;
+INPUT sCreateCtrl;
+DECISION QuantityCtrl<cNUMMAXCTRL;
+(false):
+OUTPUT sExcQuantityCtrl VIA cMain_CtrlManager;
+NEXTSTATE -;
+(true):
+CREATE pCtrl;
+TASK QuantityCtrl:=QuantityCtrl+1;
+OUTPUT sConfirmCtrl TO OFFSPRING;
+NEXTSTATE sWaitAckCtrl;
+ENDDECISION;
+ENDSTATE;
+ENDPROCESS;
+
+
+BLOCK <<SYSTEM System / BLOCK ParkingLotSystem / SUBSTRUCTURE ParkingLotSystem>> BZone;
+
+SIGNALROUTE cCtrl_CreatorZoneManager
+FROM ENV TO pCreatorZoneManager WITH sCreateZoneManager;
+FROM pCreatorZoneManager TO ENV WITH sOkCreateZoneManager;
+
+SIGNALROUTE cCtrl_Zone
+FROM ENV TO pZone WITH sInitFreeSpot, sInitTotalSpots, sReqInfo, sInitPidCtrl;
+FROM pZone TO ENV WITH sEntered_Car, sOut_Car, sOkInit, sInfoZone, sOkInitPid;
+
+SIGNALROUTE cEnv_Zone
+FROM ENV TO pZone WITH sIR1_Zone, sIR2_Zone, sIR3_Zone, sIR4_Zone, sLoopInductive_Zone;
+
+SIGNALROUTE cZone_Manager
+FROM pZone TO pZoneManager WITH sOkInit, sInfoZone, sOkInitPid;
+FROM pZoneManager TO pZone WITH sInitFreeSpot, sInitTotalSpots, sReqInfo, sInitPidCtrl;
+
+SIGNALROUTE cCreator_ZoneManager
+FROM pCreatorZoneManager TO pZoneManager WITH sConfirmZoneManager;
+FROM pZoneManager TO pCreatorZoneManager WITH sIamZoneManager;
+
+SIGNALROUTE cCtrl_ZoneManager
+FROM ENV TO pZoneManager WITH sCreateZone, sConfirmZoneManager_i;
+FROM pZoneManager TO ENV WITH sOkCreation, sExcQuantityZones, sIamZoneManager;
+
+CONNECT cEnv_Zone AND cEnv_Zone;
+
+CONNECT cCtrl_ZoneManager AND cCtrl_ZoneManager;
+
+CONNECT cCtrl_CreatorZoneManager AND cCtrl_CreatorZoneManager;
+
+CONNECT cCtrl_Zone AND cCtrl_Zone;
+PROCESS pZoneManager(1, cNUMMAXCTRL) REFERENCED;
+PROCESS pCreatorZoneManager REFERENCED;
+PROCESS pZone(1, cNUMMAXZONES_SYSTEM) REFERENCED;
+ENDBLOCK;
+
+
+PROCESS <<SYSTEM System / BLOCK ParkingLotSystem / SUBSTRUCTURE ParkingLotSystem / BLOCK BZone>> pZoneManager;
+DCL
+
+quantityZones INTEGER,
+p_freeSpots,p_totalSpots i_spots, 
+myCtrl,pidCtrl,pidZone PID;
+START ;
+TASK quantityZones:=0;
+NEXTSTATE Idle;
+
+
+STATE Idle;
+INPUT sCreateZone(p_totalSpots,p_freeSpots);
+TASK myCtrl:=SENDER;
+DECISION quantityZones < cMAX_ZONES;
+(false):
+OUTPUT sExcQuantityZones TO myCtrl;
+NEXTSTATE Idle;
+(true):
+CREATE pZone;
+TASK quantityZones:=quantityZones+1,
+pidZone:=OFFSPRING;
+OUTPUT sInitPidCtrl(myCtrl) TO pidZone;
+NEXTSTATE sWaitInitPidCtrl_Zone;
+ENDDECISION;
+INPUT sConfirmZoneManager(pidCtrl);
+TASK myCtrl:=pidCtrl;
+OUTPUT sIamZoneManager TO SENDER;
+NEXTSTATE Idle;
+INPUT sConfirmZoneManager_i;
+TASK myCtrl:=SENDER,
+quantityZones:=quantityZones+1;
+OUTPUT sIamZoneManager TO myCtrl;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE sWaitInitPidCtrl_Zone;
+INPUT sOkInitPid;
+OUTPUT sInitFreeSpot(p_freeSpots) TO pidZone;
+NEXTSTATE sWaitAck_Ok1;
+ENDSTATE;
+
+
+STATE sWaitAck_Ok2;
+INPUT sOkInit;
+OUTPUT sOkCreation(pidZone) TO myCtrl;
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE sWaitAck_Ok1;
+INPUT sOkInit;
+OUTPUT sInitTotalSpots(p_totalSpots) TO pidZone;
+NEXTSTATE sWaitAck_Ok2;
+ENDSTATE;
+ENDPROCESS;
+
+
+PROCESS <<SYSTEM System / BLOCK ParkingLotSystem / SUBSTRUCTURE ParkingLotSystem / BLOCK BZone>> pCreatorZoneManager;
+DCL
+
+pidCtrl,pidZoneManager PID;
+START ;
+NEXTSTATE Idle;
+
+
+STATE Idle;
+INPUT sCreateZoneManager;
+TASK pidCtrl:=SENDER;
+CREATE pZoneManager;
+OUTPUT sConfirmZoneManager(pidCtrl) TO OFFSPRING;
+NEXTSTATE sWaitConfirmZoneManager;
+ENDSTATE;
+
+
+STATE sWaitConfirmZoneManager;
+INPUT sIamZoneManager;
+TASK pidZoneManager:=SENDER;
+OUTPUT sOkCreateZoneManager(pidZoneManager) TO
+pidCtrl;
+NEXTSTATE Idle;
+ENDSTATE;
+ENDPROCESS;
+
+
+PROCESS <<SYSTEM System / BLOCK ParkingLotSystem / SUBSTRUCTURE ParkingLotSystem / BLOCK BZone>> pZone;
+TIMER tEnter,tOut;
+DCL
+
+/* Params Signals */
+p_freeSpots,p_totalSpots i_spots,
+
+/*Block Zone's Registers */
+freeSpots,totalSpots i_spots,pidCtrl,myCtrl PID;
+START ;
+TASK totalSpots := 300,
+freeSpots := 300;
+NEXTSTATE Idle;
+
+
+STATE WaitSensorIR2;
+INPUT sIR2_Zone;
+RESET(tEnter);
+SET(NOW+3,tEnter);
+NEXTSTATE VerifyIsaCarEntering;
+INPUT tEnter;
+RESET(tEnter);
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE WaitSensorIR4;
+INPUT sIR4_Zone;
+RESET(tOut);
+SET(NOW+3,tOut);
+NEXTSTATE VerifyIsaCarOut;
+INPUT tOut;
+RESET(tOut);
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE Idle;
+INPUT sIR1_Zone;
+SET(NOW+3, tEnter);
+NEXTSTATE WaitSensorIR2;
+INPUT sIR3_Zone;
+SET(NOW+3, tOut);
+NEXTSTATE WaitSensorIR4;
+ENDSTATE;
+
+
+STATE Idle;
+INPUT sInitFreeSpot(p_freeSpots);
+TASK freeSpots := p_freeSpots;
+OUTPUT sOkInit To SENDER;
+NEXTSTATE -;
+INPUT sInitTotalSpots(p_totalSpots);
+TASK totalSpots := p_totalSpots;
+OUTPUT sOkInit To SENDER;
+NEXTSTATE -;
+INPUT sReqInfo;
+OUTPUT sInfoZone(totalSpots,freeSpots) TO SENDER;
+NEXTSTATE -;
+INPUT sInitPidCtrl(pidCtrl);
+TASK myCtrl:=pidCtrl;
+OUTPUT sOkInitPid TO SENDER;
+NEXTSTATE -;
+ENDSTATE;
+
+
+STATE VerifyIsaCarOut;
+INPUT sLoopInductive_Zone;
+RESET(tOut);
+DECISION freeSpots=totalSpots;
+(false):
+TASK freeSpots:=freeSpots+1;
+OUTPUT sOut_Car(freeSpots) TO myCtrl;
+NEXTSTATE Idle;
+(true):
+OUTPUT sOut_Car(freeSpots) TO myCtrl;
+NEXTSTATE Idle;
+ENDDECISION;
+INPUT tOut;
+RESET(tOut);
+NEXTSTATE Idle;
+ENDSTATE;
+
+
+STATE VerifyIsaCarEntering;
+INPUT sLoopInductive_Zone;
+RESET(tEnter);
+DECISION freeSpots=0;
+(false):
+TASK freeSpots:=freeSpots-1;
+OUTPUT sEntered_Car(freeSpots) TO myCtrl;
+NEXTSTATE Idle;
+(true):
+OUTPUT sEntered_Car(freeSpots) TO myCtrl;
+NEXTSTATE Idle;
+ENDDECISION;
+INPUT tEnter;
+RESET(tEnter);
+NEXTSTATE Idle;
+ENDSTATE;
+ENDPROCESS;
+
+START ;
+NEXTSTATE init;
+
+
+STATE s_error;
+PROVIDED true;
+TASK cut;
+NEXTSTATE DEAD;
+ENDSTATE;
+
+
+STATE end;
+PROVIDED true;
+TASK cut;
+NEXTSTATE DEAD;
+ENDSTATE;
+
+
+STATE init;
+DECISION ({pZone}0) instate Idle;
+(false):
+TASK next:=0;
+NEXTSTATE init;
+(true):
+TASK next:=1;
+NEXTSTATE init;
+ENDDECISION;
+DECISION next=1;
+(false):
+TASK next:=1;
+NEXTSTATE init;
+(true):
+TASK next:=2;
+NEXTSTATE init;
+ENDDECISION;
+DECISION next=2;
+(false):
+TASK next:=2;
+NEXTSTATE init;
+(true):
+TASK next:=3;
+NEXTSTATE init;
+ENDDECISION;
+DECISION next=3;
+(false):
+NEXTSTATE s_error;
+(true):
+NEXTSTATE end;
+ENDDECISION;
+ENDSTATE;
+
+
+STATE DEAD;
+ENDSTATE;
+START ;
+NEXTSTATE init;
+
+
+STATE nb_clients_error;
+PROVIDED true;
+TASK cut;
+NEXTSTATE DEAD;
+ENDSTATE;
+
+
+STATE end;
+PROVIDED true;
+TASK cut;
+NEXTSTATE DEAD;
+ENDSTATE;
+
+
+STATE testing;
+TASK nb_requests := nb_requests + 1;
+NEXTSTATE init;
+TASK nb_clients_running := nb_clients_running + 1;
+DECISION nb_clients_running > 2;
+(false):
+NEXTSTATE init;
+(true):
+NEXTSTATE nb_clients_error;
+ENDDECISION;
+TASK nb_clients_running := nb_clients_running - 1;
+NEXTSTATE -;
+ENDSTATE;
+
+
+STATE init;
+PROVIDED nb_requests < 4;
+NEXTSTATE testing;
+PROVIDED nb_requests >= 4;
+NEXTSTATE end;
+ENDSTATE;
+
+
+STATE DEAD;
+ENDSTATE;

@@ -1,0 +1,563 @@
+
+system System;
+type RTDS_character = range 32..127;
+type RTDS_charstring = string[128] of RTDS_character;
+const cNUMMAXCTRL = 3;
+
+const cMAX_ZONES = 3;
+
+const cNUMMAXZONES_SYSTEM = 9;
+
+const cNUMMAXSPOTS = 500;
+
+const cNUMMAXENTRYWAY = 2;
+
+const cNUMMAXOUTWAY = 2;
+
+const cNUMMAXENTRYNOUTWAY = 4;
+
+const cNUMMAXUSERS = 40;
+
+const cNUMMAXFREESPOTS = 4500;
+
+type i_spots = range 0 .. 500;
+
+type numMaxSpots = range 0 .. 4500;
+
+type itIndex = range 0 .. 2;
+
+type InfoZone = record
+  totalSpots integer;
+  freeSpots integer;
+  ID pid;
+endrecord;
+type indexE_W = range 0 .. 2;
+
+type indexO_W = range 0 .. 2;
+
+type table_EntryWays = array[2] of pid;
+
+type table_OutWays = array[2] of pid;
+
+type table_Zones = array[2] of InfoZone;
+
+type itIndext_Ctrl = range 0 .. 2;
+
+type tableInfoGralCtrl = array[2] of InfoCtrl;
+
+type tableMainInfoCtrls = array[2] of infoMainCtrls;
+
+type tableVeriFyCon_Zone = array[2] of boolean;
+
+type tableVerifyCon_Ctrl = array[2] of boolean;
+
+type infoMainCtrls = record
+  totalSpotsZone integer;
+  freeSpotsZone integer;
+endrecord;
+type InfoCtrl = record
+  alltotalSpots integer;
+  allfreeSpots integer;
+  IDCtrl pid;
+  listZones table_Zones;
+  tableConnectionOkZones tableVeriFyCon_Zone;
+endrecord;
+type InfoMainSystem = record
+  totalSpotsSystem integer;
+  freeSpotsSystem integer;
+  freeSpotsParking integer;
+  tableInfoCtrl tableMainInfoCtrls;
+  tableEntryWays table_EntryWays;
+  tableOutWays table_OutWays;
+endrecord;
+type Index = range 0 .. 39;
+
+type vec_Plates = array[39] of RTDS_charstring;
+
+type vec_ID = array[39] of integer;
+
+type DataUser = record
+  plate RTDS_charstring;
+  ID integer;
+endrecord;
+type tDATABASE = record
+  tplates vec_Plates;
+  tID vec_ID;
+endrecord;
+signal sConfirmZoneManager(pid, pid);
+signal sCreateZoneManager(pid);
+signal sOkCreateZoneManager(pid, pid);
+signal sIR1_Zone(pid);
+signal sIR2_Zone(pid);
+signal sIR3_Zone(pid);
+signal sIR4_Zone(pid);
+signal sLoopInductive_Zone(pid);
+signal sInitFreeSpot(pid, i_spots);
+signal sInitTotalSpots(pid, i_spots);
+signal sReqInfo(pid);
+signal sInitPidCtrl(pid, pid);
+signal sEntered_Car(pid, i_spots);
+signal sOut_Car(pid, i_spots);
+signal sOkInit(pid);
+signal sInfoZone(pid, i_spots, i_spots);
+signal sOkInitPid(pid);
+signal sIR1_ZoneTest(pid);
+signal sIR2_ZoneTest(pid);
+signal sIR3_ZoneTest(pid);
+signal sIR4_ZoneTest(pid);
+signal sLoopInductive_ZoneTest(pid);
+signal sCreateZone(pid, i_spots, i_spots);
+signal sConfirmZoneManager_i(pid);
+signal sOkCreation(pid, pid);
+signal sExcQuantityZones(pid);
+signal sIamZoneManager(pid);
+signal sCreateCtrl(pid);
+signal sConfirmCtrl(pid);
+signal sIamCtrl(pid, InfoCtrl);
+signal sOkCreationCtrl_i(pid, InfoCtrl);
+signal sExcQuantityCtrl(pid);
+signal sOkCreationCtrl(pid, InfoCtrl);
+signal sCreateZone_(pid, i_spots, i_spots);
+signal sReqInfoCtrl(pid);
+signal sInitFreeSpotZone(pid, itIndex, i_spots);
+signal sInitTotalSpotZone(pid, itIndex, i_spots);
+signal sInitialConnection(pid);
+signal sInfoTotalCtrl(pid, InfoCtrl);
+signal sOkCreateZone(pid, InfoCtrl);
+signal sExcLimitZones(pid);
+signal sOkSetUp(pid);
+signal sFreeSpotsSystem(pid, numMaxSpots);
+signal sReqInfoCtrlZone(pid, itIndext_Ctrl, itIndex);
+signal sInfoCtrlZone(pid, i_spots);
+signal sCarPassedBarrierTest(pid, indexE_W);
+signal sCreateCtrlZone(pid);
+signal sReqInfoSystem(pid);
+signal sAddZone(pid, itIndext_Ctrl, i_spots, i_spots);
+signal sSetUpFreeSpot(pid, itIndext_Ctrl, itIndex, i_spots);
+signal sSetUpTotalSpot(pid, itIndext_Ctrl, itIndex, i_spots);
+signal sCreateEntryWay(pid);
+signal sCreateOutWay(pid);
+signal sExcLimitCtrl(pid);
+signal sOkCreationZone(pid);
+signal sImpossibleGetInfoCtrls(pid);
+signal sOkCreateCtrl(pid);
+signal sInfoSystem(pid, InfoMainSystem);
+signal sOkCreateE_W(pid);
+signal sOkCreateO_W(pid);
+signal sEntryCar(pid, itIndext_Ctrl, itIndex);
+signal sOutCar(pid, itIndext_Ctrl, itIndex);
+signal sEntryCarCtrl(pid, itIndext_Ctrl);
+signal sOutCarCtrl(pid, itIndext_Ctrl);
+signal sEntryCarZone(pid, itIndex);
+signal sOutCarZone(pid, itIndex);
+signal sLoopInductive_EntranceTest(pid, indexE_W);
+signal sLoopInductive_ExitTest(pid, indexO_W);
+
+signal RTDS_Inparam_proc_FindIndexPidZone(pid, pid, table_Zones, integer);
+signal RTDS_Outparam_proc_FindIndexPidZone(pid, integer);
+signal RTDS_Inparam_proc_FindIndexPIDCtrl(pid, pid, tableInfoGralCtrl, integer);
+signal RTDS_Outparam_proc_FindIndexPIDCtrl(pid, integer);
+
+signalroute ENV_C_cDisplay_Main_M_sReqInfoCtrlZone_P_pMainSystemManager(1) #fifo
+from env
+to pMainSystemManager
+with sReqInfoCtrlZone;
+
+signalroute ENV_C_cEnv_Main_M_sReqInfoSystem_P_pMainSystemManager(1) #fifo
+from env
+to pMainSystemManager
+with sReqInfoSystem;
+
+signalroute ENV_C_cEnv_Main_M_sCreateCtrlZone_P_pMainSystemManager(1) #fifo
+from env
+to pMainSystemManager
+with sCreateCtrlZone;
+
+signalroute ENV_C_cEnv_Main_M_sSetUpTotalSpot_P_pMainSystemManager(1) #fifo
+from env
+to pMainSystemManager
+with sSetUpTotalSpot;
+
+signalroute ENV_C_cEnv_Main_M_sAddZone_P_pMainSystemManager(1) #fifo
+from env
+to pMainSystemManager
+with sAddZone;
+
+signalroute ENV_C_cEnv_Main_M_sSetUpFreeSpot_P_pMainSystemManager(1) #fifo
+from env
+to pMainSystemManager
+with sSetUpFreeSpot;
+
+signalroute ENV_C_cEnv_Zone_M_sIR2_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR2_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sIR3_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR3_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sIR1_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR1_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sIR4_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR4_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sLoopInductive_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sLoopInductive_Zone;
+
+/*
+==========
+Messages name and corresponding channel received by the environment
+channel cEnv_Zone : 
+channel cEnv_Main : sExcLimitCtrl sExcLimitZones sInfoSystem sImpossibleGetInfoCtrls sOkCreationZone sOkCreateCtrl sOkSetUp
+channel cDisplay_Main : sInfoCtrlZone
+==========;
+*/
+signal RTDS_Inparam_proc_FindIndexPidZone(pid, pid, table_Zones, integer);
+signal RTDS_Outparam_proc_FindIndexPidZone(pid, integer);
+signal RTDS_Inparam_proc_FindIndexPIDCtrl(pid, pid, tableInfoGralCtrl, integer);
+signal RTDS_Outparam_proc_FindIndexPIDCtrl(pid, integer);
+signal RTDS_Inparam_proc_FindIndexPIDCtrl(pid, pid, tableInfoGralCtrl, integer);
+signal RTDS_Outparam_proc_FindIndexPIDCtrl(pid, integer);
+
+/*
+signalroute P_pMainSystemManager_C_cDisplay_Main_M_sInfoCtrlZone(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to env
+with sInfoCtrlZone;
+*/
+
+/*
+signalroute P_pMainSystemManager_C_cEnv_Main_M_sOkCreationZone(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to env
+with sOkCreationZone;
+*/
+
+signalroute P_pMainSystemManager_C_cMain_CtrlZone_M_sInitFreeSpotZone(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to pCtrl
+with sInitFreeSpotZone;
+
+signalroute P_pMainSystemManager_C_cMain_CtrlZone_M_sReqInfoCtrl(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to pCtrl
+with sReqInfoCtrl;
+
+/*
+signalroute P_pMainSystemManager_C_cEnv_Main_M_sOkSetUp(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to env
+with sOkSetUp;
+*/
+
+signalroute P_pMainSystemManager_C_cMain_CtrlZone_M_sCreateZone_(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to pCtrl
+with sCreateZone_;
+
+/*
+signalroute P_pMainSystemManager_C_cEnv_Main_M_sExcLimitCtrl(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to env
+with sExcLimitCtrl;
+*/
+
+signalroute P_pMainSystemManager_C_cMain_CtrlManager_M_sCreateCtrl(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to pCtrlManager
+with sCreateCtrl;
+
+/*
+signalroute P_pMainSystemManager_C_cEnv_Main_M_sOkCreateCtrl(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to env
+with sOkCreateCtrl;
+*/
+
+signalroute P_pMainSystemManager_C_cMain_CtrlZone_M_sInitTotalSpotZone(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to pCtrl
+with sInitTotalSpotZone;
+
+signalroute P_pMainSystemManager_C_cMain_CtrlZone_M_sInitialConnection(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to pCtrl
+with sInitialConnection;
+
+/*
+signalroute P_pMainSystemManager_C_cEnv_Main_M_sImpossibleGetInfoCtrls(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to env
+with sImpossibleGetInfoCtrls;
+*/
+
+/*
+signalroute P_pMainSystemManager_C_cEnv_Main_M_sInfoSystem(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to env
+with sInfoSystem;
+*/
+
+/*
+signalroute P_pMainSystemManager_C_cEnv_Main_M_sExcLimitZones(1) #fifo #reliable #unicast #urgent
+from pMainSystemManager
+to env
+with sExcLimitZones;
+*/
+
+process pMainSystemManager(0);
+fpar PARENT pid;
+var OFFSPRING pid;
+var SENDER pid;
+var RTDS_skip boolean;
+var RTDS_stop boolean;
+var infoCtrlGral InfoCtrl;
+var tableCtrls tableInfoGralCtrl;
+var indexList integer;
+var Index integer;
+var indexPid integer;
+var freeSpotsSystem integer;
+var tmpfreeSpotsSystem integer;
+var numCtrl integer;
+var numZone integer;
+var PidCtrl pid;
+var PidCtrlManager pid;
+var PidZone pid;
+var totalSpots i_spots;
+var freeSpots i_spots;
+var infoSystem InfoMainSystem;
+var tmpTblCtrl InfoCtrl;
+var tmpInfoZone InfoZone;
+var tmpTblZones table_Zones;
+var tmpTblCtrls tableMainInfoCtrls;
+var timerWaitSignalIR clock;
+var timerWaitCtrl clock;
+var proc_FindIndexPIDCtrl_PARENT pid;
+var proc_FindIndexPIDCtrl_OFFSPRING pid;
+var proc_FindIndexPIDCtrl_SENDER pid;
+var RTDS_wait_return_procedure_proc_FindIndexPIDCtrl_ind integer;
+var proc_FindIndexPIDCtrl_PidCtrl pid;
+var proc_FindIndexPIDCtrl_tableCtrl tableInfoGralCtrl;
+var proc_FindIndexPIDCtrl_indexList integer;
+var proc_FindIndexPIDCtrl_index integer;
+var proc_FindIndexPIDCtrl_PARENT pid;
+var proc_FindIndexPIDCtrl_OFFSPRING pid;
+var proc_FindIndexPIDCtrl_SENDER pid;
+var RTDS_wait_return_procedure_proc_FindIndexPIDCtrl_ind integer;
+var proc_FindIndexPIDCtrl_PidCtrl pid;
+var proc_FindIndexPIDCtrl_tableCtrl tableInfoGralCtrl;
+var proc_FindIndexPIDCtrl_indexList integer;
+var proc_FindIndexPIDCtrl_index integer;
+var proc_FindIndexPIDCtrl_PARENT pid;
+var proc_FindIndexPIDCtrl_OFFSPRING pid;
+var proc_FindIndexPIDCtrl_SENDER pid;
+var RTDS_wait_return_procedure_proc_FindIndexPIDCtrl_ind integer;
+var proc_FindIndexPIDCtrl_PidCtrl pid;
+var proc_FindIndexPIDCtrl_tableCtrl tableInfoGralCtrl;
+var proc_FindIndexPIDCtrl_indexList integer;
+var proc_FindIndexPIDCtrl_index integer;
+
+
+state RTDS_procedure_proc_FindIndexPIDCtrl #stable ;
+state RTDS_START_procedure_proc_FindIndexPIDCtrl #start #stable ;
+input RTDS_Inparam_proc_FindIndexPIDCtrl(proc_FindIndexPIDCtrl_PARENT, proc_FindIndexPIDCtrl_PidCtrl, proc_FindIndexPIDCtrl_tableCtrl, proc_FindIndexPIDCtrl_indexList);
+task proc_FindIndexPIDCtrl_Index := 0;
+nextstate RTDS_LABEL_RTDS_label1;
+endstate;
+
+state RTDS_decision_SYMB16 #unstable ;
+
+provided ( not (proc_FindIndexPIDCtrl_Index < proc_FindIndexPIDCtrl_indexList) );
+task proc_FindIndexPIDCtrl_Index := -(1);
+output RTDS_Outparam_proc_FindIndexPIDCtrl(self, proc_FindIndexPIDCtrl_Index) to self;
+nextstate RTDS_wait_return_procedure_proc_FindIndexPIDCtrl;
+
+provided ( proc_FindIndexPIDCtrl_Index < proc_FindIndexPIDCtrl_indexList );
+nextstate RTDS_decision_SYMB14;
+endstate;
+
+state RTDS_decision_SYMB14 #unstable ;
+
+provided ( not (proc_FindIndexPIDCtrl_PidCtrl = proc_FindIndexPIDCtrl_PidCtrl) );
+task proc_FindIndexPIDCtrl_Index := proc_FindIndexPIDCtrl_Index + 1;
+nextstate RTDS_end_decision_SYMB14;
+
+provided ( proc_FindIndexPIDCtrl_PidCtrl = proc_FindIndexPIDCtrl_PidCtrl );
+output RTDS_Outparam_proc_FindIndexPIDCtrl(self, proc_FindIndexPIDCtrl_Index) to self;
+nextstate RTDS_wait_return_procedure_proc_FindIndexPIDCtrl;
+endstate;
+
+state RTDS_end_decision_SYMB14 #unstable ;
+provided true;
+nextstate RTDS_LABEL_RTDS_label1;
+endstate;
+
+state RTDS_LABEL_RTDS_label1 #unstable ;
+provided true;
+nextstate RTDS_decision_SYMB16;
+endstate;
+endstate;
+
+state RTDS_START #start #stable ;
+provided true;
+task Index := 0;
+task indexList := 0;
+task infoSystem.totalSpotsSystem := 0;
+task infoSystem.freeSpotsSystem := 0;
+task infoSystem.freeSpotsParking := cNUMMAXFREESPOTS;
+output sInitialConnection(self) via {P_pMainSystemManager_C_cMain_CtrlZone_M_sInitialConnection}0;
+nextstate Idle;
+endstate;
+
+
+state sWaitConfirmCreateZone #stable ;
+
+deadline delayable;
+input sExcLimitZones(SENDER);
+output sExcLimitZones(self) /* via {P_pMainSystemManager_C_cEnv_Main_M_sExcLimitZones}0 */;
+nextstate Idle;
+
+deadline delayable;
+input sOkCreateZone(SENDER, infoCtrlGral);
+task tableCtrls[numCtrl] := infoCtrlGral;
+output sOkCreationZone(self) /* via {P_pMainSystemManager_C_cEnv_Main_M_sOkCreationZone}0 */;
+nextstate Idle;
+endstate;
+
+
+state Idle #stable ;
+
+deadline delayable;
+input sAddZone(SENDER, numCtrl,totalSpots,freeSpots);
+task tmpTblCtrl := tableCtrls[numCtrl];
+task PidCtrl := tmpTblCtrl.IDCtrl;
+output sCreateZone_(self, totalSpots, freeSpots) to PidCtrl;
+nextstate sWaitConfirmCreateZone;
+
+deadline delayable;
+input sCreateCtrlZone(SENDER);
+output sCreateCtrl(self) via {P_pMainSystemManager_C_cMain_CtrlManager_M_sCreateCtrl}0;
+nextstate sWaitAckCtrlManager;
+endstate;
+
+
+state Idle #stable ;
+
+deadline delayable;
+input sOkCreationCtrl_i(SENDER, infoCtrlGral);
+task tableCtrls[indexList] := infoCtrlGral;
+task indexList := indexList + 1;
+nextstate Idle;
+
+deadline delayable;
+input sReqInfoSystem(SENDER);
+task Index := 0;
+task infoSystem.freeSpotsSystem := 0;
+task infoSystem.totalSpotsSystem := 0;
+nextstate RTDS_LABEL_RTDS_label1;
+endstate;
+
+state RTDS_decision_SYMB296 #unstable ;
+
+provided ( not (Index < indexList) );
+task Index := 0;
+set timerWaitCtrl := -(100);
+nextstate sWaitInfoCtrl;
+
+provided ( Index < indexList );
+task tmpTblCtrl := tableCtrls[Index];
+task PidCtrl := tmpTblCtrl.IDCtrl;
+task Index := Index + 1;
+output sReqInfoCtrl(self) to PidCtrl;
+nextstate RTDS_end_decision_SYMB296;
+endstate;
+
+
+state sWaitInit #stable ;
+
+deadline delayable;
+input sOkSetUp(SENDER);
+output sOkSetUp(self) /* via {P_pMainSystemManager_C_cEnv_Main_M_sOkSetUp}0 */;
+nextstate Idle;
+endstate;
+
+
+state Idle #stable ;
+
+deadline delayable;
+input sSetUpTotalSpot(SENDER, numCtrl,numZone,totalSpots);
+task tmpTblCtrl := tableCtrls[numCtrl];
+task PidCtrl := tmpTblCtrl.IDCtrl;
+output sInitTotalSpotZone(self, numZone, totalSpots) to PidCtrl;
+nextstate sWaitInit;
+
+deadline delayable;
+input sSetUpFreeSpot(SENDER, numCtrl,numZone,freeSpots);
+task tmpTblCtrl := tableCtrls[numCtrl];
+task PidCtrl := tmpTblCtrl.IDCtrl;
+output sInitFreeSpotZone(self, numZone, freeSpots) to PidCtrl;
+nextstate sWaitInit;
+endstate;
+
+
+state sWaitAns_Ctrl #stable ;
+
+deadline delayable;
+input sInfoTotalCtrl(SENDER, infoCtrlGral);
+task tmpTblZones := infoCtrlGral.listZones;
+task tmpInfoZone := tmpTblZones[numZone];
+task freeSpots := tmpInfoZone.freeSpots;
+output sInfoCtrlZone(self, freeSpots) /* via {P_pMainSystemManager_C_cDisplay_Main_M_sInfoCtrlZone}0 */;
+nextstate Idle;
+endstate;
+
+
+state Idle #stable ;
+
+deadline delayable;
+input sReqInfoCtrlZone(SENDER, NumCtrl,NumZone);
+task tmpTblCtrl := tableCtrls[numCtrl];
+task PidCtrl := tmpTblCtrl.IDCtrl;
+output sReqInfoCtrl(self) to PidCtrl;
+nextstate sWaitAns_Ctrl;
+endstate;
+
+
+state sWaitAckCtrlManager #stable ;
+
+deadline delayable;
+input sExcQuantityCtrl(SENDER);
+output sExcLimitCtrl(self) /* via {P_pMainSystemManager_C_cEnv_Main_M_sExcLimitCtrl}0 */;
+nextstate Idle;
+
+deadline delayable;
+input sOkCreationCtrl(SENDER, infoCtrlGral);
+task tableCtrls[indexList] := infoCtrlGral;
+task indexList := indexList + 1;
+output sOkCreateCtrl(self) /* via {P_pMainSystemManager_C_cEnv_Main_M_sOkCreateCtrl}0 */;
+nextstate Idle;
+endstate;
+
+
+state sWaitInfoCtrl #stable ;
+
+when timerWaitCtrl = 0;
+reset timerWaitCtrl;
+output sImpossibleGetInfoCtrls(self) /* via {P_pMainSystemManager_C_cEnv_Main_M_sImpossibleGetInfoCtrls}0 */;
+nextstate Idle;
+
+deadline delayable;
+input sInfoTotalCtrl(SENDER, infoCtrlGral);
+reset timerWaitCtrl;
+delayable;
+input sInfoTotalCtrl(SENDER, infoCtrlGral);
+reset timerWaitCtrl;

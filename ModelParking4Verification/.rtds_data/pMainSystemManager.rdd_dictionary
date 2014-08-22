@@ -3,16 +3,17 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sOkCreateZone">
-<SignalParameterType>InfoCtrl</SignalParameterType>
+<Signal id="SIG1" name="sExcLimitZones">
+<SendSymbols>
+<SymbolReference symbolId="SYMB81"/>
+</SendSymbols>
 <InputSymbols>
-<SymbolReference symbolId="SYMB76"/>
+<SymbolReference symbolId="SYMB80"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG10" name="sOkCreationCtrl_i">
-<SignalParameterType>InfoCtrl</SignalParameterType>
+<Signal id="SIG10" name="sReqInfoSystem">
 <InputSymbols>
-<SymbolReference symbolId="SYMB304"/>
+<SymbolReference symbolId="SYMB301"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG11" name="sReqInfoCtrl">
@@ -21,9 +22,10 @@
 <SymbolReference symbolId="SYMB599"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG12" name="sReqInfoSystem">
+<Signal id="SIG12" name="sOkCreationCtrl_i">
+<SignalParameterType>InfoCtrl</SignalParameterType>
 <InputSymbols>
-<SymbolReference symbolId="SYMB301"/>
+<SymbolReference symbolId="SYMB304"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG13" name="sOkSetUp">
@@ -35,33 +37,33 @@
 </InputSymbols>
 </Signal>
 <Signal id="SIG14" name="sSetUpFreeSpot">
-<SignalParameterType>itIndext_Ctrl</SignalParameterType>
-<SignalParameterType>itIndex</SignalParameterType>
+<SignalParameterType>indexCtrl</SignalParameterType>
+<SignalParameterType>indexZone</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB311"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG15" name="sSetUpTotalSpot">
-<SignalParameterType>itIndext_Ctrl</SignalParameterType>
-<SignalParameterType>itIndex</SignalParameterType>
+<Signal id="SIG15" name="sInitTotalSpotZone">
+<SignalParameterType>indexZone</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB317"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG16" name="sSetUpTotalSpot">
+<SignalParameterType>indexCtrl</SignalParameterType>
+<SignalParameterType>indexZone</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB313"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG16" name="sInitFreeSpotZone">
-<SignalParameterType>itIndex</SignalParameterType>
+<Signal id="SIG17" name="sInitFreeSpotZone">
+<SignalParameterType>indexZone</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 <SendSymbols>
 <SymbolReference symbolId="SYMB312"/>
-</SendSymbols>
-</Signal>
-<Signal id="SIG17" name="sInitTotalSpotZone">
-<SignalParameterType>itIndex</SignalParameterType>
-<SignalParameterType>i_spots</SignalParameterType>
-<SendSymbols>
-<SymbolReference symbolId="SYMB317"/>
 </SendSymbols>
 </Signal>
 <Signal id="SIG18" name="sInfoCtrlZone">
@@ -77,16 +79,14 @@
 <SymbolReference symbolId="SYMB600"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG2" name="sCreateZone_">
-<SignalParameterType>i_spots</SignalParameterType>
-<SignalParameterType>i_spots</SignalParameterType>
+<Signal id="SIG2" name="sInitialConnection">
 <SendSymbols>
-<SymbolReference symbolId="SYMB74"/>
+<SymbolReference symbolId="SYMB650"/>
 </SendSymbols>
 </Signal>
 <Signal id="SIG20" name="sReqInfoCtrlZone">
-<SignalParameterType>itIndext_Ctrl</SignalParameterType>
-<SignalParameterType>itIndex</SignalParameterType>
+<SignalParameterType>indexCtrl</SignalParameterType>
+<SignalParameterType>indexZone</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB596"/>
 </InputSymbols>
@@ -96,21 +96,21 @@
 <SymbolReference symbolId="SYMB15"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG22" name="sOkCreationCtrl">
+<Signal id="SIG22" name="sExcQuantityCtrl">
+<InputSymbols>
+<SymbolReference symbolId="SYMB12"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG23" name="sOkCreationCtrl">
 <SignalParameterType>InfoCtrl</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG23" name="sOkCreateCtrl">
+<Signal id="SIG24" name="sOkCreateCtrl">
 <SendSymbols>
 <SymbolReference symbolId="SYMB16"/>
 </SendSymbols>
-</Signal>
-<Signal id="SIG24" name="sExcQuantityCtrl">
-<InputSymbols>
-<SymbolReference symbolId="SYMB12"/>
-</InputSymbols>
 </Signal>
 <Signal id="SIG25" name="sInfoSystem">
 <SignalParameterType>InfoMainSystem</SignalParameterType>
@@ -123,41 +123,41 @@
 <SymbolReference symbolId="SYMB45"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG3" name="sAddZone">
-<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<Signal id="SIG3" name="sCreateCtrl">
+<SendSymbols>
+<SymbolReference symbolId="SYMB8"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG4" name="sCreateCtrlZone">
+<InputSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG5" name="sCreateZone_">
+<SignalParameterType>i_spots</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB74"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG6" name="sOkCreateZone">
+<SignalParameterType>InfoCtrl</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB76"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG7" name="sOkCreationZone">
+<SendSymbols>
+<SymbolReference symbolId="SYMB77"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG8" name="sAddZone">
+<SignalParameterType>indexCtrl</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB72"/>
 </InputSymbols>
-</Signal>
-<Signal id="SIG4" name="sExcLimitZones">
-<SendSymbols>
-<SymbolReference symbolId="SYMB81"/>
-</SendSymbols>
-<InputSymbols>
-<SymbolReference symbolId="SYMB80"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG5" name="sInitialConnection">
-<SendSymbols>
-<SymbolReference symbolId="SYMB177"/>
-</SendSymbols>
-</Signal>
-<Signal id="SIG6" name="sCreateCtrl">
-<SendSymbols>
-<SymbolReference symbolId="SYMB8"/>
-</SendSymbols>
-</Signal>
-<Signal id="SIG7" name="sCreateCtrlZone">
-<InputSymbols>
-<SymbolReference symbolId="SYMB5"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG8" name="sOkCreationZone">
-<SendSymbols>
-<SymbolReference symbolId="SYMB77"/>
-</SendSymbols>
 </Signal>
 <Signal id="SIG9" name="timerWaitCtrl" isTimer="TRUE">
 <InputSymbols>
@@ -175,177 +175,226 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG17"/>
-<SignalReference id="SIG16"/>
+<SignalReference id="SIG1"/>
 <SignalReference id="SIG21"/>
-<SignalReference id="SIG13"/>
-<SignalReference id="SIG5"/>
-<SignalReference id="SIG8"/>
-<SignalReference id="SIG2"/>
-<SignalReference id="SIG4"/>
-<SignalReference id="SIG26"/>
 <SignalReference id="SIG25"/>
+<SignalReference id="SIG24"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG17"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG26"/>
 <SignalReference id="SIG11"/>
-<SignalReference id="SIG18"/>
+<SignalReference id="SIG13"/>
 <SignalReference id="SIG9"/>
-<SignalReference id="SIG6"/>
-<SignalReference id="SIG23"/>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG18"/>
+<SignalReference id="SIG15"/>
+<SignalReference id="SIG5"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG12"/>
-<SignalReference id="SIG22"/>
-<SignalReference id="SIG13"/>
-<SignalReference id="SIG3"/>
-<SignalReference id="SIG15"/>
-<SignalReference id="SIG20"/>
-<SignalReference id="SIG7"/>
-<SignalReference id="SIG4"/>
-<SignalReference id="SIG19"/>
-<SignalReference id="SIG14"/>
+<SignalReference id="SIG16"/>
+<SignalReference id="SIG6"/>
 <SignalReference id="SIG10"/>
-<SignalReference id="SIG24"/>
+<SignalReference id="SIG23"/>
 <SignalReference id="SIG1"/>
+<SignalReference id="SIG20"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG13"/>
+<SignalReference id="SIG12"/>
 <SignalReference id="SIG9"/>
+<SignalReference id="SIG14"/>
+<SignalReference id="SIG22"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG19"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
-<SymbolReference symbolId="SYMB5"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
-<SymbolReference symbolId="SYMB72"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM28"/>
-<SymbolReference symbolId="SYMB766"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM22"/>
-<SymbolReference symbolId="SYMB76"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM22"/>
-<SymbolReference symbolId="SYMB80"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB301"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB304"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM29"/>
-<SymbolReference symbolId="SYMB410"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM29"/>
-<SymbolReference symbolId="SYMB411"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM25"/>
+<StateReference itemId="ITEM27"/>
 <SymbolReference symbolId="SYMB315"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB311"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB313"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB596"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM30"/>
-<SymbolReference symbolId="SYMB354"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM31"/>
-<SymbolReference symbolId="SYMB360"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM26"/>
-<SymbolReference symbolId="SYMB600"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
+<StateReference itemId="ITEM2"/>
 <SymbolReference symbolId="SYMB11"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
+<StateReference itemId="ITEM2"/>
 <SymbolReference symbolId="SYMB12"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM23"/>
+<StateReference itemId="ITEM25"/>
 <SymbolReference symbolId="SYMB30"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM23"/>
+<StateReference itemId="ITEM25"/>
 <SymbolReference symbolId="SYMB44"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM32"/>
-<SymbolReference symbolId="SYMB786"/>
+<StateReference itemId="ITEM3"/>
+<SymbolReference symbolId="SYMB5"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM3"/>
+<SymbolReference symbolId="SYMB72"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB76"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB80"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM28"/>
+<SymbolReference symbolId="SYMB600"/>
 </Transition>
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM10" type="variable" name="freeSpots" parentId="ITEM1" scope="none" variableTypeName="i_spots">
+<Item id="ITEM10" type="variable" name="totalSpots" parentId="ITEM1" scope="none" variableTypeName="i_spots">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM11" type="variable" name="totalSpots" parentId="ITEM1" scope="none" variableTypeName="i_spots">
+<Item id="ITEM11" type="variable" name="tableCtrls" parentId="ITEM1" scope="none" variableTypeName="tableInfoGralCtrl">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM12" type="variable" name="indexPid" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM12" type="variable" name="indexList" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM13" type="variable" name="indexList" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM13" type="variable" name="freeSpots" parentId="ITEM1" scope="none" variableTypeName="i_spots">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM14" type="variable" name="infoCtrlGral" parentId="ITEM1" scope="none" variableTypeName="InfoCtrl">
+<Item id="ITEM14" type="variable" name="infoSystem" parentId="ITEM1" scope="none" variableTypeName="InfoMainSystem">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM15" type="variable" name="numZone" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM15" type="variable" name="tmpfreeSpotsSystem" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM16" type="variable" name="tableCtrls" parentId="ITEM1" scope="none" variableTypeName="tableInfoGralCtrl">
+<Item id="ITEM16" type="variable" name="numZone" parentId="ITEM1" scope="none" variableTypeName="indexZone">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM17" type="variable" name="tmpTblZones" parentId="ITEM1" scope="none" variableTypeName="table_Zones">
+<Item id="ITEM17" type="variable" name="infoCtrlGral" parentId="ITEM1" scope="none" variableTypeName="InfoCtrl">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM18" type="variable" name="PidCtrlManager" parentId="ITEM1" scope="none" variableTypeName="PID">
+<Item id="ITEM18" type="variable" name="index" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM19" type="variable" name="PidCtrl" parentId="ITEM1" scope="none" variableTypeName="PID">
+<Item id="ITEM19" type="variable" name="tmpTblCtrls" parentId="ITEM1" scope="none" variableTypeName="tableMainInfoCtrls">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM2" type="state" name="Idle" parentId="ITEM1" scope="none">
+<Item id="ITEM2" type="state" name="sWaitAckCtrlManager" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB14"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB9"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM20" type="variable" name="numCtrl" parentId="ITEM1" scope="none" variableTypeName="indexCtrl">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB23"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM21" type="variable" name="indexPid" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB23"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM22" type="variable" name="PidZone" parentId="ITEM1" scope="none" variableTypeName="PID">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB23"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM23" type="variable" name="tmpSpotsCtrl" parentId="ITEM1" scope="none" variableTypeName="infoMainCtrls">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB23"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM24" type="variable" name="PidCtrlManager" parentId="ITEM1" scope="none" variableTypeName="PID">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB23"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM25" type="state" name="sWaitInfoCtrl" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB29"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB298"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM26" type="timer" name="timerWaitCtrl" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB109"/>
+<SymbolReference symbolId="SYMB297"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB232"/>
+<SymbolReference symbolId="SYMB34"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM27" type="state" name="sWaitInit" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB314"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB310"/>
+<SymbolReference symbolId="SYMB314"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM28" type="state" name="sWaitAns_Ctrl" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB601"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB601"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM29" type="procedure" name="proc_FindIndexPIDCtrl" parentId="ITEM1" scope="none" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="PID tableInfoGralCtrl INTEGER" procedureReturnType="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB231"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM3" type="state" name="Idle" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB349"/>
 <SymbolReference symbolId="SYMB307"/>
@@ -358,6 +407,7 @@
 <SymbolReference symbolId="SYMB18"/>
 <SymbolReference symbolId="SYMB35"/>
 <SymbolReference symbolId="SYMB17"/>
+<SymbolReference symbolId="SYMB651"/>
 <SymbolReference symbolId="SYMB82"/>
 <SymbolReference symbolId="SYMB309"/>
 <SymbolReference symbolId="SYMB414"/>
@@ -365,17 +415,7 @@
 <SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM20" type="variable" name="infoSystem" parentId="ITEM1" scope="none" variableTypeName="InfoMainSystem">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB23"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM21" type="variable" name="freeSpotsSystem" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB23"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM22" type="state" name="sWaitConfirmCreateZone" parentId="ITEM1" scope="none">
+<Item id="ITEM4" type="state" name="sWaitConfirmCreateZone" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB75"/>
 </DefiningSymbols>
@@ -383,80 +423,17 @@
 <SymbolReference symbolId="SYMB75"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM23" type="state" name="sWaitInfoCtrl" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB29"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB298"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM24" type="timer" name="timerWaitCtrl" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB109"/>
-<SymbolReference symbolId="SYMB297"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB232"/>
-<SymbolReference symbolId="SYMB34"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM25" type="state" name="sWaitInit" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB314"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB310"/>
-<SymbolReference symbolId="SYMB314"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM26" type="state" name="sWaitAns_Ctrl" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB601"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB601"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM27" type="procedure" name="proc_FindIndexPIDCtrl" parentId="ITEM1" scope="none" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="PID tableInfoGralCtrl INTEGER" procedureReturnType="INTEGER">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB231"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM28" type="state" name="sWaitOkCreationEntryWay" parentId="ITEM1" scope="none">
-</Item>
-<Item id="ITEM29" type="state" name="sWaitOkCreationOutWay" parentId="ITEM1" scope="none">
-</Item>
-<Item id="ITEM3" type="state" name="sWaitAckCtrlManager" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB14"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB9"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM30" type="state" name="sWaitTimerIR1" parentId="ITEM1" scope="none">
-</Item>
-<Item id="ITEM31" type="state" name="sWaitTimerIR2" parentId="ITEM1" scope="none">
-</Item>
-<Item id="ITEM32" type="state" name="sWaitConf_User_Out" parentId="ITEM1" scope="none">
-</Item>
-<Item id="ITEM4" type="variable" name="index" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM5" type="variable" name="tmpTblZones" parentId="ITEM1" scope="none" variableTypeName="table_Zones">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="variable" name="tmpfreeSpotsSystem" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM6" type="variable" name="PidCtrl" parentId="ITEM1" scope="none" variableTypeName="PID">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM6" type="variable" name="PidZone" parentId="ITEM1" scope="none" variableTypeName="PID">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB23"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM7" type="variable" name="numCtrl" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM7" type="variable" name="tmpInfoZone" parentId="ITEM1" scope="none" variableTypeName="InfoZone">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
@@ -466,7 +443,7 @@
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM9" type="variable" name="tmpInfoZone" parentId="ITEM1" scope="none" variableTypeName="InfoZone">
+<Item id="ITEM9" type="variable" name="freeSpotsSystem" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
