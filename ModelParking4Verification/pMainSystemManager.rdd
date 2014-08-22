@@ -879,12 +879,12 @@ PidCtrl:=tmpTblCtrl!IDCtrl</Text>
 
 <Symbol symbolId="SYMB596" type="sdlInputSig" xCenter="352" yCenter="132" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sReqInfoCtrlZone(NumCtrl,NumZone)</Text>
+<Text>sReqInfoCtrlZone(numCtrl,numZone)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB597" type="sdlTask" xCenter="352" yCenter="220" fixedDimensions="FALSE" width="242" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>tmpTblCtrl:=tableCtrls(NumCtrl),
+<Text>tmpTblCtrl:=tableCtrls(numCtrl),
 PidCtrl:=tmpTblCtrl!IDCtrl</Text>
 </Symbol>
 
