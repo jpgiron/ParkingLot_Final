@@ -47,11 +47,11 @@
 <Signal id="SIG23" name="sReqInfoCtrl">
 </Signal>
 <Signal id="SIG24" name="sInitFreeSpotZone">
-<SignalParameterType>itIndex</SignalParameterType>
+<SignalParameterType>indexZone</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 </Signal>
 <Signal id="SIG25" name="sInitTotalSpotZone">
-<SignalParameterType>itIndex</SignalParameterType>
+<SignalParameterType>indexZone</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 </Signal>
 <Signal id="SIG26" name="sInitialConnection">

@@ -17,6 +17,22 @@
 </Symbol>
 </Symbol>
 
+<Link linkId="LINK448" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Zone</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sIR1_Zone,sIR2_Zone,
+sIR3_Zone,sIR4_Zone,
+sLoopInductive_Zone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="0.0750436300175" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-220"/>
+
+</Link>
+
 <Link linkId="LINK447" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_Main</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
@@ -41,22 +57,6 @@ sInfoSystem]</Text>
 
 </Link>
 
-<Link linkId="LINK448" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Zone</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
-<Text id="1">[sIR1_Zone,sIR2_Zone,
-sIR3_Zone,sIR4_Zone,
-sLoopInductive_Zone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="0.0750436300175" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="-220"/>
-
-</Link>
-
 <Link linkId="LINK449" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cDisplay_Main</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.4" endType="midarrow">
@@ -72,16 +72,45 @@ sLoopInductive_Zone]</Text>
 </Link>
 </DiagramPartition>
 
-<DiagramPartition name="Declarations" nbPagesH="2" nbPagesV="1">
+<DiagramPartition name="Declarations" nbPagesH="2" nbPagesV="2">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
-<Symbol symbolId="SYMB6" type="sdlSysDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB6" type="sdlSysDgmFrm" xCenter="595" yCenter="841" fixedDimensions="TRUE" width="1146" height="1617" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB47" type="sdlText" xCenter="572" yCenter="440" fixedDimensions="FALSE" width="264" height="484" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="561" yCenter="759" fixedDimensions="FALSE" width="682" height="1474" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>NEWTYPE InfoZone
+<Text>/*Declarations of Constants */
+
+SYNONYM cNUMMAXCTRL INTEGER = 3;
+SYNONYM cMAX_ZONES INTEGER = 4;
+SYNONYM cNUMMAXZONES_SYSTEM INTEGER = cNUMMAXCTRL*cMAX_ZONES;
+SYNONYM cNUMMAXSPOTS INTEGER = 300;
+SYNONYM cNUMMAXFREESPOTS INTEGER =  cNUMMAXSPOTS*cNUMMAXZONES_SYSTEM;
+
+/* Declaration data types */
+
+SYNTYPE i_spots = INTEGER
+DEFAULT 0;
+    CONSTANTS 0..cNUMMAXSPOTS
+ENDSYNTYPE;
+
+SYNTYPE numMaxSpots = INTEGER
+  CONSTANTS 0..cNUMMAXFREESPOTS
+ENDSYNTYPE;
+
+SYNTYPE indexZone = INTEGER
+  CONSTANTS 0:cMAX_ZONES-1
+ENDSYNTYPE;
+
+SYNTYPE indexCtrl = INTEGER
+  CONSTANTS 0:cNUMMAXCTRL-1
+ENDSYNTYPE;
+
+/*Basic data types */
+
+NEWTYPE InfoZone
 STRUCT
     totalSpots i_spots;
     freeSpots i_spots;
@@ -104,23 +133,11 @@ ENDNEWTYPE;
 
 NEWTYPE tableVeriFyCon_Zone
     ARRAY(indexCtrl,BOOLEAN)
-ENDNEWTYPE;</Text>
-</Symbol>
+ENDNEWTYPE;
 
-<Symbol symbolId="SYMB55" type="sdlText" xCenter="627" yCenter="99" fixedDimensions="FALSE" width="682" height="154" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>/*Declarations of Constants */
+/*Structs*/
 
-SYNONYM cNUMMAXCTRL INTEGER = 3;
-SYNONYM cMAX_ZONES INTEGER = 4;
-SYNONYM cNUMMAXZONES_SYSTEM INTEGER = cNUMMAXCTRL*cMAX_ZONES;
-SYNONYM cNUMMAXSPOTS INTEGER = 300;
-SYNONYM cNUMMAXFREESPOTS INTEGER =  cNUMMAXSPOTS*cNUMMAXZONES_SYSTEM;</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB56" type="sdlText" xCenter="935" yCenter="407" fixedDimensions="FALSE" width="352" height="418" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>NEWTYPE InfoCtrl
+NEWTYPE InfoCtrl
 STRUCT
     alltotalSpots numMaxSpots;
     allfreeSpots numMaxSpots;
@@ -130,7 +147,7 @@ STRUCT
 ENDNEWTYPE;
 
 NEWTYPE tableInfoGralCtrl
-  ARRAY(indexCtrl, InfoCtrl)
+  ARRAY(indexCtrl,InfoCtrl)
 ENDNEWTYPE;
 
 NEWTYPE InfoMainSystem
@@ -140,29 +157,6 @@ STRUCT
     freeSpotsParking numMaxSpots;
     tableInfoCtrl tableMainInfoCtrls;
 ENDNEWTYPE;</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB7" type="sdlText" xCenter="209" yCenter="396" fixedDimensions="FALSE" width="308" height="396" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>/* Declaration data types */
-
-
-SYNTYPE i_spots = INTEGER
-DEFAULT 0;
-    CONSTANTS 0..cNUMMAXSPOTS
-ENDSYNTYPE;
-
-SYNTYPE numMaxSpots = INTEGER
-  CONSTANTS 0..cNUMMAXFREESPOTS
-ENDSYNTYPE;
-
-SYNTYPE indexZone = INTEGER
-  CONSTANTS 0..cMAX_ZONES-1
-ENDSYNTYPE;
-
-SYNTYPE indexCtrl = INTEGER
-  CONSTANTS 0..cNUMMAXCTRL-1
-ENDSYNTYPE;</Text>
 </Symbol>
 </Symbol>
 </DiagramPartition>
@@ -174,7 +168,7 @@ ENDSYNTYPE;</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlText" xCenter="275" yCenter="451" fixedDimensions="FALSE" width="550" height="902" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB63" type="sdlText" xCenter="275" yCenter="462" fixedDimensions="FALSE" width="550" height="902" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/*----------------------------- Process called pZone -------------------------------------*/
 
@@ -233,7 +227,7 @@ SIGNAL sOkCreateZoneManager(PID);</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB39" type="sdlText" xCenter="264" yCenter="374" fixedDimensions="FALSE" width="462" height="704" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB64" type="sdlText" xCenter="275" yCenter="396" fixedDimensions="FALSE" width="462" height="704" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/*-----------------------Process pCtrlManager -----------------------------*/
 
@@ -281,7 +275,7 @@ SIGNAL sOkCreationCtrl_i(InfoCtrl);</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB41" type="sdlText" xCenter="275" yCenter="286" fixedDimensions="FALSE" width="440" height="506" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB65" type="sdlText" xCenter="286" yCenter="275" fixedDimensions="FALSE" width="440" height="506" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/*--------Process pMainSystemManager----------------------------*/
 /*Channel cEnv_Main*/

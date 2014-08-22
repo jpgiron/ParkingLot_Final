@@ -1224,7 +1224,7 @@ cEnv_Main</Text>
 <Text>-</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB33" type="sdlTask" xCenter="506" yCenter="363" fixedDimensions="FALSE" width="594" height="220" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB33" type="sdlTask" xCenter="506" yCenter="352" fixedDimensions="FALSE" width="594" height="220" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>PidCtrl:=infoCtrlGral!IDCtrl,
 indexPid:=CALL proc_FindIndexPIDCtrl(PidCtrl,tableCtrls,indexList),
@@ -1233,12 +1233,12 @@ infoSystem!totalSpotsSystem:=infoSystem!totalSpotsSystem+infoCtrlGral!alltotalSp
 tmpTblCtrls:=infoSystem!tableInfoCtrl,
 tmpSpotsCtrl:=tmpTblCtrls(indexPid),
 tmpSpotsCtrl!totalSpotsZone:=infoCtrlGral!alltotalSpots,
-tmpSpotsCtrl!totalSpotsZone:=infoCtrlGral!allfreeSpots,
+tmpSpotsCtrl!freeSpotsZone:=infoCtrlGral!allfreeSpots,
 infoSystem!tableInfoCtrl(indexPid):=tmpSpotsCtrl,
 tableCtrls(indexPid):=infoCtrlGral</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB34" type="sdlResetTimer" xCenter="462" yCenter="198" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB34" type="sdlResetTimer" xCenter="462" yCenter="187" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>RESET(timerWaitCtrl)</Text>
 </Symbol>
@@ -1344,7 +1344,7 @@ tableCtrls(indexPid):=infoCtrlGral</Text>
 
 </Link>
 
-<Link linkId="LINK1448" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK2277" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB30" type="void" isOutside="TRUE" side="x" position="0.1" endType="voidend">
 <Text id="1"></Text>
@@ -1354,11 +1354,11 @@ tableCtrls(indexPid):=infoCtrlGral</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="77"/>
+<LinkSegment orientation="v" length="66"/>
 
 </Link>
 
-<Link linkId="LINK2125" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK2275" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB33" type="void" isOutside="TRUE" side="x" position="-0.111111111111" endType="voidend">
 <Text id="1"></Text>
@@ -1368,11 +1368,11 @@ tableCtrls(indexPid):=infoCtrlGral</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="154"/>
+<LinkSegment orientation="v" length="165"/>
 
 </Link>
 
-<Link linkId="LINK2122" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK2278" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB34" type="void" isOutside="TRUE" side="x" position="0.125" endType="voidend">
 <Text id="1"></Text>
