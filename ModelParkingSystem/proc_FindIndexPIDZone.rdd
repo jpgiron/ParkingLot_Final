@@ -43,7 +43,7 @@
 
 <Symbol symbolId="SYMB3" type="sdlPrcdProto" xCenter="440" yCenter="165" fixedDimensions="TRUE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>proc_FindIndexPIDZone</Text>
+<Text>proc_FindIndexPidZone</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB30" type="sdlTask" xCenter="220" yCenter="198" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
@@ -66,7 +66,7 @@
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlText" xCenter="253" yCenter="66" fixedDimensions="FALSE" width="462" height="110" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlText" xCenter="253" yCenter="66" fixedDimensions="FALSE" width="462" height="132" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>FPAR 
 IN/OUT PidZone PID,tableZones table_Zones,indexList INTEGER;

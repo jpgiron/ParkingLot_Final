@@ -84,10 +84,9 @@ infoSystem!freeSpotsParking:=cNUMMAXFREESPOTS</Text>
 <Text>sAddZone(numCtrl,totalSpots,freeSpots)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB73" type="sdlTask" xCenter="352" yCenter="594" fixedDimensions="FALSE" width="264" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB73" type="sdlTask" xCenter="352" yCenter="594" fixedDimensions="FALSE" width="242" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>/*PidCtrl:=tableCtrls(numCtrl)!IDCtrl*/
-tmpTblCtrl:=tableCtrls(numCtrl),
+<Text>tmpTblCtrl:=tableCtrls(numCtrl),
 PidCtrl:=tmpTblCtrl!IDCtrl</Text>
 </Symbol>
 
@@ -1175,17 +1174,15 @@ indexOutWay:=indexOutWay+1</Text>
 TO PidCtrl</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB318" type="sdlTask" xCenter="330" yCenter="209" fixedDimensions="FALSE" width="264" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB318" type="sdlTask" xCenter="330" yCenter="209" fixedDimensions="FALSE" width="242" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>/*PidCtrl:=tableCtrls(numCtrl)!IDCtrl*/
-tmpTblCtrl:=tableCtrls(numCtrl),
+<Text>tmpTblCtrl:=tableCtrls(numCtrl),
 PidCtrl:=tmpTblCtrl!IDCtrl</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB319" type="sdlTask" xCenter="891" yCenter="220" fixedDimensions="FALSE" width="264" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB319" type="sdlTask" xCenter="891" yCenter="220" fixedDimensions="FALSE" width="242" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>/*PidCtrl:=tableCtrls(numCtrl)!IDCtrl*/
-tmpTblCtrl:=tableCtrls(numCtrl),
+<Text>tmpTblCtrl:=tableCtrls(numCtrl),
 PidCtrl:=tmpTblCtrl!IDCtrl</Text>
 </Symbol>
 
@@ -1396,10 +1393,9 @@ PidCtrl:=tmpTblCtrl!IDCtrl</Text>
 <Text>timerWaitSignalIR</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB356" type="sdlTask" xCenter="209" yCenter="231" fixedDimensions="FALSE" width="396" height="132" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB356" type="sdlTask" xCenter="209" yCenter="231" fixedDimensions="FALSE" width="286" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>/*PidZone:=tableCtrls(NumCtrl)!listZones(NumZone)!ID*/
-tmpTblCtrl:=tableCtrls(NumCtrl),
+<Text>tmpTblCtrl:=tableCtrls(numCtrl),
 tmpTblZones:=tmpTblCtrl!listZones,
 tmpInfoZone:=tmpTblZones(NumZone),
 PidZone:=tmpInfoZone!ID</Text>
@@ -1450,12 +1446,11 @@ PidZone:=tmpInfoZone!ID</Text>
 <Text>timerWaitSignalIR</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB366" type="sdlTask" xCenter="638" yCenter="231" fixedDimensions="FALSE" width="396" height="132" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB366" type="sdlTask" xCenter="638" yCenter="231" fixedDimensions="FALSE" width="286" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>/*PidZone:=tableCtrls(NumCtrl)!listZones(NumZone)!ID*/
-tmpTblCtrl:=tableCtrls(NumCtrl),
+<Text>tmpTblCtrl:=tableCtrls(numCtrl),
 tmpTblZones:=tmpTblCtrl!listZones,
-tmpInfoZone:=tmpTblZones(NumZone),
+tmpInfoZone:=tmpTblZones(numZone),
 PidZone:=tmpInfoZone!ID</Text>
 </Symbol>
 
@@ -1496,12 +1491,12 @@ PidZone:=tmpInfoZone!ID</Text>
 
 <Symbol symbolId="SYMB596" type="sdlInputSig" xCenter="990" yCenter="121" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sReqInfoCtrlZone(NumCtrl,NumZone)</Text>
+<Text>sReqInfoCtrlZone(numCtrl,numZone)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB597" type="sdlTask" xCenter="990" yCenter="209" fixedDimensions="FALSE" width="242" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>tmpTblCtrl:=tableCtrls(NumCtrl),
+<Text>tmpTblCtrl:=tableCtrls(numCtrl),
 PidCtrl:=tmpTblCtrl!IDCtrl</Text>
 </Symbol>
 
@@ -1784,7 +1779,7 @@ freeSpots:=tmpInfoZone!freeSpots</Text>
 
 <Link linkId="LINK1645" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB366" type="void" isOutside="TRUE" side="x" position="-0.0555555555556" endType="voidend">
+<Connector attachedSymbolId="SYMB366" type="void" isOutside="TRUE" side="x" position="-0.0769230769231" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
