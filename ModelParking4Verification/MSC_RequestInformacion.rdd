@@ -50,7 +50,7 @@
 <TimeInterval type="end" startpos="638" endpos="-1" offset="33" color="#000000"><Text>timerWaitCtrl</Text></TimeInterval>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="mscLifeline" xCenter="426" yCenter="385" fixedDimensions="FALSE" width="82" height="748" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB4" type="mscLifeline" xCenter="426" yCenter="385" fixedDimensions="FALSE" width="60" height="748" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pCtrl(1)</Text>
 <LifelineComponent type="norm" height="748" color="#000000"/>
@@ -64,7 +64,7 @@
 <LifelineComponent type="norm" height="752" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="mscLifeline" xCenter="750" yCenter="385" fixedDimensions="FALSE" width="114" height="748" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB6" type="mscLifeline" xCenter="750" yCenter="385" fixedDimensions="FALSE" width="92" height="748" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pZone(Ctrl1)</Text>
 <LifelineComponent type="norm" height="748" color="#000000"/>
@@ -129,12 +129,12 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB91" type="mscCondition" xCenter="242" yCenter="506" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB91" type="mscCondition" xCenter="242" yCenter="506" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitInfoCtrl</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB92" type="mscCondition" xCenter="242" yCenter="583" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB92" type="mscCondition" xCenter="242" yCenter="583" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitInfoCtrl</Text>
 </Symbol>

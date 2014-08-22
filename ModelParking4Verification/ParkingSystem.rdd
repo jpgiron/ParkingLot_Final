@@ -17,22 +17,6 @@
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK448" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Zone</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
-<Text id="1">[sIR1_Zone,sIR2_Zone,
-sIR3_Zone,sIR4_Zone,
-sLoopInductive_Zone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="0.0750436300175" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="-220"/>
-
-</Link>
-
 <Link linkId="LINK447" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_Main</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
@@ -70,6 +54,22 @@ sInfoSystem]</Text>
 <LinkSegment orientation="h" length="-616"/>
 
 </Link>
+
+<Link linkId="LINK448" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Zone</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sIR1_Zone,sIR2_Zone,
+sIR3_Zone,sIR4_Zone,
+sLoopInductive_Zone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="0.0750436300175" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-220"/>
+
+</Link>
 </DiagramPartition>
 
 <DiagramPartition name="Declarations" nbPagesH="2" nbPagesV="2">
@@ -86,7 +86,7 @@ sInfoSystem]</Text>
 SYNONYM cNUMMAXCTRL INTEGER = 3;
 SYNONYM cMAX_ZONES INTEGER = 4;
 SYNONYM cNUMMAXZONES_SYSTEM INTEGER = cNUMMAXCTRL*cMAX_ZONES;
-SYNONYM cNUMMAXSPOTS INTEGER = 300;
+SYNONYM cNUMMAXSPOTS INTEGER = 10;
 SYNONYM cNUMMAXFREESPOTS INTEGER =  cNUMMAXSPOTS*cNUMMAXZONES_SYSTEM;
 
 /* Declaration data types */
