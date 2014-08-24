@@ -1,0 +1,13 @@
+Parameter PortNumber
+49500
+Parameter ifFile
+propiedad/ParkingLot/InitSystem/Ver_InitSystem.if
+IF BAse Ver_InitSystem.if
+PWD /home/jpgiron/propiedad/ParkingLot/InitSystem
+Compiling...
+Compiled IF spec...
+make: `Ver_InitSystem.C' is up to date.
+echo g++  -c -o Ver_InitSystem.o -Wall -Wno-deprecated -O3 -DABSTRACT -I/opt/IFx/src/simulator-t -I/opt/IFx/src/simulator Ver_InitSystem.C; \
+	g++  -c -o Ver_InitSystem.o -Wno-deprecated -DABSTRACT -I/opt/IFx/src/simulator-t -I/opt/IFx/src/simulator Ver_InitSystem.C; 
+g++ -c -o Ver_InitSystem.o -Wall -Wno-deprecated -O3 -DABSTRACT -I/opt/IFx/src/simulator-t -I/opt/IFx/src/simulator Ver_InitSystem.C
+-EOF-

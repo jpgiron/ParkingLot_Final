@@ -8,16 +8,15 @@
 <SymbolReference symbolId="SYMB2"/>
 </UsingSymbols>
 <Prototype>
-<Signature>proc_FindIndexPIDZone</Signature>
 <PrototypeSymbol>
 <SymbolReference symbolId="SYMB3"/>
-<PrototypeText>proc_FindIndexPIDZone</PrototypeText>
+<PrototypeText>proc_FindIndexPidZone</PrototypeText>
 </PrototypeSymbol>
 </Prototype>
 <Body>
 </Body>
 </Item>
-<Item id="ITEM2" type="variable" name="indexList" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isFormalParam="TRUE">
+<Item id="ITEM2" type="variable" name="PidZone" parentId="ITEM1" scope="none" variableTypeName="PID" isFormalParam="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
@@ -32,12 +31,7 @@
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="variable" name="pid_Zone" parentId="ITEM1" scope="none" variableTypeName="PID">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB5"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM6" type="variable" name="PidZone" parentId="ITEM1" scope="none" variableTypeName="PID" isFormalParam="TRUE">
+<Item id="ITEM5" type="variable" name="indexList" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isFormalParam="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>

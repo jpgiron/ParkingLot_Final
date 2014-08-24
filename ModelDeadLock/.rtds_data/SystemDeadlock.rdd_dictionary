@@ -13,11 +13,26 @@
 <SymbolReference symbolId="SYMB4"/>
 </DeclarationSymbols>
 </Signal>
+<Signal id="SIG3" name="a">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DeclarationSymbols>
+</Signal>
 <Item id="ITEM1" type="system" name="SystemDeadlock" scope="current">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
-<Channel name="internal" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW2"/>
+<SignalWindow id="SIGWDW4" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK4" isFrom="TRUE"/>
+<Connections>
+<Connection name="env"/>
+</Connections>
+<SentSignals>
+<SignalReference id="SIG3"/>
+</SentSignals>
+</SignalWindow>
+<Channel name="internal" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW3"/>
+<Channel name="env" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW2"/>
 </Item>
 <Item id="ITEM2" type="process" name="processA" parentId="ITEM1" scope="none" minInstances="1">
 <DefiningSymbols>
@@ -35,6 +50,12 @@
 <SignalReference id="SIG2"/>
 </ReceivedSignals>
 </SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK4" isFrom="FALSE"/>
+<ReceivedSignals>
+<SignalReference id="SIG3"/>
+</ReceivedSignals>
+</SignalWindow>
 </Item>
 <Item id="ITEM3" type="process" name="processB" parentId="ITEM1" scope="none" minInstances="1">
 <DefiningSymbols>
@@ -43,7 +64,7 @@
 <UsingSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </UsingSymbols>
-<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<SignalWindow id="SIGWDW3" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK3" isFrom="FALSE"/>
 <SentSignals>
 <SignalReference id="SIG2"/>

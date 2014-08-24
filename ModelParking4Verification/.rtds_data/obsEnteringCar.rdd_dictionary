@@ -10,11 +10,11 @@
 <Body>
 <ContinuousTransitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
+<StateReference itemId="ITEM5"/>
 <SymbolReference symbolId="SYMB201"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
+<StateReference itemId="ITEM4"/>
 <SymbolReference symbolId="SYMB290"/>
 </Transition>
 </ContinuousTransitions>
@@ -31,7 +31,13 @@
 <SymbolReference symbolId="SYMB24"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM3" type="state" name="END" parentId="ITEM1" scope="none">
+<Item id="ITEM3" type="state" name="DEAD" parentId="ITEM1" scope="none">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB203"/>
+<SymbolReference symbolId="SYMB292"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="END" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB291"/>
 </DefiningSymbols>
@@ -39,19 +45,13 @@
 <SymbolReference symbolId="SYMB198"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM4" type="state" name="sError" parentId="ITEM1" scope="none">
+<Item id="ITEM5" type="state" name="sError" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB200"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB205"/>
 <SymbolReference symbolId="SYMB199"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM5" type="state" name="DEAD" parentId="ITEM1" scope="none">
-<UsingSymbols>
-<SymbolReference symbolId="SYMB203"/>
-<SymbolReference symbolId="SYMB292"/>
+<SymbolReference symbolId="SYMB205"/>
 </UsingSymbols>
 </Item>
 </DictionaryObjects>

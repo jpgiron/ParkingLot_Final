@@ -1,0 +1,152 @@
+
+system SystemDeadlock;
+type RTDS_character = range 32..127;
+type RTDS_charstring = string[128] of RTDS_character;
+signal enableA(pid);
+signal enableB(pid);
+signal a(pid);
+signal b(pid);
+
+
+signalroute P_processB_C_internal_M_enableA(1) #fifo #reliable #unicast #urgent
+from processB
+to processA
+with enableA;
+
+signalroute P_processA_C_internal_M_enableB(1) #fifo #reliable #unicast #urgent
+from processA
+to processB
+with enableB;
+
+signalroute ENV_C_env_M_b_P_processB(1) #fifo
+from env
+to processB
+with b;
+
+signalroute ENV_C_env_M_a_P_processA(1) #fifo
+from env
+to processA
+with a;
+
+/*
+==========
+Messages name and corresponding channel received by the environment
+channel env : 
+==========;
+*/
+
+process processA(0);
+fpar PARENT pid;
+var OFFSPRING pid;
+var SENDER pid;
+var RTDS_skip boolean;
+var RTDS_stop boolean;
+
+state RTDS_START #start #stable ;
+provided true;
+nextstate Idle;
+endstate;
+
+
+state Idle #stable ;
+
+deadline delayable;
+input a(SENDER);
+nextstate waitEnablea;
+endstate;
+
+
+state waitEnablea #stable ;
+
+deadline delayable;
+input enableA(SENDER);
+output enableB(self) via {P_processA_C_internal_M_enableB}0;
+nextstate waitEnablea;
+endstate;
+endprocess;
+
+
+process processB(0);
+fpar PARENT pid;
+var OFFSPRING pid;
+var SENDER pid;
+var RTDS_skip boolean;
+var RTDS_stop boolean;
+
+state RTDS_START #start #stable ;
+provided true;
+nextstate Idle;
+endstate;
+
+
+state Idle #stable ;
+
+deadline delayable;
+input b(SENDER);
+nextstate waitEnableB;
+endstate;
+
+
+state waitEnableB #stable ;
+
+deadline delayable;
+input enableB(SENDER);
+output enableA(self) via {P_processB_C_internal_M_enableA}0;
+nextstate Idle;
+endstate;
+endprocess;
+
+
+process RTDS_start_process(1);
+state RTDS_START #start ;
+provided true;
+fork processA(nil);
+fork processB(nil);
+kill self;
+stop;
+endstate;
+endprocess;
+
+endsystem;
+
+
+cut observer Init;
+var pidSender pid;
+var pidA pid;
+var tmp integer:=0;
+state RTDS_START #start #stable ;
+provided true;
+task tmp:=0;
+nextstate test;
+endstate;
+
+
+state END ;
+provided true;
+cut;
+nextstate END;
+endstate;
+
+
+state test ;
+match input enableA(pidSender) in pidA;
+nextstate RTDS_decision_SYMB23;
+endstate;
+
+state RTDS_decision_SYMB23 #unstable ;
+
+provided not (({processA}0) instate Idle);
+nextstate sError;
+
+provided ({processA}0) instate Idle;
+nextstate END;
+endstate;
+
+
+state sError #error ;
+provided true;
+cut;
+nextstate sError;
+endstate;
+endobserver;
+
