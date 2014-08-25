@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="blk">
+<Signal id="SIG1" name="sCreateZone_">
+<SignalParameterType>i_spots</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Signal id="SIG10" name="sOkCreationCtrl_i">
+<SignalParameterType>InfoCtrl</SignalParameterType>
+</Signal>
+<Signal id="SIG11" name="sCreateCtrl">
+</Signal>
+<Signal id="SIG12" name="sExcQuantityCtrl">
+</Signal>
+<Signal id="SIG13" name="sOkCreationCtrl">
+<SignalParameterType>InfoCtrl</SignalParameterType>
+</Signal>
+<Signal id="SIG14" name="sExcLimitCtrl">
+</Signal>
+<Signal id="SIG15" name="sImpossibleGetInfoCtrls">
+</Signal>
+<Signal id="SIG16" name="sOkCreateCtrl">
+</Signal>
+<Signal id="SIG17" name="sOkCreationZone">
+</Signal>
+<Signal id="SIG18" name="sInfoSystem">
+<SignalParameterType>InfoMainSystem</SignalParameterType>
+</Signal>
+<Signal id="SIG19" name="sCreateCtrlZone">
+</Signal>
+<Signal id="SIG2" name="sReqInfoCtrl">
+</Signal>
+<Signal id="SIG20" name="sReqInfoSystem">
+</Signal>
+<Signal id="SIG21" name="sAddZone">
+<SignalParameterType>indexCtrl</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Signal id="SIG22" name="sSetUpFreeSpot">
+<SignalParameterType>indexCtrl</SignalParameterType>
+<SignalParameterType>indexZone</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Signal id="SIG23" name="sSetUpTotalSpot">
+<SignalParameterType>indexCtrl</SignalParameterType>
+<SignalParameterType>indexZone</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Signal id="SIG24" name="sInfoCtrlZone">
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Signal id="SIG25" name="sReqInfoCtrlZone">
+<SignalParameterType>indexCtrl</SignalParameterType>
+<SignalParameterType>indexZone</SignalParameterType>
+</Signal>
+<Signal id="SIG3" name="sInitFreeSpotZone">
+<SignalParameterType>indexZone</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Signal id="SIG4" name="sInitTotalSpotZone">
+<SignalParameterType>indexZone</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Signal id="SIG5" name="sInitialConnection">
+</Signal>
+<Signal id="SIG6" name="sInfoTotalCtrl">
+<SignalParameterType>InfoCtrl</SignalParameterType>
+</Signal>
+<Signal id="SIG7" name="sOkCreateZone">
+<SignalParameterType>InfoCtrl</SignalParameterType>
+</Signal>
+<Signal id="SIG8" name="sExcLimitZones">
+</Signal>
+<Signal id="SIG9" name="sOkSetUp">
+</Signal>
+<Item id="ITEM1" type="block" name="BMainSystemManager" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW5" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK133" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG10"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW6" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK135" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG12"/>
+<SignalReference id="SIG13"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG11"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW7" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK136" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG19"/>
+<SignalReference id="SIG20"/>
+<SignalReference id="SIG21"/>
+<SignalReference id="SIG22"/>
+<SignalReference id="SIG23"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG14"/>
+<SignalReference id="SIG15"/>
+<SignalReference id="SIG16"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG17"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG18"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW8" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK134" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG25"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG24"/>
+</ReceivedSignals>
+</SignalWindow>
+<Channel name="cMain_CtrlZone" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW5"/>
+<Channel name="cMain_CtrlManager" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW6"/>
+<Channel name="cEnv_Main" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW7"/>
+<Channel name="cDisplay_Main" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW8"/>
+</Item>
+<Item id="ITEM2" type="process" name="pMainSystemManager" parentId="ITEM1" scope="none" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW4" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK134" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG24"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG25"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK133" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG10"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK135" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG11"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG12"/>
+<SignalReference id="SIG13"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW3" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK136" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG14"/>
+<SignalReference id="SIG15"/>
+<SignalReference id="SIG16"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG17"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG18"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG19"/>
+<SignalReference id="SIG20"/>
+<SignalReference id="SIG21"/>
+<SignalReference id="SIG22"/>
+<SignalReference id="SIG23"/>
+</ReceivedSignals>
+</SignalWindow>
+</Item>
+</DictionaryObjects>
