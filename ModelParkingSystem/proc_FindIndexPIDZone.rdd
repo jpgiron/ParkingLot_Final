@@ -21,9 +21,9 @@
 <Text>index</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB16" type="sdlDecision" xCenter="220" yCenter="286" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB16" type="sdlDecision" xCenter="220" yCenter="286" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>index&lt;=indexList</Text>
+<Text>index&lt;indexList</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB18" type="sdlTask" xCenter="451" yCenter="440" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
@@ -105,7 +105,7 @@ DCL index INTEGER;</Text>
 
 </Link>
 
-<Link linkId="LINK67" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK105" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>true</Text>
 <Connector attachedSymbolId="SYMB16" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -119,7 +119,7 @@ DCL index INTEGER;</Text>
 
 </Link>
 
-<Link linkId="LINK100" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK103" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>false</Text>
 <Connector attachedSymbolId="SYMB16" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -133,7 +133,7 @@ DCL index INTEGER;</Text>
 
 </Link>
 
-<Link linkId="LINK65" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK102" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB18" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -165,7 +165,7 @@ DCL index INTEGER;</Text>
 
 </Link>
 
-<Link linkId="LINK80" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK104" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB30" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>

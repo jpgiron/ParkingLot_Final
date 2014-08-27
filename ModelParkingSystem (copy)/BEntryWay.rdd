@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="blk" name="BEntryNOut_Way" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB1" type="sdlBlkDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB2" type="sdlPrcs" xCenter="352" yCenter="297" fixedDimensions="TRUE" width="594" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>pEntryNOut_Way(1,cNUMMAXENTRYNOUTWAY)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="1045" yCenter="286" fixedDimensions="TRUE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>pCreatorEntryNOut_Way</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK33" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_Main</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.111111111111" endType="midarrow">
+<Text id="1">[sInitEntryWay_i,
+sLoopInductive_Entrance_S,
+sLoopInductive_Exit_S,
+sCarPassedBarrier_S]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.328097731239" endType="midarrow">
+<Text id="1">[sEnteredCarSystem,
+sOutCarSystem,
+sUpBarrier,
+sOkEntryWay1]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="-308"/>
+
+</Link>
+
+<Link linkId="LINK34" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_DB</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.703703703704" endType="midarrow">
+<Text id="1">[sOkUser,
+sNoRegis_User]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.020942408377" endType="midarrow">
+<Text id="1">[sConfirmEntranceUser,
+sConfirmOutUser]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="-308"/>
+
+</Link>
+
+<Link linkId="LINK30" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCreatorCRNC</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="-0.555555555556" endType="midarrow">
+<Text id="1">[sAssigned]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="-0.673647469459" endType="midarrow">
+<Text id="1">[sAssignCardReaderNCam]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="484"/>
+
+</Link>
+
+<Link linkId="LINK31" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_Cam</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.222222222222" endType="midarrow">
+<Text id="1">[sPlate]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="-0.270506108202" endType="midarrow">
+<Text id="1">[sRequestPlate]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="484"/>
+
+</Link>
+
+<Link linkId="LINK32" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_EntryWay</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="-0.518518518519" endType="midarrow">
+<Text id="1">[sLoopInductive_Entrance,
+sLoopInductive_Exit,
+sCarPassedBarrier]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.65445026178" endType="midarrow">
+<Text id="1">[sUpBarrier,
+sDownBarrier]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="-308"/>
+
+</Link>
+
+<Link linkId="LINK29" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_CR</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.962962962963" endType="midarrow">
+<Text id="1">[sDataUser]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.113438045375" endType="midarrow">
+<Text id="1">[sEnableCardReader]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="484"/>
+
+</Link>
+
+<Link linkId="LINK28" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cInternalEntryWay</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sOkInitEntryWay]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.5" endType="midarrow">
+<Text id="1">[sOkCreateEntryNOut_Way]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="693"/>
+
+</Link>
+
+<Link linkId="LINK14" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCreatorEntryWay_Main</Text>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sCreateEntryWay,
+sCreateOutWay]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="0.823734729494" endType="midarrow">
+<Text id="1">[sOkCreateEntryWay,
+sOkCreateOutWay,
+sExcOutWay,
+sExcEntryWay]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="-286"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

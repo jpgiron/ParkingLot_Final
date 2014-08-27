@@ -17,12 +17,12 @@
 <Body>
 </Body>
 </Item>
-<Item id="ITEM2" type="variable" name="PidZone" parentId="ITEM1" scope="none" variableTypeName="PID" isFormalParam="TRUE">
+<Item id="ITEM2" type="variable" name="tableZones" parentId="ITEM1" scope="none" variableTypeName="table_Zones" isFormalParam="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM3" type="variable" name="tableZones" parentId="ITEM1" scope="none" variableTypeName="table_Zones" isFormalParam="TRUE">
+<Item id="ITEM3" type="variable" name="PidZone" parentId="ITEM1" scope="none" variableTypeName="PID" isFormalParam="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>

@@ -1,0 +1,63 @@
+/* Here is the delcarations of the Templates
+    that will be used in the TestCase */
+    
+/* Templates written by Juan Pablo Giron Ruiz */
+
+module declaration_templates
+{
+    
+    import from declaration_Signals all;
+    
+    /*Channel cDisplay_Main*/
+    template sReqInfoCtrlZone a_sReqInfoCtrlZone(numCtrl p_numCtrl,numZone p_numZone):=
+    {
+        num_Ctrl:=p_numCtrl,
+        num_Zone:=p_numZone     
+    } 
+    
+    template sInfoCtrlZone a_sInfoCtrlZone(spots p_freeSpots):=
+    {
+        freeSpots:=p_freeSpots    
+    }
+    
+    /*Channel cEnv_pTesting*/
+    
+    template sEntryCarCtrl a_sEntryCarCtrl(numCtrl p_numCtrl):=
+    {
+        num_Ctrl:=p_numCtrl
+    }        
+    template sOutCarCtrl a_sOutCarCtrl(numCtrl p_numCtrl):=
+    {
+        num_Ctrl:=p_numCtrl
+    }
+    template sEntryCarZone a_sEntryCarZone(numZone p_numZone):=
+    {
+        num_Zone:=p_numZone
+    }   
+    template sOutCarZone a_sOutCarZone(numZone p_numZone):=
+    {
+        num_Zone:=p_numZone
+    }     
+    
+    /*Channel cEnv_Main */
+    
+    template sCreateCtrlZone a_sCreateCtrlZone:=?
+    template sOkCreationZone a_sOkCreationZone:=?
+    template sOkCreateCtrl a_sOkCreateCtrl:=?
+    template sCreateEntryWay a_sCreateEntryWay:=?
+    
+    
+    template sAddZone a_sAddZone(numCtrl p_numCtrl,spots p_totalSpots,spots p_freeSpots):=
+    {
+        num_Ctrl:=p_numCtrl,
+        totalSpots:=p_totalSpots,
+        freeSpots:=p_freeSpots
+    }
+    
+    /*Channel cEnv_CR */
+    
+    template sIDUserFromEnv a_sIDUserFromEnv(ID_User p_ID):=
+    {
+      ID:=p_ID
+    }
+}    
