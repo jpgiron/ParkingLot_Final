@@ -129,19 +129,6 @@
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK80" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sOkInitEntryWay</Text>
-<Connector attachedSymbolId="SYMB19" type="mscvoid" isOutside="TRUE" side="y" position="-0.578544061303" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB22" type="mscvoid" isOutside="TRUE" side="y" position="-0.851796407186" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
 <Link linkId="LINK77" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB19" type="mscvoid" isOutside="TRUE" side="y" position="-0.688378033206" endType="voidend">
@@ -155,13 +142,26 @@
 
 </Link>
 
+<Link linkId="LINK80" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sOkInitEntryWay</Text>
+<Connector attachedSymbolId="SYMB19" type="mscvoid" isOutside="TRUE" side="y" position="-0.578544061303" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB22" type="mscvoid" isOutside="TRUE" side="y" position="-0.578544061303" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
 <Link linkId="LINK81" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sOkCreateOutWay(pidOutWay)</Text>
 <Connector attachedSymbolId="SYMB19" type="mscvoid" isOutside="TRUE" side="y" position="0.0140485312899" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.00256739409499" endType="arrow">
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.0140485312899" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -239,7 +239,7 @@
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB20" type="mscvoid" isOutside="TRUE" side="y" position="-0.537579617834" endType="arrow">
+<Connector attachedSymbolId="SYMB20" type="mscvoid" isOutside="TRUE" side="y" position="-0.802395209581" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -252,7 +252,7 @@
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.80487804878" endType="arrow">
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.784713375796" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

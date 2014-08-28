@@ -16,10 +16,10 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB12" type="mscLifeline" xCenter="1664" yCenter="1098" fixedDimensions="TRUE" width="88" height="964" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB12" type="mscLifeline" xCenter="1661" yCenter="792" fixedDimensions="TRUE" width="110" height="352" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pCamera</Text>
-<LifelineComponent type="norm" height="964" color="#000000"/>
+<LifelineComponent type="norm" height="352" color="#000000"/>
 </Symbol>
 
 <Symbol symbolId="SYMB13" type="mscCondition" xCenter="1452" yCenter="539" fixedDimensions="TRUE" width="66" height="44" color="#000000" fillColor="#ffffff">
@@ -37,7 +37,7 @@
 <Text>sWaitOkCreationEntryWay</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB17" type="mscCondition" xCenter="1007" yCenter="563" fixedDimensions="FALSE" width="122" height="48" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB17" type="mscCondition" xCenter="1012" yCenter="561" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitAssigned</Text>
 </Symbol>
@@ -67,16 +67,16 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB25" type="mscLifeline" xCenter="1460" yCenter="989" fixedDimensions="TRUE" width="110" height="1184" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB25" type="mscLifeline" xCenter="1463" yCenter="682" fixedDimensions="TRUE" width="110" height="572" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pCardReader</Text>
-<LifelineComponent type="norm" height="1185" color="#000000"/>
+<LifelineComponent type="norm" height="573" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB26" type="mscLifeline" xCenter="352" yCenter="801" fixedDimensions="TRUE" width="176" height="1558" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB26" type="mscLifeline" xCenter="352" yCenter="484" fixedDimensions="TRUE" width="176" height="946" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pMainSystemManager</Text>
-<LifelineComponent type="norm" height="1558" color="#000000"/>
+<LifelineComponent type="norm" height="946" color="#000000"/>
 </Symbol>
 
 <Symbol symbolId="SYMB29" type="mscCondition" xCenter="1210" yCenter="99" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
@@ -84,15 +84,15 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB3" type="mscCondition" xCenter="996" yCenter="882" fixedDimensions="FALSE" width="56" height="48" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB3" type="mscCondition" xCenter="1001" yCenter="880" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB31" type="mscLifeline" xCenter="700" yCenter="796" fixedDimensions="TRUE" width="154" height="1566" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB31" type="mscLifeline" xCenter="704" yCenter="484" fixedDimensions="TRUE" width="154" height="946" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pCreatorEntryWay</Text>
-<LifelineComponent type="norm" height="1566" color="#000000"/>
+<LifelineComponent type="norm" height="946" color="#000000"/>
 </Symbol>
 
 <Symbol symbolId="SYMB32" type="mscCondition" xCenter="1210" yCenter="451" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
@@ -105,193 +105,193 @@
 <Text>sWaitConfirmCamera</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB34" type="mscLifeline" xCenter="996" yCenter="910" fixedDimensions="TRUE" width="110" height="1336" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB34" type="mscLifeline" xCenter="1001" yCenter="605" fixedDimensions="TRUE" width="132" height="726" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pEntryWay</Text>
-<LifelineComponent type="norm" height="1336" color="#000000"/>
+<LifelineComponent type="norm" height="726" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB35" type="mscCondition" xCenter="996" yCenter="310" fixedDimensions="FALSE" width="56" height="48" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB35" type="mscCondition" xCenter="1001" yCenter="308" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="mscLifeline" xCenter="1210" yCenter="796" fixedDimensions="TRUE" width="242" height="1570" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB5" type="mscLifeline" xCenter="1210" yCenter="484" fixedDimensions="TRUE" width="220" height="946" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pCreatorCardReaderNCamera</Text>
-<LifelineComponent type="norm" height="1571" color="#000000"/>
+<LifelineComponent type="norm" height="947" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB69" type="mscLifeline" xCenter="77" yCenter="796" fixedDimensions="TRUE" width="44" height="1570" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB69" type="mscLifeline" xCenter="77" yCenter="484" fixedDimensions="TRUE" width="66" height="946" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>Env</Text>
-<LifelineComponent type="norm" height="1571" color="#000000"/>
+<LifelineComponent type="norm" height="947" color="#000000"/>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK107" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK191" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sIamCamera(pidC)</Text>
-<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.863070539419" endType="voidend">
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.625" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.145222929936" endType="arrow">
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.418604651163" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK86" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK174" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sIamCardReader(pidCR)</Text>
-<Connector attachedSymbolId="SYMB25" type="mscvoid" isOutside="TRUE" side="y" position="-0.83277027027" endType="voidend">
+<Connector attachedSymbolId="SYMB25" type="mscvoid" isOutside="TRUE" side="y" position="-0.653846153846" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.383439490446" endType="arrow">
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.0232558139535" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK136" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK186" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sCreateEntryWay</Text>
-<Connector attachedSymbolId="SYMB26" type="mscvoid" isOutside="TRUE" side="y" position="-0.743260590501" endType="voidend">
+<Connector attachedSymbolId="SYMB26" type="mscvoid" isOutside="TRUE" side="y" position="-0.577167019027" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="-0.733077905492" endType="arrow">
+<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="-0.581395348837" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK108" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK188" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sOkCreateE_W</Text>
-<Connector attachedSymbolId="SYMB26" type="mscvoid" isOutside="TRUE" side="y" position="0.0449293966624" endType="voidend">
+<Connector attachedSymbolId="SYMB26" type="mscvoid" isOutside="TRUE" side="y" position="0.744186046512" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB69" type="mscvoid" isOutside="TRUE" side="y" position="0.0509554140127" endType="arrow">
+<Connector attachedSymbolId="SYMB69" type="mscvoid" isOutside="TRUE" side="y" position="0.744186046512" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK138" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK185" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sOkCreateEntryWay(pidEntryWay)</Text>
-<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="0.00766283524904" endType="voidend">
+<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="0.668076109937" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB26" type="mscvoid" isOutside="TRUE" side="y" position="0.00256739409499" endType="arrow">
+<Connector attachedSymbolId="SYMB26" type="mscvoid" isOutside="TRUE" side="y" position="0.674418604651" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK139" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK180" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="-0.693486590038" endType="voidend">
+<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="-0.488372093023" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB34" type="mscvoid" isOutside="TRUE" side="y" position="-0.983532934132" endType="arrow">
+<Connector attachedSymbolId="SYMB34" type="mscvoid" isOutside="TRUE" side="y" position="-0.969696969697" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK141" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK182" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sOkInitEntryWay</Text>
-<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="-0.567049808429" endType="voidend">
+<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="-0.283298097252" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB34" type="mscvoid" isOutside="TRUE" side="y" position="-0.835329341317" endType="arrow">
+<Connector attachedSymbolId="SYMB34" type="mscvoid" isOutside="TRUE" side="y" position="-0.69696969697" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK142" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK184" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sOkCreateEntryNOut_Way(pidEntryWay)</Text>
-<Connector attachedSymbolId="SYMB34" type="mscvoid" isOutside="TRUE" side="y" position="-0.209580838323" endType="voidend">
+<Connector attachedSymbolId="SYMB34" type="mscvoid" isOutside="TRUE" side="y" position="0.454545454545" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="-0.0306513409962" endType="arrow">
+<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="0.604651162791" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK143" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK183" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sAssignCardReaderNCam</Text>
-<Connector attachedSymbolId="SYMB34" type="mscvoid" isOutside="TRUE" side="y" position="-0.802395209581" endType="voidend">
+<Connector attachedSymbolId="SYMB34" type="mscvoid" isOutside="TRUE" side="y" position="-0.636363636364" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.537579617834" endType="arrow">
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.232558139535" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK106" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK192" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.215286624204" endType="voidend">
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.302325581395" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.977178423237" endType="arrow">
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.9375" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK87" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK173" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.495541401274" endType="voidend">
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.162790697674" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB25" type="mscvoid" isOutside="TRUE" side="y" position="-0.981418918919" endType="arrow">
+<Connector attachedSymbolId="SYMB25" type="mscvoid" isOutside="TRUE" side="y" position="-0.961538461538" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK140" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK181" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sAssigned(pidCR,pidC)</Text>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.131210191083" endType="voidend">
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.441860465116" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB34" type="mscvoid" isOutside="TRUE" side="y" position="-0.324850299401" endType="arrow">
+<Connector attachedSymbolId="SYMB34" type="mscvoid" isOutside="TRUE" side="y" position="0.242424242424" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK79" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK187" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sCreateEntryWay</Text>
-<Connector attachedSymbolId="SYMB69" type="mscvoid" isOutside="TRUE" side="y" position="-0.789808917197" endType="voidend">
+<Connector attachedSymbolId="SYMB69" type="mscvoid" isOutside="TRUE" side="y" position="-0.651162790698" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB26" type="mscvoid" isOutside="TRUE" side="y" position="-0.802310654685" endType="arrow">
+<Connector attachedSymbolId="SYMB26" type="mscvoid" isOutside="TRUE" side="y" position="-0.653276955603" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

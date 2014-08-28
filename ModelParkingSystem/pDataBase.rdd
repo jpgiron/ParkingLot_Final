@@ -11,7 +11,7 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlSendSig" xCenter="418" yCenter="484" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlSendSig" xCenter="418" yCenter="484" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sNoRegis_User TO SENDER</Text>
 </Symbol>
@@ -21,7 +21,7 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB12" type="sdlInputSig" xCenter="429" yCenter="231" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB12" type="sdlInputSig" xCenter="429" yCenter="231" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sConfirmOutUser(data_User)</Text>
 </Symbol>
@@ -31,7 +31,7 @@
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB21" type="sdlPrcdCall" xCenter="297" yCenter="99" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB21" type="sdlPrcdCall" xCenter="297" yCenter="99" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>LoadDB(dataBase)</Text>
 </Symbol>
@@ -51,12 +51,12 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="sdlInputSig" xCenter="154" yCenter="231" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB4" type="sdlInputSig" xCenter="154" yCenter="231" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sConfirmEntranceUser(data_User)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlText" xCenter="99" yCenter="55" fixedDimensions="FALSE" width="198" height="110" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlText" xCenter="99" yCenter="77" fixedDimensions="FALSE" width="176" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>DCL
 dataBase tDATABASE,
@@ -64,17 +64,17 @@ data_User DataUser,
 statusUser BOOLEAN;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlTask" xCenter="275" yCenter="330" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlTask" xCenter="275" yCenter="330" fixedDimensions="FALSE" width="352" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>statusUser:=CALL getPass(dataBase,data_User)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB8" type="sdlDecision" xCenter="275" yCenter="407" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB8" type="sdlDecision" xCenter="275" yCenter="407" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>statusUser</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB9" type="sdlSendSig" xCenter="121" yCenter="484" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB9" type="sdlSendSig" xCenter="121" yCenter="484" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sOkUser TO SENDER</Text>
 </Symbol>
@@ -208,7 +208,7 @@ statusUser BOOLEAN;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB10" type="sdlarrow" isOutside="TRUE" side="x" position="0.0165289256198" endType="arrow">
+<Connector attachedSymbolId="SYMB10" type="sdlarrow" isOutside="TRUE" side="x" position="0.0181818181818" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -223,7 +223,7 @@ statusUser BOOLEAN;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB9" type="sdlarrow" isOutside="TRUE" side="x" position="-0.0808080808081" endType="arrow">
+<Connector attachedSymbolId="SYMB9" type="sdlarrow" isOutside="TRUE" side="x" position="-0.0909090909091" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
