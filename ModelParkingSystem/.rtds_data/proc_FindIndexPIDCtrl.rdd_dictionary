@@ -17,17 +17,17 @@
 <Body>
 </Body>
 </Item>
-<Item id="ITEM2" type="variable" name="tableCtrl" parentId="ITEM1" scope="none" variableTypeName="tableInfoGralCtrl" isFormalParam="TRUE">
+<Item id="ITEM2" type="variable" name="PidCtrl" parentId="ITEM1" scope="none" variableTypeName="PID" isFormalParam="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM3" type="variable" name="PidCtrl" parentId="ITEM1" scope="none" variableTypeName="PID" isFormalParam="TRUE">
+<Item id="ITEM3" type="variable" name="indexList" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isFormalParam="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM4" type="variable" name="indexList" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isFormalParam="TRUE">
+<Item id="ITEM4" type="variable" name="tableCtrl" parentId="ITEM1" scope="none" variableTypeName="tableInfoGralCtrl" isFormalParam="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>

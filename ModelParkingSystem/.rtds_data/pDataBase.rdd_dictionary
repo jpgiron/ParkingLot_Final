@@ -8,22 +8,22 @@
 <SymbolReference symbolId="SYMB10"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG2" name="sConfirmOutUser">
+<Signal id="SIG2" name="sOkUser">
+<SendSymbols>
+<SymbolReference symbolId="SYMB9"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG3" name="sConfirmOutUser">
 <SignalParameterType>DataUser</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB12"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG3" name="sConfirmEntranceUser">
+<Signal id="SIG4" name="sConfirmEntranceUser">
 <SignalParameterType>DataUser</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB4"/>
 </InputSymbols>
-</Signal>
-<Signal id="SIG4" name="sOkUser">
-<SendSymbols>
-<SymbolReference symbolId="SYMB9"/>
-</SendSymbols>
 </Signal>
 <Item id="ITEM1" type="process" name="pDataBase" scope="current">
 <UsingSymbols>
@@ -31,12 +31,12 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG4"/>
+<SignalReference id="SIG2"/>
 <SignalReference id="SIG1"/>
 </SentSignals>
 <ReceivedSignals>
+<SignalReference id="SIG4"/>
 <SignalReference id="SIG3"/>
-<SignalReference id="SIG2"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -55,19 +55,19 @@
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM3" type="variable" name="data_User" parentId="ITEM1" scope="none" variableTypeName="DataUser">
+<Item id="ITEM3" type="variable" name="dataBase" parentId="ITEM1" scope="none" variableTypeName="tDATABASE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM4" type="variable" name="dataBase" parentId="ITEM1" scope="none" variableTypeName="tDATABASE">
+<Item id="ITEM4" type="variable" name="data_User" parentId="ITEM1" scope="none" variableTypeName="DataUser">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="procedure" name="getPass" parentId="ITEM1" scope="none" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="tDATABASE DataUser" procedureReturnType="BOOLEAN">
+<Item id="ITEM5" type="procedure" name="LoadDB" parentId="ITEM1" scope="none" procedureKind="NORMAL_PROCEDURE">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB23"/>
+<SymbolReference symbolId="SYMB22"/>
 </DefiningSymbols>
 </Item>
 <Item id="ITEM6" type="state" name="Idle" parentId="ITEM1" scope="none">
@@ -79,9 +79,9 @@
 <SymbolReference symbolId="SYMB11"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM7" type="procedure" name="LoadDB" parentId="ITEM1" scope="none" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="tDATABASE">
+<Item id="ITEM7" type="procedure" name="getPass" parentId="ITEM1" scope="none" procedureKind="NORMAL_PROCEDURE">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB22"/>
+<SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
 </DictionaryObjects>
