@@ -1,0 +1,16 @@
+Ä}q(UversionqU4.4.1qUobjectq]q((crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q(Utextq	UcNUMAXZONES INTEGER = 10q
+U
+identifierqU1UtypeqUsynonymdeclqUchildrenq]q((hoq}q(h	UINTEGERqhU1hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentq(hoq}q(h	h
+hU1hhhhh(hoq}q(h	h
+hU1hhhhhhububub(crtds.editor.business.SyntaxChecker
+SyntaxTreeNode
+qoq}q(h	UcNUMAXZONES = 10qhNhUsnglsynonymdeclqh]q((hoq }q!(h	UcNUMAXZONESq"hU1hUsynonymnameq#h]q$hhub(hoq%}q&(h	U10q'hU1hU
+synonymvalq(h]q)(hoq*}q+(h	U10q,hU1hUnbexprq-h]q.hh%ubahhubeubeh(hoq/}q0(h	UÅ/* Declarations of constants */
+SYNONYM cNUMAXZONES INTEGER = 10;
+
+SYNTYPE i_spots = INTEGER
+CONSTANTS 0..cNUMAXZONES
+ENDSYNTYPE;q1hNhUdatadeclq2h]q3(h(hoq4}q5(h	U9i_spots = INTEGER CONSTANTS 0 .. cNUMAXZONES ENDSYNTYPE ;q6hU3hUsyntypedeclq7h]q8((hoq9}q:(h	Ui_spotsq;hU3hUsyntypenameq<h]q=h(hoq>}q?(h	h6hU3hh7hh8hh4ubub(hoq@}qA(h	UINTEGERqBhU3hUtypenameqCh]qDhh>ub(hoqE}qF(h	UCONSTANTS 0 .. cNUMAXZONESqGhU4hUconstraintsqHh]qI(hoqJ}qK(h	U0 .. cNUMAXZONESqLhU4hU
+constraintqMh]qN((hoqO}qP(h	U0hU4hUoperand1qQh]qR(hoqS}qT(h	U0hU4hUnbexprqUh]qVhhOubahhJub(hoqW}qX(h	U..qYhU4hU	cnstrntopqZh]q[hhJub(hoq\}q](h	UcNUMAXZONESq^hU4hUoperand2q_h]q`(hoqa}qb(h	UcNUMAXZONESqchU4hUnameexprqdh]qehh\ubahhJubehhEubahh>ubehh/ubehNububh4eu.
