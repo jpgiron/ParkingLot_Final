@@ -1,11 +1,7 @@
 /* Description:
-   Here is defined the tc_EntryNoutCarSystem 
-   which consist in test if the system 
-   satisfies with the entry and out of 
-   car, the objetive is to feed the system
-   with real datas and do a request to the system
-   about one zone in one specific pCtrl and 
-   observer the freeSpots of this zone */
+Each time that entry or out a Car in a Zone 
+is evaluated its freeSpots with the focus of probe
+that the system works so well with real datas*/
    
    
 module Testbench_InAndOut_Total
@@ -131,7 +127,6 @@ module Testbench_InAndOut_Total
     
     /*Loop for In and Out of Cars to the Parking System*/
     
-    indexHour:=2;
     
     for (index:=0;index<length_array_data;index:=index+1)
     {
