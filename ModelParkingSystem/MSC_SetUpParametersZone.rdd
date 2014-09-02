@@ -13,7 +13,7 @@
 
 <Symbol symbolId="SYMB2" type="mscLifeline" xCenter="499" yCenter="352" fixedDimensions="TRUE" width="66" height="638" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
-<Text>Zone</Text>
+<Text>pZone</Text>
 <LifelineComponent type="norm" height="639" color="#000000"/>
 </Symbol>
 
@@ -93,7 +93,7 @@
 </Link>
 
 <Link linkId="LINK337" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sInfoZone(InfoZone)</Text>
+<Text>sInfoZone(totalSpots,freeSpots)</Text>
 <Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.655172413793" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
@@ -119,7 +119,7 @@
 </Link>
 
 <Link linkId="LINK338" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sOkInit(infoZone)</Text>
+<Text>sOkInit</Text>
 <Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.172413793103" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
@@ -132,7 +132,7 @@
 </Link>
 
 <Link linkId="LINK336" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sOkInit(infoZone)</Text>
+<Text>sOkInit</Text>
 <Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.206896551724" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
@@ -145,25 +145,12 @@
 </Link>
 
 <Link linkId="LINK351" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sOkCreation(infoTableZone)</Text>
+<Text>sOkCreation(pidZone)</Text>
 <Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.793103448276" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB1" type="mscvoid" isOutside="FALSE" side="w" position="0.562580645161" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
-<Link linkId="LINK335" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sInitPidCtrl(pidCtrl)</Text>
-<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="-0.689655172414" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.689655172414" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -183,6 +170,19 @@
 
 </Link>
 
+<Link linkId="LINK340" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sReqInfo</Text>
+<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.448275862069" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.448275862069" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
 <Link linkId="LINK341" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sInitFreeSpot(freeSpots)</Text>
 <Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="-0.344827586207" endType="voidend">
@@ -196,13 +196,13 @@
 
 </Link>
 
-<Link linkId="LINK340" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sReqInfo</Text>
-<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.448275862069" endType="voidend">
+<Link linkId="LINK335" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInitPidCtrl(pidCtrl)</Text>
+<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="-0.689655172414" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.448275862069" endType="arrow">
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.689655172414" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

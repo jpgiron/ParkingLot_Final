@@ -16,7 +16,6 @@ module declaration_Signals
   type integer numZone;
   type integer numEntryWay_In;
   type integer numEntryWay_Out;
-  type integer ID_User;
     
   /* Step 2. Declaration of the Signals */
   /* The PURE Signals are enumerated, signals 
@@ -63,7 +62,6 @@ module declaration_Signals
   type enumerated sCreateCtrlZone {e_sCreateCtrlZone}
   type enumerated sOkCreateCtrl {e_sOkCreateCtrl}
   type enumerated sOkCreationZone {e_sOkCreationZone}
-  type enumerated sCreateEntryWay {e_sCreateEntryWay}
   
   type record sAddZone
   {
@@ -72,10 +70,5 @@ module declaration_Signals
       spots freeSpots
   }
   
-  /*Channel cEnv_CR */
-  type record sIDUserFromEnv
-  {
-      ID_User ID
-  }
- 
+  
 }

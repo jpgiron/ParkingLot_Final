@@ -91,7 +91,7 @@
 
 <Symbol symbolId="SYMB31" type="mscLifeline" xCenter="704" yCenter="484" fixedDimensions="TRUE" width="154" height="946" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
-<Text>pCreatorEntryWay</Text>
+<Text>pCreatorEntryNOut_Way</Text>
 <LifelineComponent type="norm" height="946" color="#000000"/>
 </Symbol>
 
@@ -107,7 +107,7 @@
 
 <Symbol symbolId="SYMB34" type="mscLifeline" xCenter="1001" yCenter="605" fixedDimensions="TRUE" width="132" height="726" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
-<Text>pEntryWay</Text>
+<Text>pEntryNOut_Way</Text>
 <LifelineComponent type="norm" height="726" color="#000000"/>
 </Symbol>
 

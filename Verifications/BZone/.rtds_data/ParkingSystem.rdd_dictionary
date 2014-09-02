@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="sys">
+<Signal id="SIG1" name="sEntered_Car">
+<SignalParameterType>i_spots</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG10" name="sIR3_Zone">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG11" name="sIR4_Zone">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG12" name="sLoopInductive_Zone">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG13" name="sOkInitPid">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG14" name="sInitPidCtrl">
+<SignalParameterType>PID</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG2" name="sOut_Car">
+<SignalParameterType>i_spots</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG3" name="sOkInit">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG4" name="sInfoZone">
+<SignalParameterType>i_spots</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG5" name="sInitFreeSpot">
+<SignalParameterType>i_spots</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG6" name="sInitTotalSpots">
+<SignalParameterType>i_spots</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG7" name="sReqInfo">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG8" name="sIR1_Zone">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG9" name="sIR2_Zone">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DeclarationSymbols>
+</Signal>
+<Item id="ITEM1" type="system" name="System" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB38"/>
+<SymbolReference symbolId="SYMB1"/>
+<SymbolReference symbolId="SYMB6"/>
+<SymbolReference symbolId="SYMB9"/>
+<SymbolReference symbolId="SYMB40"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW4" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK454" isFrom="FALSE"/>
+<Connections>
+<Connection name="cEnv_Zone"/>
+</Connections>
+<SentSignals>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG10"/>
+<SignalReference id="SIG11"/>
+<SignalReference id="SIG12"/>
+</SentSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW3" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK453" isFrom="FALSE"/>
+<Connections>
+<Connection name="cCtrl_Zone"/>
+</Connections>
+<SentSignals>
+<SignalReference id="SIG5"/>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+</ReceivedSignals>
+</SignalWindow>
+<Channel name="cCtrl_Zone" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW3"/>
+<Channel name="cEnv_Zone" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW4"/>
+</Item>
+<Item id="ITEM2" type="block" name="ParkingLotSystem" parentId="ITEM1" scope="none" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB28"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB28"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK453" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG5"/>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK454" isFrom="TRUE"/>
+<ReceivedSignals>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG10"/>
+<SignalReference id="SIG11"/>
+<SignalReference id="SIG12"/>
+</ReceivedSignals>
+</SignalWindow>
+</Item>
+<Item id="ITEM3" type="type" name="i_spots" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="cNUMMAXZONES_SYSTEM" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="cMAX_ZONES" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM6" type="variable" name="cNUMMAXSPOTS" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="cNUMMAXFREESPOTS" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM8" type="variable" name="cNUMMAXCTRL" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
+</Item>
+</DictionaryObjects>

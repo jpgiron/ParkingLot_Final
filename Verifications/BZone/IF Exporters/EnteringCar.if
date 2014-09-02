@@ -1,0 +1,136 @@
+
+system System;
+type RTDS_character = range 32..127;
+type RTDS_charstring = string[128] of RTDS_character;
+const cNUMMAXCTRL = 1;
+
+const cMAX_ZONES = 1;
+
+const cNUMMAXZONES_SYSTEM = 1;
+
+const cNUMMAXSPOTS = 10;
+
+const cNUMMAXFREESPOTS = 10;
+
+type i_spots = range 0 .. 10;
+
+type numMaxSpots = range 0 .. 10;
+
+type indexZone = range 0 .. 0;
+
+type indexCtrl = range 0 .. 0;
+
+type InfoZone = record
+  totalSpots i_spots;
+  freeSpots i_spots;
+  ID pid;
+endrecord;
+type table_Zones = array[0] of InfoZone;
+
+type infoMainCtrls = record
+  totalSpotsZone numMaxSpots;
+  freeSpotsZone numMaxSpots;
+endrecord;
+type tableMainInfoCtrls = array[0] of infoMainCtrls;
+
+type tableVeriFyCon_Zone = array[0] of boolean;
+
+type InfoCtrl = record
+  alltotalSpots numMaxSpots;
+  allfreeSpots numMaxSpots;
+  IDCtrl pid;
+  listZones table_Zones;
+  tableConnectionOkZones tableVeriFyCon_Zone;
+endrecord;
+type tableInfoGralCtrl = array[0] of InfoCtrl;
+
+type InfoMainSystem = record
+  totalSpotsSystem numMaxSpots;
+  freeSpotsSystem numMaxSpots;
+  freeSpotsParking numMaxSpots;
+  tableInfoCtrl tableMainInfoCtrls;
+endrecord;
+signal sConfirmZoneManager(pid, pid);
+signal sCreateZoneManager(pid);
+signal sOkCreateZoneManager(pid, pid);
+signal sIR1_Zone(pid);
+signal sIR2_Zone(pid);
+signal sIR3_Zone(pid);
+signal sIR4_Zone(pid);
+signal sLoopInductive_Zone(pid);
+signal sInitFreeSpot(pid, i_spots);
+signal sInitTotalSpots(pid, i_spots);
+signal sReqInfo(pid);
+signal sInitPidCtrl(pid, pid);
+signal sEntered_Car(pid, i_spots);
+signal sOut_Car(pid, i_spots);
+signal sOkInit(pid);
+signal sInfoZone(pid, i_spots, i_spots);
+signal sOkInitPid(pid);
+signal sCreateZone(pid, i_spots, i_spots);
+signal sConfirmZoneManager_i(pid);
+signal sOkCreation(pid, pid);
+signal sExcQuantityZones(pid);
+signal sIamZoneManager(pid);
+signal sCreateCtrl(pid);
+signal sConfirmCtrl(pid);
+signal sIamCtrl(pid, InfoCtrl);
+signal sInitFreeSpotZone(pid, indexZone, i_spots);
+signal sOkCreationCtrl_i(pid, InfoCtrl);
+signal sExcQuantityCtrl(pid);
+signal sOkCreationCtrl(pid, InfoCtrl);
+signal sCreateZone_(pid, i_spots, i_spots);
+signal sReqInfoCtrl(pid);
+signal sInitTotalSpotZone(pid, indexZone, i_spots);
+signal sInitialConnection(pid);
+signal sInfoTotalCtrl(pid, InfoCtrl);
+signal sOkCreateZone(pid, InfoCtrl);
+signal sExcLimitZones(pid);
+signal sOkSetUp(pid);
+signal sAddZone(pid, indexCtrl, i_spots, i_spots);
+signal sSetUpFreeSpot(pid, indexCtrl, indexZone, i_spots);
+signal sSetUpTotalSpot(pid, indexCtrl, indexZone, i_spots);
+signal sInfoSystem(pid, InfoMainSystem);
+signal sReqInfoCtrlZone(pid, indexCtrl, indexZone);
+signal sInfoCtrlZone(pid, i_spots);
+signal sCreateCtrlZone(pid);
+signal sReqInfoSystem(pid);
+signal sExcLimitCtrl(pid);
+signal sOkCreationZone(pid);
+signal sImpossibleGetInfoCtrls(pid);
+signal sOkCreateCtrl(pid);
+
+
+signalroute ENV_C_cEnv_Zone_M_sIR2_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR2_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sLoopInductive_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sLoopInductive_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sIR1_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR1_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sIR3_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR3_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sIR4_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR4_Zone;
+
+/*
+==========
+Messages name and corresponding channel received by the environment
+channel cEnv_Zone : 
+channel cEnv_Main : sOkCreateCtrl sExcLimitZones sOkCreationZone sOkSetUp sImpossibleGetInfoCtrls sInfoSystem sExcLimitCtrl
+channel cDisplay_Main : sInfoCtrlZone
+==========;
+*/

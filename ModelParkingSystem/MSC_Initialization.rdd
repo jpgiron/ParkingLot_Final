@@ -128,10 +128,10 @@
 <LifelineComponent type="norm" height="770" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="mscLifeline" xCenter="99" yCenter="539" fixedDimensions="TRUE" width="176" height="1056" color="#000000" fillColor="#ffffff" dies="TRUE">
+<Symbol symbolId="SYMB7" type="mscLifeline" xCenter="99" yCenter="385" fixedDimensions="TRUE" width="176" height="748" color="#000000" fillColor="#ffffff" dies="TRUE">
 <Description></Description>
 <Text>RTDS_start_process</Text>
-<LifelineComponent type="norm" height="1056" color="#000000"/>
+<LifelineComponent type="norm" height="748" color="#000000"/>
 </Symbol>
 </Symbol>
 
@@ -161,19 +161,6 @@
 
 </Link>
 
-<Link linkId="LINK270" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sInitPidCtrl(pidCtrl)</Text>
-<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.0454545454545" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.131578947368" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
 <Link linkId="LINK273" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sReqInfo</Text>
 <Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.318181818182" endType="voidend">
@@ -181,6 +168,19 @@
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.184210526316" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK270" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInitPidCtrl(pidCtrl)</Text>
+<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.0454545454545" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.131578947368" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -214,7 +214,7 @@
 </Link>
 
 <Link linkId="LINK274" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sInfoZone(InfoZone)</Text>
+<Text>sInfoZone(totalSpots,freeSpots)</Text>
 <Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.394736842105" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
@@ -241,7 +241,7 @@
 
 <Link linkId="LINK289" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.916666666667" endType="voidend">
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.882352941176" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -254,7 +254,7 @@
 
 <Link linkId="LINK61" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.354166666667" endType="voidend">
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.0882352941176" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -267,7 +267,7 @@
 
 <Link linkId="LINK62" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.291666666667" endType="voidend">
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -280,7 +280,7 @@
 
 <Link linkId="LINK275" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.833333333333" endType="voidend">
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.764705882353" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -293,7 +293,7 @@
 
 <Link linkId="LINK251" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.729166666667" endType="voidend">
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.617647058824" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -306,7 +306,7 @@
 
 <Link linkId="LINK167" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.5625" endType="voidend">
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.382352941176" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -319,7 +319,7 @@
 
 <Link linkId="LINK113" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.416666666667" endType="voidend">
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.176470588235" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

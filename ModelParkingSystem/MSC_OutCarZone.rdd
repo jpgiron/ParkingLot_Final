@@ -75,25 +75,12 @@
 </Symbol>
 
 <Link linkId="LINK12" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sOut_Car(infoTableZone)</Text>
+<Text>sOut_Car(freeSpots)</Text>
 <Connector attachedSymbolId="SYMB10" type="mscvoid" isOutside="TRUE" side="y" position="0.612903225806" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB9" type="mscvoid" isOutside="TRUE" side="y" position="0.612903225806" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
-<Link linkId="LINK9" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sIR4_Zone</Text>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.193548387097" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB10" type="mscvoid" isOutside="TRUE" side="y" position="-0.225806451613" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -107,6 +94,19 @@
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB10" type="mscvoid" isOutside="TRUE" side="y" position="-0.645161290323" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK9" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sIR4_Zone</Text>
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.193548387097" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB10" type="mscvoid" isOutside="TRUE" side="y" position="-0.225806451613" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

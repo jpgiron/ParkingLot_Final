@@ -25,20 +25,13 @@ module declaration_portsNComponent
     {
         out sCreateCtrlZone;
         out sAddZone;
-        out sCreateEntryWay;
         in sOkCreateCtrl;
         in sOkCreationZone;
     }
-    type port cEnv_CR_type message
-    {
-        out sIDUserFromEnv;
-    }     
-    
     type component System
     {
         port cDisplay_Main_type cDisplay_Main
         port cEnv_pTesting_type cEnv_pTesting
         port cEnv_Main_type cEnv_Main
-        port cEnv_CR_type cEnv_CR 
     }
 }

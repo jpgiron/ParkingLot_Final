@@ -18,19 +18,49 @@ signal sIR1_Zone(pid);
 signal sIR2_Zone(pid);
 signal sIR3_Zone(pid);
 signal sIR4_Zone(pid);
+signal sLoopInductive_ZoneTest(pid);
+signal sIR1_ZoneTest(pid);
+signal sIR2_ZoneTest(pid);
+signal sIR3_ZoneTest(pid);
+signal sIR4_ZoneTest(pid);
 signal sOkInitPid(pid);
 signal sInitPidCtrl(pid, pid);
 
+
+signalroute ENV_C_cMain_Zone_M_sIR2_ZoneTest_P_pZone(1) #fifo
+from env
+to pZone
+with sIR2_ZoneTest;
+
+signalroute ENV_C_cMain_Zone_M_sIR4_ZoneTest_P_pZone(1) #fifo
+from env
+to pZone
+with sIR4_ZoneTest;
+
+signalroute ENV_C_cMain_Zone_M_sIR1_ZoneTest_P_pZone(1) #fifo
+from env
+to pZone
+with sIR1_ZoneTest;
+
+signalroute ENV_C_cMain_Zone_M_sLoopInductive_ZoneTest_P_pZone(1) #fifo
+from env
+to pZone
+with sLoopInductive_ZoneTest;
+
+signalroute ENV_C_cMain_Zone_M_sIR3_ZoneTest_P_pZone(1) #fifo
+from env
+to pZone
+with sIR3_ZoneTest;
+
+signalroute ENV_C_cEnv_Zone_M_sLoopInductive_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sLoopInductive_Zone;
 
 signalroute ENV_C_cEnv_Zone_M_sIR1_Zone_P_pZone(1) #fifo
 from env
 to pZone
 with sIR1_Zone;
-
-signalroute ENV_C_cEnv_Zone_M_sInitTotalSpots_P_pZone(1) #fifo
-from env
-to pZone
-with sInitTotalSpots;
 
 signalroute ENV_C_cEnv_Zone_M_sIR2_Zone_P_pZone(1) #fifo
 from env
@@ -42,20 +72,10 @@ from env
 to pZone
 with sIR4_Zone;
 
-signalroute ENV_C_cEnv_Zone_M_sLoopInductive_Zone_P_pZone(1) #fifo
+signalroute ENV_C_cEnv_Zone_M_sInitTotalSpots_P_pZone(1) #fifo
 from env
 to pZone
-with sLoopInductive_Zone;
-
-signalroute ENV_C_cEnv_Zone_M_sInitPidCtrl_P_pZone(1) #fifo
-from env
-to pZone
-with sInitPidCtrl;
-
-signalroute ENV_C_cEnv_Zone_M_sReqInfo_P_pZone(1) #fifo
-from env
-to pZone
-with sReqInfo;
+with sInitTotalSpots;
 
 signalroute ENV_C_cEnv_Zone_M_sInitFreeSpot_P_pZone(1) #fifo
 from env
@@ -67,18 +87,22 @@ from env
 to pZone
 with sIR3_Zone;
 
+signalroute ENV_C_cEnv_Zone_M_sReqInfo_P_pZone(1) #fifo
+from env
+to pZone
+with sReqInfo;
+
+signalroute ENV_C_cEnv_Zone_M_sInitPidCtrl_P_pZone(1) #fifo
+from env
+to pZone
+with sInitPidCtrl;
+
 /*
 ==========
 Messages name and corresponding channel received by the environment
-channel cEnv_Zone : sOut_Car sEntered_Car sOkInitPid sOkInit sInfoZone
+channel cMain_Zone : 
+channel cEnv_Zone : sOut_Car sInfoZone sEntered_Car sOkInitPid sOkInit
 ==========;
-*/
-
-/*
-signalroute P_pZone_C_cEnv_Zone_M_sOkInit(1) #fifo #reliable #unicast #urgent
-from pZone
-to env
-with sOkInit;
 */
 
 /*
@@ -86,6 +110,13 @@ signalroute P_pZone_C_cEnv_Zone_M_sInfoZone(1) #fifo #reliable #unicast #urgent
 from pZone
 to env
 with sInfoZone;
+*/
+
+/*
+signalroute P_pZone_C_cEnv_Zone_M_sOkInit(1) #fifo #reliable #unicast #urgent
+from pZone
+to env
+with sOkInit;
 */
 
 /*
@@ -132,58 +163,7 @@ nextstate Idle;
 endstate;
 
 
-state WaitSensorIR2 #stable ;
-
-deadline delayable;
-input sIR3_Zone(SENDER);
-reset tEnter;
-set tEnter := -(3);
-nextstate VerifyIsaCarEntering;
-
-when tEnter = 0;
-reset tEnter;
-reset tEnter;
-nextstate Idle;
-
-deadline delayable;
-input sIR2_Zone(SENDER);
-reset tEnter;
-set tEnter := -(3);
-nextstate VerifyIsaCarEntering;
-endstate;
-
-
-state Idle #stable ;
-
-deadline delayable;
-input sIR3_Zone(SENDER);
-set tOut := -(3);
-nextstate WaitSensorIR4;
-
-deadline delayable;
-input sIR1_Zone(SENDER);
-set tEnter := -(3);
-nextstate WaitSensorIR2;
-
-deadline delayable;
-input sIR4_Zone(SENDER);
-set tEnter := -(3);
-nextstate WaitSensorIR2;
-
-deadline delayable;
-input sIR2_Zone(SENDER);
-set tOut := -(3);
-nextstate WaitSensorIR4;
-endstate;
-
-
 state WaitSensorIR4 #stable ;
-
-deadline delayable;
-input sIR4_Zone(SENDER);
-reset tOut;
-set tOut := -(3);
-nextstate VerifyIsaCarOut;
 
 when tOut = 0;
 reset tOut;
@@ -191,7 +171,25 @@ reset tOut;
 nextstate Idle;
 
 deadline delayable;
+input sIR4_ZoneTest(SENDER);
+reset tOut;
+set tOut := -(3);
+nextstate VerifyIsaCarOut;
+
+deadline delayable;
 input sIR1_Zone(SENDER);
+reset tOut;
+set tOut := -(3);
+nextstate VerifyIsaCarOut;
+
+deadline delayable;
+input sIR4_Zone(SENDER);
+reset tOut;
+set tOut := -(3);
+nextstate VerifyIsaCarOut;
+
+deadline delayable;
+input sIR1_ZoneTest(SENDER);
 reset tOut;
 set tOut := -(3);
 nextstate VerifyIsaCarOut;
@@ -199,15 +197,7 @@ endstate;
 
 
 state Idle #stable ;
-
-deadline delayable;
-input sInitPidCtrl(SENDER, pidCtrl);
-task myCtrl := pidCtrl;
-output sOkInitPid(self) to SENDER;
-nextstate Idle;
-
-deadline delayable;
-input sInitTotalSpots(SENDER, p_totalSpots);
+_totalSpots);
 task totalSpots := p_totalSpots;
 output sOkInit(self) to SENDER;
 nextstate Idle;

@@ -32,7 +32,7 @@
 <LifelineComponent type="norm" height="729" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB3" type="mscLifeline" xCenter="429" yCenter="375" fixedDimensions="FALSE" width="176" height="728" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB3" type="mscLifeline" xCenter="429" yCenter="375" fixedDimensions="FALSE" width="154" height="728" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pMainSystemManager</Text>
 <LifelineComponent type="norm" height="729" color="#000000"/>
@@ -49,7 +49,7 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB43" type="mscCondition" xCenter="429" yCenter="220" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB43" type="mscCondition" xCenter="429" yCenter="220" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitConfirmCreateZone</Text>
 </Symbol>
@@ -64,7 +64,7 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB46" type="mscCondition" xCenter="726" yCenter="220" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB46" type="mscCondition" xCenter="726" yCenter="220" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitCreationZoneManager</Text>
 </Symbol>
@@ -100,12 +100,12 @@
 <Text>MSC_SetUpParametersZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB53" type="mscCondition" xCenter="1078" yCenter="308" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB53" type="mscCondition" xCenter="1078" yCenter="308" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitConfirmZoneManager</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="mscLifeline" xCenter="1386" yCenter="463" fixedDimensions="FALSE" width="132" height="552" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB7" type="mscLifeline" xCenter="1386" yCenter="463" fixedDimensions="FALSE" width="110" height="552" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pZoneManager</Text>
 <LifelineComponent type="norm" height="553" color="#000000"/>
@@ -113,7 +113,7 @@
 
 <Symbol symbolId="SYMB8" type="mscLifeline" xCenter="1650" yCenter="584" fixedDimensions="FALSE" width="66" height="310" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
-<Text>Zone</Text>
+<Text>pZone</Text>
 <LifelineComponent type="norm" height="311" color="#000000"/>
 </Symbol>
 </Symbol>
@@ -236,7 +236,7 @@
 </Link>
 
 <Link linkId="LINK379" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sOkCreation(InfoZone)</Text>
+<Text>sOkCreation(pidZone)</Text>
 <Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.434782608696" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>

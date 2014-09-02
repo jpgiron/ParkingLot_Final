@@ -44,7 +44,6 @@ module declaration_templates
     template sCreateCtrlZone a_sCreateCtrlZone:=?
     template sOkCreationZone a_sOkCreationZone:=?
     template sOkCreateCtrl a_sOkCreateCtrl:=?
-    template sCreateEntryWay a_sCreateEntryWay:=?
     
     
     template sAddZone a_sAddZone(numCtrl p_numCtrl,spots p_totalSpots,spots p_freeSpots):=
@@ -53,11 +52,5 @@ module declaration_templates
         totalSpots:=p_totalSpots,
         freeSpots:=p_freeSpots
     }
-    
-    /*Channel cEnv_CR */
-    
-    template sIDUserFromEnv a_sIDUserFromEnv(ID_User p_ID):=
-    {
-      ID:=p_ID
-    }
+        
 }    
