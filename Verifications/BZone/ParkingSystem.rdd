@@ -17,22 +17,6 @@
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK454" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Zone</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.733333333333" endType="midarrow">
-<Text id="1">[sIR1_Zone,sIR2_Zone,
-sIR3_Zone,sIR4_Zone,
-sLoopInductive_Zone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.616055846422" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="-242"/>
-
-</Link>
-
 <Link linkId="LINK453" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cCtrl_Zone</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.4" endType="midarrow">
@@ -51,6 +35,22 @@ sInfoZone]</Text>
 <LinkSegment orientation="v" length="-242"/>
 
 </Link>
+
+<Link linkId="LINK454" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Zone</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.733333333333" endType="midarrow">
+<Text id="1">[sIR1_Zone,sIR2_Zone,
+sIR3_Zone,sIR4_Zone,
+sLoopInductive_Zone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.616055846422" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-242"/>
+
+</Link>
 </DiagramPartition>
 
 <DiagramPartition name="Declarations" nbPagesH="2" nbPagesV="2">
@@ -60,14 +60,14 @@ sInfoZone]</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB7" type="sdlText" xCenter="418" yCenter="176" fixedDimensions="FALSE" width="682" height="286" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="385" yCenter="165" fixedDimensions="FALSE" width="682" height="286" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/*Declarations of Constants */
 
 SYNONYM cNUMMAXCTRL INTEGER = 1;
 SYNONYM cMAX_ZONES INTEGER = 1;
 SYNONYM cNUMMAXZONES_SYSTEM INTEGER = cNUMMAXCTRL*cMAX_ZONES;
-SYNONYM cNUMMAXSPOTS INTEGER = 5;
+SYNONYM cNUMMAXSPOTS INTEGER = 3;
 SYNONYM cNUMMAXFREESPOTS INTEGER =  cNUMMAXSPOTS*cNUMMAXZONES_SYSTEM;
 
 /* Declaration data types */

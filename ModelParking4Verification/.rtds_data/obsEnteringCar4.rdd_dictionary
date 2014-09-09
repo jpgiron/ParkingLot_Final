@@ -14,38 +14,21 @@
 <SymbolReference symbolId="SYMB50"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
+<StateReference itemId="ITEM6"/>
 <SymbolReference symbolId="SYMB52"/>
 </Transition>
 </ContinuousTransitions>
 </Body>
 </Item>
-<Item id="ITEM2" type="state" name="sSignalEnterCar" parentId="ITEM1" scope="none">
+<Item id="ITEM2" type="state" name="sSignalsSystem" parentId="ITEM1" scope="none">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB84"/>
+<SymbolReference symbolId="SYMB65"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB82"/>
+<SymbolReference symbolId="SYMB56"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM3" type="state" name="DEAD" parentId="ITEM1" scope="none">
-<UsingSymbols>
-<SymbolReference symbolId="SYMB63"/>
-<SymbolReference symbolId="SYMB78"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM4" type="state" name="sError" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB80"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB72"/>
-<SymbolReference symbolId="SYMB89"/>
-<SymbolReference symbolId="SYMB66"/>
-<SymbolReference symbolId="SYMB69"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM5" type="state" name="sSignalIR2" parentId="ITEM1" scope="none">
+<Item id="ITEM3" type="state" name="sSignalIR2" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB75"/>
 </DefiningSymbols>
@@ -53,20 +36,37 @@
 <SymbolReference symbolId="SYMB76"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM6" type="state" name="sSignalLoopInductive" parentId="ITEM1" scope="none">
+<Item id="ITEM4" type="state" name="DEAD" parentId="ITEM1" scope="none">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB63"/>
+<SymbolReference symbolId="SYMB78"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="state" name="sSignalEnterCar" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB84"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB82"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM6" type="state" name="sError" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB80"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB69"/>
+<SymbolReference symbolId="SYMB89"/>
+<SymbolReference symbolId="SYMB66"/>
+<SymbolReference symbolId="SYMB72"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM7" type="state" name="sSignalLoopInductive" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB62"/>
 </DefiningSymbols>
 <UsingSymbols>
 <SymbolReference symbolId="SYMB47"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM7" type="state" name="sSignalsSystem" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB65"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB56"/>
 </UsingSymbols>
 </Item>
 <Item id="ITEM8" type="state" name="END" parentId="ITEM1" scope="none">

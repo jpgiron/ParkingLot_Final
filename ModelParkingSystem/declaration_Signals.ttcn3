@@ -1,5 +1,5 @@
 
-/* Here is the declarations of the data type
+/* Here are the declarations of the data type
    and the signals that will be used in the 
    testcases   */
    
@@ -14,8 +14,6 @@ module declaration_Signals
   type integer spots;
   type integer numCtrl;
   type integer numZone;
-  type integer numEntryWay_In;
-  type integer numEntryWay_Out;
     
   /* Step 2. Declaration of the Signals */
   /* The PURE Signals are enumerated, signals 

@@ -3,20 +3,20 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="a">
+<Signal id="SIG1" name="enableA">
+<InputSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG2" name="a">
 <InputSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG2" name="enableB">
+<Signal id="SIG3" name="enableB">
 <SendSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </SendSymbols>
-</Signal>
-<Signal id="SIG3" name="enableA">
-<InputSymbols>
-<SymbolReference symbolId="SYMB4"/>
-</InputSymbols>
 </Signal>
 <Item id="ITEM1" type="process" name="processA" scope="current">
 <UsingSymbols>
@@ -24,10 +24,10 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG3"/>
+<SignalReference id="SIG2"/>
 <SignalReference id="SIG1"/>
 </ReceivedSignals>
 <Transitions>

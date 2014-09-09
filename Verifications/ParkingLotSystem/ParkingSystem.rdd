@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="sys" name="System" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Architecture" nbPagesH="2" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB1" type="sdlSysDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB28" type="sdlBlk" xCenter="616" yCenter="220" fixedDimensions="TRUE" width="726" height="110" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>ParkingLotSystem</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK447" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Main</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sCreateCtrlZone,
+sReqInfoSystem,
+sAddZone,
+sSetUpFreeSpot,
+sSetUpTotalSpot]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="s" position="0.0750436300175" endType="midarrow">
+<Text id="1">[sExcLimitCtrl,
+sImpossibleGetInfoCtrls,
+sOkCreateCtrl,
+sExcLimitZones,
+sOkCreationZone,
+sOkSetUp,
+sInfoSystem]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="561"/>
+
+</Link>
+
+<Link linkId="LINK449" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cDisplay_Main</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.4" endType="midarrow">
+<Text id="1">[sReqInfoCtrlZone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.374193548387" endType="midarrow">
+<Text id="1">[sInfoCtrlZone]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-616"/>
+
+</Link>
+
+<Link linkId="LINK448" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Zone</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sIR1_Zone,sIR2_Zone,
+sIR3_Zone,sIR4_Zone,
+sLoopInductive_Zone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="0.0750436300175" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-220"/>
+
+</Link>
+</DiagramPartition>
+
+<DiagramPartition name="Declarations" nbPagesH="2" nbPagesV="2">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB6" type="sdlSysDgmFrm" xCenter="595" yCenter="841" fixedDimensions="TRUE" width="1146" height="1617" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="561" yCenter="759" fixedDimensions="FALSE" width="682" height="1474" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>/*Declarations of Constants */
+
+SYNONYM cNUMMAXCTRL INTEGER = 2;
+SYNONYM cMAX_ZONES INTEGER = 4;
+SYNONYM cNUMMAXZONES_SYSTEM INTEGER = cNUMMAXCTRL*cMAX_ZONES;
+SYNONYM cNUMMAXSPOTS INTEGER = 3;
+SYNONYM cNUMMAXFREESPOTS INTEGER =  cNUMMAXSPOTS*cNUMMAXZONES_SYSTEM;
+
+/* Declaration data types */
+
+SYNTYPE i_spots = INTEGER
+DEFAULT 0;
+    CONSTANTS 0..cNUMMAXSPOTS
+ENDSYNTYPE;
+
+SYNTYPE numMaxSpots = INTEGER
+  CONSTANTS 0..cNUMMAXFREESPOTS
+ENDSYNTYPE;
+
+SYNTYPE indexZone = INTEGER
+  CONSTANTS 0:cMAX_ZONES-1
+ENDSYNTYPE;
+
+SYNTYPE indexCtrl = INTEGER
+  CONSTANTS 0:cNUMMAXCTRL-1
+ENDSYNTYPE;
+
+/*Basic data types */
+
+NEWTYPE InfoZone
+STRUCT
+    totalSpots i_spots;
+    freeSpots i_spots;
+    ID PID;
+ENDNEWTYPE;
+
+NEWTYPE table_Zones
+  ARRAY(indexZone,InfoZone)
+ENDNEWTYPE;
+
+NEWTYPE infoMainCtrls
+STRUCT
+    totalSpotsZone numMaxSpots;
+    freeSpotsZone numMaxSpots;
+ENDNEWTYPE;
+
+NEWTYPE tableMainInfoCtrls
+    ARRAY(indexCtrl,infoMainCtrls)
+ENDNEWTYPE;
+
+NEWTYPE tableVeriFyCon_Zone
+    ARRAY(indexCtrl,BOOLEAN)
+ENDNEWTYPE;
+
+/*Structs*/
+
+NEWTYPE InfoCtrl
+STRUCT
+    alltotalSpots numMaxSpots;
+    allfreeSpots numMaxSpots;
+    IDCtrl PID;
+    listZones table_Zones;
+    tableConnectionOkZones tableVeriFyCon_Zone;
+ENDNEWTYPE;
+
+NEWTYPE tableInfoGralCtrl
+  ARRAY(indexCtrl,InfoCtrl)
+ENDNEWTYPE;
+
+NEWTYPE InfoMainSystem
+STRUCT
+    totalSpotsSystem numMaxSpots;
+    freeSpotsSystem numMaxSpots;
+    freeSpotsParking numMaxSpots;
+    tableInfoCtrl tableMainInfoCtrls;
+ENDNEWTYPE;</Text>
+</Symbol>
+</Symbol>
+</DiagramPartition>
+
+<DiagramPartition name="Signals BZone" nbPagesH="1" nbPagesV="2">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB9" type="sdlSysDgmFrm" xCenter="297" yCenter="841" fixedDimensions="TRUE" width="551" height="1617" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB63" type="sdlText" xCenter="275" yCenter="462" fixedDimensions="FALSE" width="550" height="902" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>/*----------------------------- Process called pZone -------------------------------------*/
+
+/*Channel cEnv_Zone */
+/*----&gt;Signal from Enviroment to pZone &lt;----- */
+
+SIGNAL sIR1_Zone,sIR2_Zone,sIR3_Zone,sIR4_Zone,sLoopInductive_Zone;
+
+/*Channel cCtrl_Zone */
+/*----&gt; Signals from pCtrl to pZone &lt;----- */
+
+SIGNAL sInitFreeSpot(i_spots),sInitTotalSpots(i_spots),sReqInfo,sInitPidCtrl(PID);
+
+/*---&gt; Signals from pZone to pCrtl &lt;----*/
+
+SIGNAL sEntered_Car(i_spots),sOut_Car(i_spots);
+SIGNAL sOkInit,sInfoZone(i_spots,i_spots),sOkInitPid;
+      
+
+/*------------------------------------Process pZoneManager--------------------------- */
+
+/* channel cCtrl_ZoneManager*/
+
+/*---&gt; Signals from pCtrl to pZoneManager &lt;---*/
+
+SIGNAL sCreateZone(i_spots,i_spots),sConfirmZoneManager_i;
+
+/*---&gt;Signals from pZoneManager to pCtrl &lt;---*/
+
+SIGNAL sOkCreation(PID),sExcQuantityZones,sIamZoneManager;
+
+/*channel cCreator_ZoneManager*/
+
+/*---&gt; Signals from pCreatorZoneManager to pZoneManager*/
+
+SIGNAL sConfirmZoneManager(PID);
+/*-----------------------Process pCreatorZoneManager------------------------*/
+
+/*Channel cCtrl_CreatorZoneManager */
+
+/*---&gt; Signals from pCtrl to pCreatorZoneManager &lt;---*/
+
+SIGNAL sCreateZoneManager;
+
+/*---&gt;Signals from pCreatorZoneManager to pCtrl &lt;---*/
+
+SIGNAL sOkCreateZoneManager(PID);</Text>
+</Symbol>
+</Symbol>
+</DiagramPartition>
+
+<DiagramPartition name="Signals BCtrl" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB38" type="sdlSysDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB64" type="sdlText" xCenter="275" yCenter="396" fixedDimensions="FALSE" width="462" height="704" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>/*-----------------------Process pCtrlManager -----------------------------*/
+
+/*Channel cMain_CtrlManager*/
+
+/*---&gt;Signals from pMainSystemManager to pCtrlManager &lt;---*/
+
+SIGNAL sCreateCtrl;
+
+/*Signals from pCtrlManager to pMainSystemManager*/
+
+SIGNAL sExcQuantityCtrl,sOkCreationCtrl(InfoCtrl);
+
+/*Channel cCtrl_CtrlManager*/
+
+/* Signals from pCtrlManager to pCtrl*/
+
+SIGNAL sConfirmCtrl;
+
+/*Signals from pCtrl to pCtrlManager*/
+
+SIGNAL sIamCtrl(InfoCtrl);
+
+/*Channel cMain_CtrlZone*/
+
+/*Signals from pMainSystemManager to pCtrl*/
+
+SIGNAL sCreateZone_(i_spots,i_spots),sReqInfoCtrl;
+SIGNAL sInitFreeSpotZone(indexZone,i_spots);
+SIGNAL sInitTotalSpotZone(indexZone,i_spots),sInitialConnection;
+
+/*Signals from pCtrl to pMainSystemManager*/
+
+SIGNAL sInfoTotalCtrl(InfoCtrl),sOkCreateZone(InfoCtrl);
+SIGNAL sExcLimitZones,sOkSetUp;
+SIGNAL sOkCreationCtrl_i(InfoCtrl);</Text>
+</Symbol>
+</Symbol>
+</DiagramPartition>
+
+<DiagramPartition name="Signals BMainSystem" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB40" type="sdlSysDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB65" type="sdlText" xCenter="286" yCenter="275" fixedDimensions="FALSE" width="440" height="506" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>/*--------Process pMainSystemManager----------------------------*/
+/*Channel cEnv_Main*/
+
+/*---&gt;Signals from Enviroment to pMainSystemManager&lt;---*/
+
+SIGNAL sCreateCtrlZone,sReqInfoSystem;
+SIGNAL sAddZone(indexCtrl,i_spots,i_spots);
+SIGNAL sSetUpFreeSpot(indexCtrl,indexZone,i_spots);
+SIGNAL sSetUpTotalSpot(indexCtrl,indexZone,i_spots);
+
+/*---&gt;Signals from pMainSystemManager to Enviroment&lt;---*/
+
+SIGNAL sExcLimitCtrl,sOkCreationZone;
+SIGNAL sImpossibleGetInfoCtrls,sOkCreateCtrl;
+SIGNAL sInfoSystem(InfoMainSystem);
+
+/*Channel cDisplay_Main*/
+
+/*---&gt;Signal from process pDisplay to process pMain&lt;---*/
+
+SIGNAL sReqInfoCtrlZone(indexCtrl,indexZone);
+
+/*---&gt;Signal from process pMain to process pDisplay&lt;---*/
+
+SIGNAL sInfoCtrlZone(i_spots);</Text>
+</Symbol>
+</Symbol>
+</DiagramPartition>
+
+</Diagram>

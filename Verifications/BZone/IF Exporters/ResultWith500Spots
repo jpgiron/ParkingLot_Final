@@ -1,0 +1,10 @@
+00:00:42       3039/s       3071/t 
+   label table :    6086 items    257/entry 12/min 40/max 23.68/avg
+   event table :    2014 items    127/entry  4/min 36/max 15.86/avg
+  config table :    3039 items    127/entry 16/min 40/max 23.93/avg
+   chunk table :    3039 items    127/entry 16/min 36/max 23.93/avg
+instance table :    4037 items    127/entry 24/min 48/max 31.79/avg
+   queue table :       0 items     13/entry  0/min  0/max  0.00/avg
+ message table :    2012 items    127/entry 16/min 20/max 15.84/avg
+no error state
+-EOF-

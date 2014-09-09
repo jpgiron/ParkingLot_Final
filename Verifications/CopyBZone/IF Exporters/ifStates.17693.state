@@ -1,0 +1,2712 @@
+
+0:
+{RTDS_start_process}0		{}
+  @top:RTDS_START		{} {}
+{FreeDeadLocks}0		{{}} 
+  @top:RTDS_START		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+1:
+{RTDS_start_process}0		{}
+  @top:RTDS_START		{} {}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+2:
+{pZone}0		{}
+  @top:RTDS_START		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=0,totalSpots=0,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{RTDS_start_process}0 #pZone{pZone}0>> <<{RTDS_start_process}0 k{RTDS_start_process}0>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+3:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+4:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sReqInfo{p1={nil}0}{pZone}0>> <<{pZone}0 !sInfoZone{p1={pZone}0,p2=5,p3=5}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+5:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=0,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=0}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+6:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=1,freeSpots=5,totalSpots=1,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=1}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+7:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=2,freeSpots=5,totalSpots=2,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=2}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+8:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=3,freeSpots=5,totalSpots=3,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=3}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+9:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=4,freeSpots=5,totalSpots=4,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=4}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+10:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=5,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=5}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+11:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=6,freeSpots=5,totalSpots=6,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=6}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+12:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=7,freeSpots=5,totalSpots=7,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=7}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+13:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=8,freeSpots=5,totalSpots=8,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=8}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+14:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=9,freeSpots=5,totalSpots=9,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=9}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+15:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=10,freeSpots=5,totalSpots=10,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=10}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+16:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=11,freeSpots=5,totalSpots=11,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=11}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+17:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=12,freeSpots=5,totalSpots=12,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=12}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+18:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=13,freeSpots=5,totalSpots=13,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=13}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+19:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=14,freeSpots=5,totalSpots=14,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=14}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+20:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=15,freeSpots=5,totalSpots=15,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=15}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+21:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=16,freeSpots=5,totalSpots=16,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=16}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+22:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=17,freeSpots=5,totalSpots=17,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=17}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+23:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=18,freeSpots=5,totalSpots=18,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=18}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+24:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=19,freeSpots=5,totalSpots=19,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=19}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+25:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=20,freeSpots=5,totalSpots=20,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=20}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+26:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=21,freeSpots=5,totalSpots=21,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=21}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+27:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=22,freeSpots=5,totalSpots=22,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=22}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+28:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=23,freeSpots=5,totalSpots=23,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=23}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+29:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=24,freeSpots=5,totalSpots=24,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=24}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+30:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=25,freeSpots=5,totalSpots=25,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=25}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+31:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=26,freeSpots=5,totalSpots=26,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=26}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+32:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=27,freeSpots=5,totalSpots=27,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=27}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+33:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=28,freeSpots=5,totalSpots=28,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=28}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+34:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=29,freeSpots=5,totalSpots=29,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=29}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+35:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=30,freeSpots=5,totalSpots=30,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=30}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+36:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=31,freeSpots=5,totalSpots=31,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=31}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+37:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=32,freeSpots=5,totalSpots=32,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=32}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+38:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=33,freeSpots=5,totalSpots=33,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=33}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+39:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=34,freeSpots=5,totalSpots=34,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=34}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+40:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=35,freeSpots=5,totalSpots=35,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=35}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+41:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=36,freeSpots=5,totalSpots=36,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=36}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+42:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=37,freeSpots=5,totalSpots=37,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=37}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+43:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=38,freeSpots=5,totalSpots=38,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=38}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+44:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=39,freeSpots=5,totalSpots=39,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=39}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+45:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=40,freeSpots=5,totalSpots=40,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=40}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+46:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=41,freeSpots=5,totalSpots=41,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=41}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+47:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=42,freeSpots=5,totalSpots=42,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=42}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+48:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=43,freeSpots=5,totalSpots=43,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=43}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+49:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=44,freeSpots=5,totalSpots=44,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=44}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+50:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=45,freeSpots=5,totalSpots=45,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=45}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+51:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=46,freeSpots=5,totalSpots=46,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=46}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+52:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=47,freeSpots=5,totalSpots=47,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=47}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+53:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=48,freeSpots=5,totalSpots=48,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=48}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+54:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=49,freeSpots=5,totalSpots=49,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=49}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+55:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=50,freeSpots=5,totalSpots=50,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitTotalSpots{p1={nil}0,p2=50}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+56:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=0,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=0}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+57:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=1,p_totalSpots=0,freeSpots=1,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=1}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+58:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=2,p_totalSpots=0,freeSpots=2,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=2}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+59:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=3,p_totalSpots=0,freeSpots=3,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=3}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+60:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=4,p_totalSpots=0,freeSpots=4,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=4}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+61:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=5,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=5}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+62:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=6,p_totalSpots=0,freeSpots=6,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=6}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+63:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=7,p_totalSpots=0,freeSpots=7,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=7}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+64:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=8,p_totalSpots=0,freeSpots=8,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=8}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+65:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=9,p_totalSpots=0,freeSpots=9,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=9}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+66:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=10,p_totalSpots=0,freeSpots=10,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=10}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+67:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=11,p_totalSpots=0,freeSpots=11,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=11}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+68:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=12,p_totalSpots=0,freeSpots=12,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=12}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+69:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=13,p_totalSpots=0,freeSpots=13,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=13}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+70:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=14,p_totalSpots=0,freeSpots=14,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=14}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+71:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=15,p_totalSpots=0,freeSpots=15,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=15}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+72:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=16,p_totalSpots=0,freeSpots=16,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=16}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+73:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=17,p_totalSpots=0,freeSpots=17,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=17}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+74:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=18,p_totalSpots=0,freeSpots=18,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=18}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+75:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=19,p_totalSpots=0,freeSpots=19,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=19}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+76:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=20,p_totalSpots=0,freeSpots=20,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=20}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+77:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=21,p_totalSpots=0,freeSpots=21,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=21}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+78:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=22,p_totalSpots=0,freeSpots=22,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=22}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+79:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=23,p_totalSpots=0,freeSpots=23,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=23}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+80:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=24,p_totalSpots=0,freeSpots=24,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=24}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+81:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=25,p_totalSpots=0,freeSpots=25,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=25}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+82:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=26,p_totalSpots=0,freeSpots=26,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=26}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+83:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=27,p_totalSpots=0,freeSpots=27,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=27}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+84:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=28,p_totalSpots=0,freeSpots=28,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=28}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+85:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=29,p_totalSpots=0,freeSpots=29,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=29}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+86:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=30,p_totalSpots=0,freeSpots=30,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=30}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+87:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=31,p_totalSpots=0,freeSpots=31,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=31}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+88:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=32,p_totalSpots=0,freeSpots=32,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=32}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+89:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=33,p_totalSpots=0,freeSpots=33,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=33}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+90:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=34,p_totalSpots=0,freeSpots=34,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=34}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+91:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=35,p_totalSpots=0,freeSpots=35,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=35}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+92:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=36,p_totalSpots=0,freeSpots=36,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=36}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+93:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=37,p_totalSpots=0,freeSpots=37,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=37}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+94:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=38,p_totalSpots=0,freeSpots=38,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=38}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+95:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=39,p_totalSpots=0,freeSpots=39,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=39}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+96:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=40,p_totalSpots=0,freeSpots=40,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=40}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+97:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=41,p_totalSpots=0,freeSpots=41,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=41}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+98:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=42,p_totalSpots=0,freeSpots=42,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=42}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+99:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=43,p_totalSpots=0,freeSpots=43,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=43}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+100:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=44,p_totalSpots=0,freeSpots=44,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=44}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+101:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=45,p_totalSpots=0,freeSpots=45,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=45}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+102:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=46,p_totalSpots=0,freeSpots=46,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=46}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+103:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=47,p_totalSpots=0,freeSpots=47,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=47}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+104:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=48,p_totalSpots=0,freeSpots=48,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=48}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+105:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=49,p_totalSpots=0,freeSpots=49,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=49}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+106:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=50,p_totalSpots=0,freeSpots=50,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sInitFreeSpot{p1={nil}0,p2=50}{pZone}0>> <<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+107:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sIR3_Zone{p1={nil}0}{pZone}0>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -3/1 
+
+108:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sIR2_Zone{p1={nil}0}{pZone}0>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -3/1 
+
+109:
+{pZone}0		{}
+  @top:WaitSensorIR2		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sIR1_Zone{p1={nil}0}{pZone}0>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -3/1 
+
+110:
+{pZone}0		{}
+  @top:WaitSensorIR2		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sIR4_Zone{p1={nil}0}{pZone}0>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -3/1 
+
+111:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sInfoZone{p1={pZone}0,p2=5,p3=5}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+112:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=0,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+113:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=1,freeSpots=5,totalSpots=1,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=1}
+{time}0		{}
+  @run		0/0 
+
+114:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=2,freeSpots=5,totalSpots=2,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=2}
+{time}0		{}
+  @run		0/0 
+
+115:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=3,freeSpots=5,totalSpots=3,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=3}
+{time}0		{}
+  @run		0/0 
+
+116:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=4,freeSpots=5,totalSpots=4,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=4}
+{time}0		{}
+  @run		0/0 
+
+117:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=5,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=5}
+{time}0		{}
+  @run		0/0 
+
+118:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=6,freeSpots=5,totalSpots=6,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=6}
+{time}0		{}
+  @run		0/0 
+
+119:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=7,freeSpots=5,totalSpots=7,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=7}
+{time}0		{}
+  @run		0/0 
+
+120:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=8,freeSpots=5,totalSpots=8,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=8}
+{time}0		{}
+  @run		0/0 
+
+121:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=9,freeSpots=5,totalSpots=9,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=9}
+{time}0		{}
+  @run		0/0 
+
+122:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=10,freeSpots=5,totalSpots=10,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=10}
+{time}0		{}
+  @run		0/0 
+
+123:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=11,freeSpots=5,totalSpots=11,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=11}
+{time}0		{}
+  @run		0/0 
+
+124:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=12,freeSpots=5,totalSpots=12,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=12}
+{time}0		{}
+  @run		0/0 
+
+125:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=13,freeSpots=5,totalSpots=13,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=13}
+{time}0		{}
+  @run		0/0 
+
+126:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=14,freeSpots=5,totalSpots=14,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=14}
+{time}0		{}
+  @run		0/0 
+
+127:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=15,freeSpots=5,totalSpots=15,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=15}
+{time}0		{}
+  @run		0/0 
+
+128:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=16,freeSpots=5,totalSpots=16,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=16}
+{time}0		{}
+  @run		0/0 
+
+129:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=17,freeSpots=5,totalSpots=17,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=17}
+{time}0		{}
+  @run		0/0 
+
+130:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=18,freeSpots=5,totalSpots=18,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=18}
+{time}0		{}
+  @run		0/0 
+
+131:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=19,freeSpots=5,totalSpots=19,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=19}
+{time}0		{}
+  @run		0/0 
+
+132:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=20,freeSpots=5,totalSpots=20,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=20}
+{time}0		{}
+  @run		0/0 
+
+133:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=21,freeSpots=5,totalSpots=21,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=21}
+{time}0		{}
+  @run		0/0 
+
+134:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=22,freeSpots=5,totalSpots=22,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=22}
+{time}0		{}
+  @run		0/0 
+
+135:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=23,freeSpots=5,totalSpots=23,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=23}
+{time}0		{}
+  @run		0/0 
+
+136:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=24,freeSpots=5,totalSpots=24,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=24}
+{time}0		{}
+  @run		0/0 
+
+137:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=25,freeSpots=5,totalSpots=25,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=25}
+{time}0		{}
+  @run		0/0 
+
+138:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=26,freeSpots=5,totalSpots=26,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=26}
+{time}0		{}
+  @run		0/0 
+
+139:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=27,freeSpots=5,totalSpots=27,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=27}
+{time}0		{}
+  @run		0/0 
+
+140:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=28,freeSpots=5,totalSpots=28,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=28}
+{time}0		{}
+  @run		0/0 
+
+141:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=29,freeSpots=5,totalSpots=29,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=29}
+{time}0		{}
+  @run		0/0 
+
+142:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=30,freeSpots=5,totalSpots=30,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=30}
+{time}0		{}
+  @run		0/0 
+
+143:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=31,freeSpots=5,totalSpots=31,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=31}
+{time}0		{}
+  @run		0/0 
+
+144:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=32,freeSpots=5,totalSpots=32,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=32}
+{time}0		{}
+  @run		0/0 
+
+145:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=33,freeSpots=5,totalSpots=33,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=33}
+{time}0		{}
+  @run		0/0 
+
+146:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=34,freeSpots=5,totalSpots=34,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=34}
+{time}0		{}
+  @run		0/0 
+
+147:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=35,freeSpots=5,totalSpots=35,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=35}
+{time}0		{}
+  @run		0/0 
+
+148:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=36,freeSpots=5,totalSpots=36,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=36}
+{time}0		{}
+  @run		0/0 
+
+149:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=37,freeSpots=5,totalSpots=37,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=37}
+{time}0		{}
+  @run		0/0 
+
+150:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=38,freeSpots=5,totalSpots=38,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=38}
+{time}0		{}
+  @run		0/0 
+
+151:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=39,freeSpots=5,totalSpots=39,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=39}
+{time}0		{}
+  @run		0/0 
+
+152:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=40,freeSpots=5,totalSpots=40,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=40}
+{time}0		{}
+  @run		0/0 
+
+153:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=41,freeSpots=5,totalSpots=41,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=41}
+{time}0		{}
+  @run		0/0 
+
+154:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=42,freeSpots=5,totalSpots=42,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=42}
+{time}0		{}
+  @run		0/0 
+
+155:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=43,freeSpots=5,totalSpots=43,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=43}
+{time}0		{}
+  @run		0/0 
+
+156:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=44,freeSpots=5,totalSpots=44,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=44}
+{time}0		{}
+  @run		0/0 
+
+157:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=45,freeSpots=5,totalSpots=45,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=45}
+{time}0		{}
+  @run		0/0 
+
+158:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=46,freeSpots=5,totalSpots=46,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=46}
+{time}0		{}
+  @run		0/0 
+
+159:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=47,freeSpots=5,totalSpots=47,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=47}
+{time}0		{}
+  @run		0/0 
+
+160:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=48,freeSpots=5,totalSpots=48,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=48}
+{time}0		{}
+  @run		0/0 
+
+161:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=49,freeSpots=5,totalSpots=49,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=49}
+{time}0		{}
+  @run		0/0 
+
+162:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=50,freeSpots=5,totalSpots=50,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:END		{pidSender={nil}0,pidZone={pZone}0,vSpot=50}
+{time}0		{}
+  @run		0/0 
+
+163:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=0,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+164:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=1,p_totalSpots=0,freeSpots=1,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=1}
+{time}0		{}
+  @run		0/0 
+
+165:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=2,p_totalSpots=0,freeSpots=2,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=2}
+{time}0		{}
+  @run		0/0 
+
+166:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=3,p_totalSpots=0,freeSpots=3,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=3}
+{time}0		{}
+  @run		0/0 
+
+167:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=4,p_totalSpots=0,freeSpots=4,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=4}
+{time}0		{}
+  @run		0/0 
+
+168:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=5,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=5}
+{time}0		{}
+  @run		0/0 
+
+169:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=6,p_totalSpots=0,freeSpots=6,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=6}
+{time}0		{}
+  @run		0/0 
+
+170:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=7,p_totalSpots=0,freeSpots=7,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=7}
+{time}0		{}
+  @run		0/0 
+
+171:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=8,p_totalSpots=0,freeSpots=8,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=8}
+{time}0		{}
+  @run		0/0 
+
+172:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=9,p_totalSpots=0,freeSpots=9,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=9}
+{time}0		{}
+  @run		0/0 
+
+173:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=10,p_totalSpots=0,freeSpots=10,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=10}
+{time}0		{}
+  @run		0/0 
+
+174:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=11,p_totalSpots=0,freeSpots=11,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=11}
+{time}0		{}
+  @run		0/0 
+
+175:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=12,p_totalSpots=0,freeSpots=12,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=12}
+{time}0		{}
+  @run		0/0 
+
+176:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=13,p_totalSpots=0,freeSpots=13,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=13}
+{time}0		{}
+  @run		0/0 
+
+177:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=14,p_totalSpots=0,freeSpots=14,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=14}
+{time}0		{}
+  @run		0/0 
+
+178:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=15,p_totalSpots=0,freeSpots=15,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=15}
+{time}0		{}
+  @run		0/0 
+
+179:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=16,p_totalSpots=0,freeSpots=16,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=16}
+{time}0		{}
+  @run		0/0 
+
+180:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=17,p_totalSpots=0,freeSpots=17,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=17}
+{time}0		{}
+  @run		0/0 
+
+181:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=18,p_totalSpots=0,freeSpots=18,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=18}
+{time}0		{}
+  @run		0/0 
+
+182:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=19,p_totalSpots=0,freeSpots=19,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=19}
+{time}0		{}
+  @run		0/0 
+
+183:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=20,p_totalSpots=0,freeSpots=20,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=20}
+{time}0		{}
+  @run		0/0 
+
+184:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=21,p_totalSpots=0,freeSpots=21,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=21}
+{time}0		{}
+  @run		0/0 
+
+185:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=22,p_totalSpots=0,freeSpots=22,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=22}
+{time}0		{}
+  @run		0/0 
+
+186:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=23,p_totalSpots=0,freeSpots=23,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=23}
+{time}0		{}
+  @run		0/0 
+
+187:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=24,p_totalSpots=0,freeSpots=24,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=24}
+{time}0		{}
+  @run		0/0 
+
+188:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=25,p_totalSpots=0,freeSpots=25,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=25}
+{time}0		{}
+  @run		0/0 
+
+189:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=26,p_totalSpots=0,freeSpots=26,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=26}
+{time}0		{}
+  @run		0/0 
+
+190:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=27,p_totalSpots=0,freeSpots=27,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=27}
+{time}0		{}
+  @run		0/0 
+
+191:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=28,p_totalSpots=0,freeSpots=28,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=28}
+{time}0		{}
+  @run		0/0 
+
+192:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=29,p_totalSpots=0,freeSpots=29,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=29}
+{time}0		{}
+  @run		0/0 
+
+193:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=30,p_totalSpots=0,freeSpots=30,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=30}
+{time}0		{}
+  @run		0/0 
+
+194:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=31,p_totalSpots=0,freeSpots=31,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=31}
+{time}0		{}
+  @run		0/0 
+
+195:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=32,p_totalSpots=0,freeSpots=32,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=32}
+{time}0		{}
+  @run		0/0 
+
+196:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=33,p_totalSpots=0,freeSpots=33,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=33}
+{time}0		{}
+  @run		0/0 
+
+197:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=34,p_totalSpots=0,freeSpots=34,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=34}
+{time}0		{}
+  @run		0/0 
+
+198:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=35,p_totalSpots=0,freeSpots=35,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=35}
+{time}0		{}
+  @run		0/0 
+
+199:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=36,p_totalSpots=0,freeSpots=36,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=36}
+{time}0		{}
+  @run		0/0 
+
+200:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=37,p_totalSpots=0,freeSpots=37,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=37}
+{time}0		{}
+  @run		0/0 
+
+201:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=38,p_totalSpots=0,freeSpots=38,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=38}
+{time}0		{}
+  @run		0/0 
+
+202:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=39,p_totalSpots=0,freeSpots=39,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=39}
+{time}0		{}
+  @run		0/0 
+
+203:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=40,p_totalSpots=0,freeSpots=40,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=40}
+{time}0		{}
+  @run		0/0 
+
+204:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=41,p_totalSpots=0,freeSpots=41,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=41}
+{time}0		{}
+  @run		0/0 
+
+205:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=42,p_totalSpots=0,freeSpots=42,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=42}
+{time}0		{}
+  @run		0/0 
+
+206:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=43,p_totalSpots=0,freeSpots=43,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=43}
+{time}0		{}
+  @run		0/0 
+
+207:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=44,p_totalSpots=0,freeSpots=44,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=44}
+{time}0		{}
+  @run		0/0 
+
+208:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=45,p_totalSpots=0,freeSpots=45,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=45}
+{time}0		{}
+  @run		0/0 
+
+209:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=46,p_totalSpots=0,freeSpots=46,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=46}
+{time}0		{}
+  @run		0/0 
+
+210:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=47,p_totalSpots=0,freeSpots=47,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=47}
+{time}0		{}
+  @run		0/0 
+
+211:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=48,p_totalSpots=0,freeSpots=48,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=48}
+{time}0		{}
+  @run		0/0 
+
+212:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=49,p_totalSpots=0,freeSpots=49,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=49}
+{time}0		{}
+  @run		0/0 
+
+213:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=50,p_totalSpots=0,freeSpots=50,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,vSpot=50}
+{time}0		{}
+  @run		0/0 
+
+214:
+{pZone}0		{}
+  @top:VerifyIsaCarOut		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sIR1_Zone{p1={nil}0}{pZone}0>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -3/1 
+
+215:
+{pZone}0		{}
+  @top:VerifyIsaCarOut		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sIR4_Zone{p1={nil}0}{pZone}0>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -3/1 
+
+216:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -2/1 
+
+217:
+{pZone}0		{}
+  @top:VerifyIsaCarEntering		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sIR3_Zone{p1={nil}0}{pZone}0>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -3/1 
+
+218:
+{pZone}0		{}
+  @top:VerifyIsaCarEntering		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sIR2_Zone{p1={nil}0}{pZone}0>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -3/1 
+
+219:
+{pZone}0		{}
+  @top:WaitSensorIR2		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -2/1 
+
+220:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sInfoZone{p1={pZone}0,p2=5,p3=5}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+221:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=0,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+222:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=1,freeSpots=5,totalSpots=1,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=1}
+{time}0		{}
+  @run		0/0 
+
+223:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=2,freeSpots=5,totalSpots=2,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=2}
+{time}0		{}
+  @run		0/0 
+
+224:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=3,freeSpots=5,totalSpots=3,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=3}
+{time}0		{}
+  @run		0/0 
+
+225:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=4,freeSpots=5,totalSpots=4,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=4}
+{time}0		{}
+  @run		0/0 
+
+226:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=5,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=5}
+{time}0		{}
+  @run		0/0 
+
+227:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=6,freeSpots=5,totalSpots=6,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=6}
+{time}0		{}
+  @run		0/0 
+
+228:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=7,freeSpots=5,totalSpots=7,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=7}
+{time}0		{}
+  @run		0/0 
+
+229:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=8,freeSpots=5,totalSpots=8,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=8}
+{time}0		{}
+  @run		0/0 
+
+230:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=9,freeSpots=5,totalSpots=9,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=9}
+{time}0		{}
+  @run		0/0 
+
+231:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=10,freeSpots=5,totalSpots=10,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=10}
+{time}0		{}
+  @run		0/0 
+
+232:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=11,freeSpots=5,totalSpots=11,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=11}
+{time}0		{}
+  @run		0/0 
+
+233:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=12,freeSpots=5,totalSpots=12,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=12}
+{time}0		{}
+  @run		0/0 
+
+234:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=13,freeSpots=5,totalSpots=13,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=13}
+{time}0		{}
+  @run		0/0 
+
+235:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=14,freeSpots=5,totalSpots=14,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=14}
+{time}0		{}
+  @run		0/0 
+
+236:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=15,freeSpots=5,totalSpots=15,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=15}
+{time}0		{}
+  @run		0/0 
+
+237:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=16,freeSpots=5,totalSpots=16,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=16}
+{time}0		{}
+  @run		0/0 
+
+238:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=17,freeSpots=5,totalSpots=17,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=17}
+{time}0		{}
+  @run		0/0 
+
+239:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=18,freeSpots=5,totalSpots=18,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=18}
+{time}0		{}
+  @run		0/0 
+
+240:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=19,freeSpots=5,totalSpots=19,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=19}
+{time}0		{}
+  @run		0/0 
+
+241:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=20,freeSpots=5,totalSpots=20,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=20}
+{time}0		{}
+  @run		0/0 
+
+242:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=21,freeSpots=5,totalSpots=21,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=21}
+{time}0		{}
+  @run		0/0 
+
+243:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=22,freeSpots=5,totalSpots=22,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=22}
+{time}0		{}
+  @run		0/0 
+
+244:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=23,freeSpots=5,totalSpots=23,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=23}
+{time}0		{}
+  @run		0/0 
+
+245:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=24,freeSpots=5,totalSpots=24,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=24}
+{time}0		{}
+  @run		0/0 
+
+246:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=25,freeSpots=5,totalSpots=25,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=25}
+{time}0		{}
+  @run		0/0 
+
+247:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=26,freeSpots=5,totalSpots=26,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=26}
+{time}0		{}
+  @run		0/0 
+
+248:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=27,freeSpots=5,totalSpots=27,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=27}
+{time}0		{}
+  @run		0/0 
+
+249:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=28,freeSpots=5,totalSpots=28,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=28}
+{time}0		{}
+  @run		0/0 
+
+250:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=29,freeSpots=5,totalSpots=29,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=29}
+{time}0		{}
+  @run		0/0 
+
+251:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=30,freeSpots=5,totalSpots=30,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=30}
+{time}0		{}
+  @run		0/0 
+
+252:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=31,freeSpots=5,totalSpots=31,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=31}
+{time}0		{}
+  @run		0/0 
+
+253:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=32,freeSpots=5,totalSpots=32,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=32}
+{time}0		{}
+  @run		0/0 
+
+254:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=33,freeSpots=5,totalSpots=33,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=33}
+{time}0		{}
+  @run		0/0 
+
+255:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=34,freeSpots=5,totalSpots=34,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=34}
+{time}0		{}
+  @run		0/0 
+
+256:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=35,freeSpots=5,totalSpots=35,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=35}
+{time}0		{}
+  @run		0/0 
+
+257:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=36,freeSpots=5,totalSpots=36,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=36}
+{time}0		{}
+  @run		0/0 
+
+258:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=37,freeSpots=5,totalSpots=37,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=37}
+{time}0		{}
+  @run		0/0 
+
+259:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=38,freeSpots=5,totalSpots=38,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=38}
+{time}0		{}
+  @run		0/0 
+
+260:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=39,freeSpots=5,totalSpots=39,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=39}
+{time}0		{}
+  @run		0/0 
+
+261:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=40,freeSpots=5,totalSpots=40,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=40}
+{time}0		{}
+  @run		0/0 
+
+262:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=41,freeSpots=5,totalSpots=41,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=41}
+{time}0		{}
+  @run		0/0 
+
+263:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=42,freeSpots=5,totalSpots=42,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=42}
+{time}0		{}
+  @run		0/0 
+
+264:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=43,freeSpots=5,totalSpots=43,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=43}
+{time}0		{}
+  @run		0/0 
+
+265:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=44,freeSpots=5,totalSpots=44,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=44}
+{time}0		{}
+  @run		0/0 
+
+266:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=45,freeSpots=5,totalSpots=45,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=45}
+{time}0		{}
+  @run		0/0 
+
+267:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=46,freeSpots=5,totalSpots=46,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=46}
+{time}0		{}
+  @run		0/0 
+
+268:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=47,freeSpots=5,totalSpots=47,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=47}
+{time}0		{}
+  @run		0/0 
+
+269:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=48,freeSpots=5,totalSpots=48,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=48}
+{time}0		{}
+  @run		0/0 
+
+270:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=49,freeSpots=5,totalSpots=49,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=49}
+{time}0		{}
+  @run		0/0 
+
+271:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=50,freeSpots=5,totalSpots=50,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=50}
+{time}0		{}
+  @run		0/0 
+
+272:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=0,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+273:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=1,p_totalSpots=0,freeSpots=1,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=1}
+{time}0		{}
+  @run		0/0 
+
+274:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=2,p_totalSpots=0,freeSpots=2,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=2}
+{time}0		{}
+  @run		0/0 
+
+275:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=3,p_totalSpots=0,freeSpots=3,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=3}
+{time}0		{}
+  @run		0/0 
+
+276:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=4,p_totalSpots=0,freeSpots=4,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=4}
+{time}0		{}
+  @run		0/0 
+
+277:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=5,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=5}
+{time}0		{}
+  @run		0/0 
+
+278:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=6,p_totalSpots=0,freeSpots=6,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=6}
+{time}0		{}
+  @run		0/0 
+
+279:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=7,p_totalSpots=0,freeSpots=7,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=7}
+{time}0		{}
+  @run		0/0 
+
+280:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=8,p_totalSpots=0,freeSpots=8,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=8}
+{time}0		{}
+  @run		0/0 
+
+281:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=9,p_totalSpots=0,freeSpots=9,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=9}
+{time}0		{}
+  @run		0/0 
+
+282:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=10,p_totalSpots=0,freeSpots=10,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=10}
+{time}0		{}
+  @run		0/0 
+
+283:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=11,p_totalSpots=0,freeSpots=11,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=11}
+{time}0		{}
+  @run		0/0 
+
+284:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=12,p_totalSpots=0,freeSpots=12,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=12}
+{time}0		{}
+  @run		0/0 
+
+285:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=13,p_totalSpots=0,freeSpots=13,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=13}
+{time}0		{}
+  @run		0/0 
+
+286:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=14,p_totalSpots=0,freeSpots=14,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=14}
+{time}0		{}
+  @run		0/0 
+
+287:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=15,p_totalSpots=0,freeSpots=15,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=15}
+{time}0		{}
+  @run		0/0 
+
+288:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=16,p_totalSpots=0,freeSpots=16,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=16}
+{time}0		{}
+  @run		0/0 
+
+289:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=17,p_totalSpots=0,freeSpots=17,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=17}
+{time}0		{}
+  @run		0/0 
+
+290:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=18,p_totalSpots=0,freeSpots=18,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=18}
+{time}0		{}
+  @run		0/0 
+
+291:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=19,p_totalSpots=0,freeSpots=19,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=19}
+{time}0		{}
+  @run		0/0 
+
+292:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=20,p_totalSpots=0,freeSpots=20,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=20}
+{time}0		{}
+  @run		0/0 
+
+293:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=21,p_totalSpots=0,freeSpots=21,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=21}
+{time}0		{}
+  @run		0/0 
+
+294:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=22,p_totalSpots=0,freeSpots=22,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=22}
+{time}0		{}
+  @run		0/0 
+
+295:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=23,p_totalSpots=0,freeSpots=23,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=23}
+{time}0		{}
+  @run		0/0 
+
+296:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=24,p_totalSpots=0,freeSpots=24,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=24}
+{time}0		{}
+  @run		0/0 
+
+297:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=25,p_totalSpots=0,freeSpots=25,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=25}
+{time}0		{}
+  @run		0/0 
+
+298:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=26,p_totalSpots=0,freeSpots=26,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=26}
+{time}0		{}
+  @run		0/0 
+
+299:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=27,p_totalSpots=0,freeSpots=27,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=27}
+{time}0		{}
+  @run		0/0 
+
+300:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=28,p_totalSpots=0,freeSpots=28,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=28}
+{time}0		{}
+  @run		0/0 
+
+301:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=29,p_totalSpots=0,freeSpots=29,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=29}
+{time}0		{}
+  @run		0/0 
+
+302:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=30,p_totalSpots=0,freeSpots=30,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=30}
+{time}0		{}
+  @run		0/0 
+
+303:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=31,p_totalSpots=0,freeSpots=31,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=31}
+{time}0		{}
+  @run		0/0 
+
+304:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=32,p_totalSpots=0,freeSpots=32,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=32}
+{time}0		{}
+  @run		0/0 
+
+305:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=33,p_totalSpots=0,freeSpots=33,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=33}
+{time}0		{}
+  @run		0/0 
+
+306:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=34,p_totalSpots=0,freeSpots=34,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=34}
+{time}0		{}
+  @run		0/0 
+
+307:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=35,p_totalSpots=0,freeSpots=35,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=35}
+{time}0		{}
+  @run		0/0 
+
+308:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=36,p_totalSpots=0,freeSpots=36,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=36}
+{time}0		{}
+  @run		0/0 
+
+309:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=37,p_totalSpots=0,freeSpots=37,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=37}
+{time}0		{}
+  @run		0/0 
+
+310:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=38,p_totalSpots=0,freeSpots=38,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=38}
+{time}0		{}
+  @run		0/0 
+
+311:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=39,p_totalSpots=0,freeSpots=39,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=39}
+{time}0		{}
+  @run		0/0 
+
+312:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=40,p_totalSpots=0,freeSpots=40,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=40}
+{time}0		{}
+  @run		0/0 
+
+313:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=41,p_totalSpots=0,freeSpots=41,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=41}
+{time}0		{}
+  @run		0/0 
+
+314:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=42,p_totalSpots=0,freeSpots=42,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=42}
+{time}0		{}
+  @run		0/0 
+
+315:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=43,p_totalSpots=0,freeSpots=43,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=43}
+{time}0		{}
+  @run		0/0 
+
+316:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=44,p_totalSpots=0,freeSpots=44,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=44}
+{time}0		{}
+  @run		0/0 
+
+317:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=45,p_totalSpots=0,freeSpots=45,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=45}
+{time}0		{}
+  @run		0/0 
+
+318:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=46,p_totalSpots=0,freeSpots=46,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=46}
+{time}0		{}
+  @run		0/0 
+
+319:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=47,p_totalSpots=0,freeSpots=47,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=47}
+{time}0		{}
+  @run		0/0 
+
+320:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=48,p_totalSpots=0,freeSpots=48,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=48}
+{time}0		{}
+  @run		0/0 
+
+321:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=49,p_totalSpots=0,freeSpots=49,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=49}
+{time}0		{}
+  @run		0/0 
+
+322:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=50,p_totalSpots=0,freeSpots=50,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 !sOkInit{p1={pZone}0}>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,vSpot=50}
+{time}0		{}
+  @run		0/0 
+
+323:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sLoopInductive_Zone{p1={nil}0}{pZone}0>> <<{pZone}0 !sOut_Car{p1={pZone}0,p2=5}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+324:
+{pZone}0		{}
+  @top:VerifyIsaCarOut		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -2/1 
+
+325:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -1/1 
+
+326:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=4,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sLoopInductive_Zone{p1={nil}0}{pZone}0>> <<{pZone}0 !sEntered_Car{p1={pZone}0,p2=4}>> }} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 
+
+327:
+{pZone}0		{}
+  @top:VerifyIsaCarEntering		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -2/1 
+
+328:
+{pZone}0		{}
+  @top:WaitSensorIR2		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -1/1 
+
+329:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sLoopInductive_Zone{p1={nil}0}{pZone}0>> }} 
+  @top:END		{pidSender={pZone}0,pidZone={pZone}0,vSpot=5}
+{time}0		{}
+  @run		0/0 
+
+330:
+{pZone}0		{}
+  @top:VerifyIsaCarOut		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -1/1 
+
+331:
+{pZone}0		{}
+  @top:WaitSensorIR4		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 0/1 
+
+332:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=4,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sLoopInductive_Zone{p1={nil}0}{pZone}0>> }} 
+  @top:END		{pidSender={pZone}0,pidZone={pZone}0,vSpot=4}
+{time}0		{}
+  @run		0/0 
+
+333:
+{pZone}0		{}
+  @top:VerifyIsaCarEntering		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 -1/1 
+
+334:
+{pZone}0		{}
+  @top:WaitSensorIR2		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 0/1 
+
+335:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sLoopInductive_Zone{p1={nil}0}{pZone}0>> }} cut!
+  @top:DEAD		{pidSender={pZone}0,pidZone={pZone}0,vSpot=5}
+{time}0		{}
+  @run		0/0 
+
+336:
+{pZone}0		{}
+  @top:VerifyIsaCarOut		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 0/1 
+
+337:
+{pZone}0		{}
+  @top:Idle		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=4,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=-1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{<<{pZone}0 ?sLoopInductive_Zone{p1={nil}0}{pZone}0>> }} cut!
+  @top:DEAD		{pidSender={pZone}0,pidZone={pZone}0,vSpot=4}
+{time}0		{}
+  @run		0/0 
+
+338:
+{pZone}0		{}
+  @top:VerifyIsaCarEntering		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=0,p_totalSpots=0,freeSpots=5,totalSpots=5,pidCtrl={nil}0,myCtrl={nil}0,tEnter=1,tOut=-1} {PARENT={nil}0}
+{FreeDeadLocks}0		{{}} 
+  @top:Prove		{pidSender={nil}0,pidZone={nil}0,vSpot=0}
+{time}0		{}
+  @run		0/0 0/1 

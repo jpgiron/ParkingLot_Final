@@ -1,0 +1,8 @@
+00:00:00         69/s        101/t 
+   label table :     146 items     13/entry  8/min 20/max 11.23/avg
+   event table :      34 items     13/entry  4/min  4/max  2.62/avg
+  config table :      69 items     13/entry  4/min 12/max  5.31/avg
+   chunk table :      69 items     13/entry  4/min  8/max  5.31/avg
+instance table :      77 items     13/entry  4/min 12/max  5.92/avg
+   queue table :       0 items     13/entry  0/min  0/max  0.00/avg
+ message table :      32 items     13/entry  4/min  8/max  2.46/avg
