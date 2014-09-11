@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="ifobs">
+<Item id="ITEM1" type="ifobs" name="obsEnteringCar2" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<Body>
+<ContinuousTransitions>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB23"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB44"/>
+</Transition>
+</ContinuousTransitions>
+</Body>
+</Item>
+<Item id="ITEM2" type="state" name="END" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB33"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="state" name="sSignals" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB17"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB29"/>
+<SymbolReference symbolId="SYMB16"/>
+<SymbolReference symbolId="SYMB17"/>
+<SymbolReference symbolId="SYMB52"/>
+<SymbolReference symbolId="SYMB13"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="sError" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB54"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB36"/>
+<SymbolReference symbolId="SYMB42"/>
+<SymbolReference symbolId="SYMB11"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="state" name="DEAD" parentId="ITEM1" scope="none">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB12"/>
+<SymbolReference symbolId="SYMB40"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

@@ -22,40 +22,6 @@
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_pTesting</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
-<Text id="1">[sEntryCarCtrl,
-sOutCarCtrl,
-sEntryCarZone,
-sOutCarZone,
-sLoopInductive_EntranceTest,
-sLoopInductive_ExitTest,
-sCarPassedBarrierTest]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.155322862129" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="-264"/>
-
-</Link>
-
-<Link linkId="LINK425" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cDisplay_Main</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="-0.6" endType="midarrow">
-<Text id="1">[sReqInfoCtrlZone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.402580645161" endType="midarrow">
-<Text id="1">[sInfoCtrlZone]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="h" length="-573"/>
-
-</Link>
-
 <Link linkId="LINK414" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_EntryWay</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
@@ -120,6 +86,58 @@ sLoopInductive_Zone]</Text>
 
 </Link>
 
+<Link linkId="LINK425" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cDisplay_Main</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="-0.6" endType="midarrow">
+<Text id="1">[sReqInfoCtrlZone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.402580645161" endType="midarrow">
+<Text id="1">[sInfoCtrlZone]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-573"/>
+
+</Link>
+
+<Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_pTesting</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
+<Text id="1">[sEntryCarCtrl,
+sOutCarCtrl,
+sEntryCarZone,
+sOutCarZone,
+sLoopInductive_EntranceTest,
+sLoopInductive_ExitTest,
+sCarPassedBarrierTest]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.155322862129" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-264"/>
+
+</Link>
+
+<Link linkId="LINK422" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_DB</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.863636363636" endType="midarrow">
+<Text id="1">[sOkUser,
+sNoRegis_User]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="0.815249266862" endType="midarrow">
+<Text id="1">[sConfirmEntranceUser,
+sConfirmOutUser]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="208"/>
+<LinkSegment orientation="h" length="113"/>
+<LinkSegment orientation="v" length="188"/>
+
+</Link>
+
 <Link linkId="LINK418" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEntryWay_CR</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.318181818182" endType="midarrow">
@@ -147,24 +165,6 @@ sLoopInductive_Zone]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="396"/>
-
-</Link>
-
-<Link linkId="LINK422" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEntryWay_DB</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.863636363636" endType="midarrow">
-<Text id="1">[sOkUser,
-sNoRegis_User]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="0.815249266862" endType="midarrow">
-<Text id="1">[sConfirmEntranceUser,
-sConfirmOutUser]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="208"/>
-<LinkSegment orientation="h" length="113"/>
-<LinkSegment orientation="v" length="188"/>
 
 </Link>
 
@@ -220,7 +220,7 @@ sConfirmOutUser]</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB47" type="sdlText" xCenter="858" yCenter="572" fixedDimensions="FALSE" width="352" height="946" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB47" type="sdlText" xCenter="957" yCenter="495" fixedDimensions="FALSE" width="352" height="946" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>NEWTYPE infoMainCtrls
 STRUCT
@@ -272,7 +272,7 @@ STRUCT
 ENDNEWTYPE;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlText" xCenter="330" yCenter="671" fixedDimensions="TRUE" width="616" height="1320" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="407" yCenter="715" fixedDimensions="FALSE" width="704" height="1386" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/* Declarations of constants */
 
@@ -418,7 +418,7 @@ SIGNAL sOkCreateZoneManager(PID);</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB39" type="sdlText" xCenter="583" yCenter="374" fixedDimensions="FALSE" width="616" height="660" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB39" type="sdlText" xCenter="583" yCenter="396" fixedDimensions="FALSE" width="616" height="704" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/*-------------------------------------------Process pCtrlManager ------------------------------------------*/
 
@@ -441,6 +441,8 @@ SIGNAL sConfirmCtrl;
 /*Signals from pCtrl to pCtrlManager*/
 
 SIGNAL sIamCtrl(InfoCtrl);
+
+/*----&gt;Process pCtrl &lt;---*/
 
 /*Channel cMain_CtrlZone*/
 

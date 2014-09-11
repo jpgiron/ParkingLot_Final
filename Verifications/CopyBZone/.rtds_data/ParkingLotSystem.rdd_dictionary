@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="blk">
+<Signal id="SIG1" name="sIR1_Zone">
+</Signal>
+<Signal id="SIG10" name="sInitFreeSpot">
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Signal id="SIG11" name="sInitTotalSpots">
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Signal id="SIG12" name="sReqInfo">
+</Signal>
+<Signal id="SIG2" name="sIR2_Zone">
+</Signal>
+<Signal id="SIG3" name="sIR3_Zone">
+</Signal>
+<Signal id="SIG4" name="sIR4_Zone">
+</Signal>
+<Signal id="SIG5" name="sLoopInductive_Zone">
+</Signal>
+<Signal id="SIG6" name="sEntered_Car">
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Signal id="SIG7" name="sOut_Car">
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Signal id="SIG8" name="sOkInit">
+</Signal>
+<Signal id="SIG9" name="sInfoZone">
+<SignalParameterType>i_spots</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+</Signal>
+<Item id="ITEM1" type="block" name="ParkingLotSystem" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW4" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK280" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG10"/>
+<SignalReference id="SIG11"/>
+<SignalReference id="SIG12"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW3" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK279" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+</SentSignals>
+</SignalWindow>
+<Channel name="cEnv_Zone" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW1"/>
+<Channel name="cCtrl_Zone" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW2"/>
+</Item>
+<Item id="ITEM2" type="block" name="BZone" parentId="ITEM1" scope="none" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK279" isFrom="FALSE"/>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK280" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG10"/>
+<SignalReference id="SIG11"/>
+<SignalReference id="SIG12"/>
+</ReceivedSignals>
+</SignalWindow>
+</Item>
+</DictionaryObjects>

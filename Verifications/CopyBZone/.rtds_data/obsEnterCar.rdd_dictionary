@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="ifobs">
+<Item id="ITEM1" type="ifobs" name="obsEnterCar" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+<SymbolReference symbolId="SYMB315"/>
+</UsingSymbols>
+<Body>
+<ContinuousTransitions>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB21"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM5"/>
+<SymbolReference symbolId="SYMB5"/>
+</Transition>
+</ContinuousTransitions>
+</Body>
+</Item>
+<Item id="ITEM2" type="state" name="sSignals" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB333"/>
+<SymbolReference symbolId="SYMB10"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB318"/>
+<SymbolReference symbolId="SYMB508"/>
+<SymbolReference symbolId="SYMB323"/>
+<SymbolReference symbolId="SYMB504"/>
+<SymbolReference symbolId="SYMB38"/>
+<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB328"/>
+<SymbolReference symbolId="SYMB503"/>
+<SymbolReference symbolId="SYMB94"/>
+<SymbolReference symbolId="SYMB96"/>
+<SymbolReference symbolId="SYMB299"/>
+<SymbolReference symbolId="SYMB2"/>
+<SymbolReference symbolId="SYMB301"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="state" name="DEAD" parentId="ITEM1" scope="none">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB16"/>
+<SymbolReference symbolId="SYMB22"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="sError" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB26"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB321"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="state" name="END" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB11"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB325"/>
+<SymbolReference symbolId="SYMB332"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>
